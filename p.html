@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer Example</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <div style="width: 100%; max-width: 100%; position: relative;">
+        <div style="padding-bottom: 56.25%; height: 0; position: relative;">
+    <model-viewer camera-controls touch-action="pan-y"
+        skybox-image="https://raw.githubusercontent.com/google/model-viewer/refs/heads/master/packages/shared-assets/environments/whipple_creek_regional_park_1k_HDR.jpg" alt="A 3D model of a damaged helmet"
+        src="https://huggingface.co/datasets/jdiaz/test/resolve/main/pudu.glb"
+        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+    </model-viewer>
+</div>
+</div>
+</body>
+
+</html>
