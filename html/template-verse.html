@@ -6,6 +6,12 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Pudú, Museo Nacional de Historia Natural. Santiago, Chile</title>
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -29,11 +35,48 @@
         }
 
         #info {
-            z-index: 100;
-            position: absolute;
-            top: 10px;
-            left: 15px
+            position: fixed;
+            /* Makes it float above the content */
+            top: 50px;
+            /* Position from the top */
+            left: 50%;
+            /* Center horizontally */
+            transform: translateX(-50%);
+            /* Center the element horizontally */
+            padding: 15px 20px;
+            border-radius: 6px;
+            color: #fff;
+            /* White text */
+            max-width: 350px;
+            /* Compact width */
+            font-size: 1rem;
+            /* Slightly larger text */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            /* Subtle shadow for depth */
+            z-index: 1000;
+            /* Ensures it appears above other elements */
+            text-align: center;
+            /* Center the text inside */
+            backdrop-filter: blur(4px);
+            /* Slight blur for a modern touch */
         }
+
+        h3.nohf {
+            font-size: 1.3rem;
+            /* Slightly bigger font */
+            color: #5cb874;
+            /* Soft green for main heading */
+            margin-bottom: 6px;
+        }
+
+        h4.nohf {
+            font-size: 1.1rem;
+            /* Smaller subheading font */
+            color: #888;
+            /* Light gray for subheading */
+        }
+
+
 
         h3 {
             margin: 5px 0
@@ -117,14 +160,14 @@
         }
     </style>
     <script type="importmap">
-            {
-                "imports": {
-                    "playcanvas": "js/playcanvas.mjs"
-                }
+        {
+            "imports": {
+                "playcanvas": "https://cdn.jsdelivr.net/npm/playcanvas@2.3.3/build/playcanvas.mjs"
             }
-        </script>
-    <script type="module" src="js/pwc.mjs"></script>
-    <link href="css/style.css" rel="stylesheet">
+        }
+    </script>
+    <link href="css/style-verse.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@playcanvas/web-components@0.1.10/dist/pwc.mjs"></script>
 </head>
 
 <body>
@@ -134,14 +177,14 @@
 
             <h1 class="logo me-auto">
                 <a href="https://boquila.org/en" style="display: inline-flex; align-items: center;">
-                    <img src="assets/img/logo.png" class="img-fluid" alt="" style="vertical-align: middle;">
+                    <img src="assets/img/logo_w.png" class="img-fluid" alt="" style="vertical-align: middle;">
                     <!-- <span>HUB</span> -->
                 </a>
             </h1>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="https://boquila.org/hub">HUB</a></li>
+                    <li><a class="nav-link scrollto" href="https://boquila.org/hub">HUB</a></li>
                     <li><a class="nav-link scrollto " href="https://boquila.org/verse">Verse</a></li>
                     <li><a class="getstarted scrollto" href="https://boquila.org/donate">Donate</a></li>
                     <li class="language-selector">
