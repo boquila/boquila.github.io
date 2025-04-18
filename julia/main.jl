@@ -22,6 +22,10 @@ end
 
 body(str::String)::String = "<body>\n"*str*"</body>\n"
 
+function get_layer(data::HTML)::Int
+    count(c -> c == '/', data.path)
+end
+
 function text_between(full_string::String, start_string::String, end_string::String)::String
     # Find the start position after the start_string
     start_pos = findnext(start_string, full_string, 1)
@@ -56,6 +60,19 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "IMAGE_PLACEHOLDER" => data.image)
     final_str = replace(final_str, "TITLE_PLACEHOLDER" => data.title)
     final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
+
+    layer::Int = get_layer(data)
+
+    if layer > 0
+        prefix = "../" ^ layer
+        final_str = replace(final_str, "href=\"assets" => "href=\""* prefix * "assets")
+        final_str = replace(final_str, "href=\"js" => "href=\""* prefix * "js")
+        final_str = replace(final_str, "href=\"css" => "href=\""* prefix * "css")
+        final_str = replace(final_str, "src=\"assets" => "src=\""* prefix * "assets")
+        final_str = replace(final_str, "src=\"js" => "src=\""* prefix * "js")
+        final_str = replace(final_str, "src=\"css" => "src=\""* prefix * "css")
+    end
+
     return final_str
 end
 
@@ -84,6 +101,7 @@ es = [
 lang = langs[2]
 en = [
     HTML("verse.html","BoquilaVerse offers a growing open collection of 3D models made with photogrammetry and deep learning. Ideal for education, AI training, and connecting with nature through detailed visualizations.",img,"BoquilaVerse",lang)
+    HTML("en/index.html",desc[lang],img, title[lang],lang)
     HTML("donate.html","Support Boquila and become part of a global movement to protect the planet. Your commitment can make a difference in biodiversity conservation and sustainable development. Donate now and join the change!",img,"Support the Boquila Foundation",lang)
     HTML("hub.html","BoquilaHUB empowers conservationists with locally deployed AI—no cloud needed. Enjoy efficient performance, simple UI, and real-time analysis of images and video, even on embedded devices.",img,"BoquilaHUB",lang)
 ]
