@@ -87,29 +87,76 @@ function save(data::HTML)
 end
 
 # DEFAULTS
-const keywords = Dict("es" => "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.","en" => "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.")
-const desc = Dict("es" => "Fundación boquila es una organización dedicada a la investigación aplicada, la conservación de la biodiversidad y el desarrollo sustentable. Utilizamos herramientas basadas en inteligencia artificial como nuestra base. Trabajamos para encontrar soluciones innovadoras que aborden los desafíos ambientales y sociales de nuestra época.", "en" => "Boquila Foundation is a non profit dedicated to applied research, the conservation of biodivesrity and sustainable development. We use artificial intelligence-based tools as our basis. We work to find innovative solutions that address the environmental and social challenges of our time.")
-const title = Dict("es" => "Fundación Boquila", "en" => "Boquila Foundation")
-const footer_text = Dict("es" => "Uniendo tecnología y naturaleza", "en" => "Connecting technology and nature.")
+const keywords = Dict(
+    "es" => "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
+    "en" => "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
+    "zh" => "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护"
+)
+
+const desc = Dict(
+    "es" => "Fundación boquila es una organización dedicada a la investigación aplicada, la conservación de la biodiversidad y el desarrollo sustentable. Utilizamos herramientas basadas en inteligencia artificial como nuestra base. Trabajamos para encontrar soluciones innovadoras que aborden los desafíos ambientales y sociales de nuestra época.",
+    "en" => "Boquila Foundation is a non profit dedicated to applied research, the conservation of biodiversity and sustainable development. We use artificial intelligence-based tools as our basis. We work to find innovative solutions that address the environmental and social challenges of our time.",
+    "zh" => "Boquila基金会是一家致力于应用研究、生物多样性保护和可持续发展的非营利组织。我们以人工智能技术为基础，寻找创新解决方案，以应对当今的环境和社会挑战。"
+)
+
+const title = Dict(
+    "es" => "Fundación Boquila",
+    "en" => "Boquila Foundation",
+    "zh" => "Boquila基金会"
+)
+
+const footer_text = Dict(
+    "es" => "Uniendo tecnología y naturaleza",
+    "en" => "Connecting technology and nature.",
+    "zh" => "科技与自然的联结"
+)
+
+const verse_text = Dict(
+    "es" => "BoquilaVerso ofrece una colección abierta y creciente de modelos 3D creados con fotogrametría e inteligencia artificial. Ideal para la educación, el entrenamiento de IA y para conectar con la naturaleza a través de visualizaciones detalladas.",
+    "en" => "BoquilaVerse offers a growing open collection of 3D models made with photogrammetry and deep learning. Ideal for education, AI training, and connecting with nature through detailed visualizations.",
+    "zh" => "BoquilaVerse提供不断扩大的开放式3D模型库，所有模型均通过摄影测量和深度学习技术构建。特别适合教育、AI训练，以及通过高精度可视化实现与自然的深度交互。"
+)
+
+const donate_text = Dict(
+    "es" => "Apoya a Boquila y sé parte de un movimiento global para proteger el planeta. Tu compromiso puede marcar la diferencia en la conservación de la biodiversidad y el desarrollo sustentable. ¡Dona ahora y únete al cambio!",
+    "en" => "Support Boquila and become part of a global movement to protect the planet. Your commitment can make a difference in biodiversity conservation and sustainable development. Donate now and join the change!",
+    "zh" => "支持Boquila，加入全球守护地球的行动。您的每一份投入都将推动生物多样性保护与可持续发展。立即捐赠，成为变革的力量！"
+)
+
+const hub_text = Dict(
+    "es" => "BoquilaHUB empodera a los conservacionistas con IA desplegada localmente, ¡sin necesidad de nube! Disfruta de un rendimiento eficiente, una interfaz sencilla y análisis en tiempo real de imágenes y videos, incluso en dispositivos embebidos.",
+    "en" => "BoquilaHUB empowers conservationists with locally deployed AI—no cloud needed. Enjoy efficient performance, simple UI, and real-time analysis of images and video, even on embedded devices.",
+    "zh" => "BoquilaHUB为环保工作者提供本地化AI解决方案，无需依赖云端。即使在嵌入式设备上，也能实现高效的图像与视频实时分析，操作界面简洁，性能卓越。"
+)
+
 const img = "https://boquila.org/assets/img/logo.png"
 
-langs = ["es", "en"]
+langs = ["es", "en","zh"]
 
 lang = langs[1]
 es = [
-    HTML("verso.html", "BoquilaVerse ofrece una colección abierta y creciente de modelos 3D creados con fotogrametría e inteligencia artificial. Ideal para la educación, el entrenamiento de IA y para conectar con la naturaleza a través de visualizaciones detalladas.", img, "BoquilaVerso", lang)
+    HTML("verso.html", verse_text[lang], img, "BoquilaVerso", lang)
     HTML("index.html", desc[lang], img, title[lang], lang)
-    HTML("donar.html", "Apoya a Boquila y sé parte de un movimiento global para proteger el planeta. Tu compromiso puede marcar la diferencia en la conservación de la biodiversidad y el desarrollo sustentable. ¡Dona ahora y únete al cambio!", img, "Apoya a Fundación Boquila", lang)
-    HTML("es/hub.html", "BoquilaHUB empodera a los conservacionistas con IA desplegada localmente, ¡sin necesidad de nube! Disfruta de un rendimiento eficiente, una interfaz sencilla y análisis en tiempo real de imágenes y videos, incluso en dispositivos embebidos.", img, "BoquilaHUB", lang)
+    HTML("donar.html", donate_text[lang], img, "Apoya a Fundación Boquila", lang)
+    HTML("es/hub.html", hub_text[lang], img, "BoquilaHUB", lang)
 ]
 
 lang = langs[2]
 en = [
-    HTML("verse.html", "BoquilaVerse offers a growing open collection of 3D models made with photogrammetry and deep learning. Ideal for education, AI training, and connecting with nature through detailed visualizations.", img, "BoquilaVerse", lang)
+    HTML("verse.html", verse_text[lang], img, "BoquilaVerse", lang)
     HTML("en/index.html", desc[lang], img, title[lang], lang)
-    HTML("donate.html", "Support Boquila and become part of a global movement to protect the planet. Your commitment can make a difference in biodiversity conservation and sustainable development. Donate now and join the change!", img, "Support the Boquila Foundation", lang)
-    HTML("hub.html", "BoquilaHUB empowers conservationists with locally deployed AI—no cloud needed. Enjoy efficient performance, simple UI, and real-time analysis of images and video, even on embedded devices.", img, "BoquilaHUB", lang)
+    HTML("donate.html", donate_text[lang], img, "Support the Boquila Foundation", lang)
+    HTML("hub.html", hub_text[lang], img, "BoquilaHUB", lang)
+]
+
+lang = langs[3]
+zh = [
+    HTML("zh/index.html", desc[lang], img, title[lang], lang)
+    HTML("zh/juanzeng.html", donate_text[lang], img, title[lang], lang) # donate
+    HTML("zh/yuzhou.html", verse_text[lang], img, title[lang], lang) # boquilaverse
+    HTML("zh/zhongxin.html", hub_text[lang], img, title[lang], lang) # boquilahub
 ]
 
 save.(es)
 save.(en)
+save.(zh)
