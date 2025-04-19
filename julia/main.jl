@@ -46,8 +46,8 @@ function text_between(full_string::String, start_string::String, end_string::Str
 end
 
 function generate(data::HTML)::String
-    footer = read("html/" * data.lang * "/footer.html", String) * "\n"
-    head = read("html/" * data.lang * "/head.html", String) * "\n"
+    footer = read("html/footer.html", String) * "\n"
+    head = read("html/head.html", String) * "\n"
     header = read("html/" * data.lang * "/header.html", String) * "\n"
     main = text_between(read(data.path, String), "<main", "</main>") * "\n"
 
@@ -60,6 +60,8 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "IMAGE_PLACEHOLDER" => data.image)
     final_str = replace(final_str, "TITLE_PLACEHOLDER" => data.title)
     final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
+    final_str = replace(final_str, "FOOTER_PLACEHOLDER" => footer_text[data.lang])
+    final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => keywords[data.lang])
 
     layer::Int = get_layer(data)
 
@@ -85,8 +87,10 @@ function save(data::HTML)
 end
 
 # DEFAULTS
+const keywords = Dict("es" => "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.","en" => "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.")
 const desc = Dict("es" => "Fundación boquila es una organización dedicada a la investigación aplicada, la conservación de la biodiversidad y el desarrollo sustentable. Utilizamos herramientas basadas en inteligencia artificial como nuestra base. Trabajamos para encontrar soluciones innovadoras que aborden los desafíos ambientales y sociales de nuestra época.", "en" => "Boquila Foundation is a non profit dedicated to applied research, the conservation of biodivesrity and sustainable development. We use artificial intelligence-based tools as our basis. We work to find innovative solutions that address the environmental and social challenges of our time.")
 const title = Dict("es" => "Fundación Boquila", "en" => "Boquila Foundation")
+const footer_text = Dict("es" => "Uniendo tecnología y naturaleza", "en" => "Connecting technology and nature.")
 const img = "https://boquila.org/assets/img/logo.png"
 
 langs = ["es", "en"]
