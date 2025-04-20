@@ -79,6 +79,7 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
     final_str = replace(final_str, "FOOTER_PLACEHOLDER" => footer_text[data.lang])
     final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => keywords[data.lang])
+    final_str = replace(final_str, "DONATE_BUTTON_TEXT" => donate_button_text[data.lang])
 
     # header data
     final_str = replace(final_str, "MAIN_LINK" => get_data(default.links, data.lang))
@@ -217,6 +218,15 @@ const keywords = Dict(
     "fr" => "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
     "ja" => "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "de" => "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz"
+)
+
+const donate_button_text = Dict(
+    "es" => "Donar",
+    "en" => "Donate",
+    "fr" => "Faire un don",
+    "zh" => "捐赠",
+    "ja" => "寄付する",
+    "de" => "Spenden"
 )
 
 const footer_text = Dict(
