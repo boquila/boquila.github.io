@@ -245,14 +245,7 @@ en = [HTML("en/index.html", lang, default)
     HTML("hub.html", lang, hub)
 ]
 
-lang = langs[3]
-zh = [
-    HTML("zh/index.html", lang, default)
-    HTML("zh/verse.html", lang, verse) # boquilaverse
-    HTML("zh/donate.html", lang, donate) # donate
-    HTML("zh/hub.html", lang, hub) # boquilahub
-]
-
+zh = get_basic("zh")
 fr = get_basic("fr")
 de = get_basic("de")
 ja = get_basic("ja")
