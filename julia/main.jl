@@ -145,14 +145,12 @@ const hub_text = Dict(
 
 const hub_links = Dict(
     "en" => "https://boquila.org/hub",
-    "zh" => "https://boquila.org/zh/zhongxin",
     :default => lang -> "https://boquila.org/$(lang)/hub"
 )
 
 const verse_links = Dict(
     "en" => "https://boquila.org/verse",
     "es" => "https://boquila.org/verso",
-    "zh" => "https://boquila.org/zh/yuzhou",
     :default => lang -> "https://boquila.org/$(lang)/verse"
 )
 
@@ -193,8 +191,8 @@ lang = langs[3]
 zh = [
     HTML("zh/index.html", desc[lang], img, title[lang], lang)
     HTML("zh/juanzeng.html", donate_text[lang], img, title[lang], lang) # donate
-    HTML("zh/yuzhou.html", verse_text[lang], img, title[lang], lang) # boquilaverse
-    HTML("zh/zhongxin.html", hub_text[lang], img, title[lang], lang) # boquilahub
+    HTML("zh/verse.html", verse_text[lang], img, title[lang], lang) # boquilaverse
+    HTML("zh/hub.html", hub_text[lang], img, title[lang], lang) # boquilahub
 ]
 
 save.(es)
