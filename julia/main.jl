@@ -113,7 +113,7 @@ function get_basic(lang)::Vector{HTML}
     ]
 end
 
-function save(data::HTML)::Noting
+function save(data::HTML)
     str = generate(data)
 
     open(data.path, "w") do io
