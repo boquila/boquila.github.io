@@ -20,6 +20,11 @@ struct HTML
     end
 end
 
+# Function to get link from dictionary with fallback to default pattern
+function get_link(link_dict, lang)
+    return haskey(link_dict, lang) ? link_dict[lang] : link_dict[:default](lang)
+end
+
 body(str::String)::String = "<body>\n" * str * "</body>\n"
 
 function get_layer(data::HTML)::Int
@@ -64,41 +69,12 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => keywords[data.lang])
 
     # header data
-    if (data.lang == "es")
-        final_str = replace(final_str, "MAIN_LINK" => "https://boquila.org/")
-    else 
-        final_str = replace(final_str, "MAIN_LINK" => "https://boquila.org/"*data.lang)
-    end
+    final_str = replace(final_str, "MAIN_LINK" => get_link(main_links, data.lang))
+    final_str = replace(final_str, "HUB_LINK" => get_link(hub_links, data.lang))
+    final_str = replace(final_str, "VERSE_LINK" => get_link(verse_links, data.lang))
+    final_str = replace(final_str, "DONATE_LINK" => get_link(donate_links, data.lang))
 
-    if (data.lang == "en")
-        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/hub")
-    elseif data.lang == "zh"
-        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/zh/zhongxin")
-    else 
-        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/"*data.lang*"/hub")
-    end
-
-    if (data.lang == "es")
-        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/verso")
-    elseif data.lang == "en"
-        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/verse")
-    elseif data.lang == "zh"
-        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/zh/yuzhou")
-    else 
-        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/"*data.lang*"/verse")
-    end
-
-    if (data.lang == "es")
-        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/donar")
-    elseif (data.lang == "es")
-        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/donate")
-    elseif data.lang == "zh"
-        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/zh/juanzeng")
-    else 
-        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/"*data.lang*"/donate")
-    end
-
-    final_str = replace(final_str, "BLOG_LINK" => "https://boquila.org/"*data.lang*"/blog")
+    final_str = replace(final_str, "BLOG_LINK" => "https://boquila.org/" * data.lang * "/blog")
     final_str = replace(final_str, "CURRENT_LANG" => uppercase(data.lang))
 
     layer::Int = get_layer(data)
@@ -167,9 +143,35 @@ const hub_text = Dict(
     "zh" => "BoquilaHUB为环保工作者提供本地化AI解决方案，无需依赖云端。即使在嵌入式设备上，也能实现高效的图像与视频实时分析，操作界面简洁，性能卓越。"
 )
 
+const hub_links = Dict(
+    "en" => "https://boquila.org/hub",
+    "zh" => "https://boquila.org/zh/zhongxin",
+    :default => lang -> "https://boquila.org/$(lang)/hub"
+)
+
+const verse_links = Dict(
+    "en" => "https://boquila.org/verse",
+    "es" => "https://boquila.org/verso",
+    "zh" => "https://boquila.org/zh/yuzhou",
+    :default => lang -> "https://boquila.org/$(lang)/verse"
+)
+
+const donate_links = Dict(
+    "en" => "https://boquila.org/donate",
+    "es" => "https://boquila.org/donar",
+    "zh" => "https://boquila.org/zh/juanzeng",
+    :default => lang -> "https://boquila.org/$(lang)/donate"
+)
+
+const main_links = Dict(
+    "es" => "https://boquila.org/",
+    :default => lang -> "https://boquila.org/$(lang)"
+)
+
+
 const img = "https://boquila.org/assets/img/logo.png"
 
-langs = ["es", "en","zh"]
+langs = ["es", "en", "zh"]
 
 lang = langs[1]
 es = [
