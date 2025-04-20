@@ -48,7 +48,7 @@ end
 function generate(data::HTML)::String
     footer = read("html/footer.html", String) * "\n"
     head = read("html/head.html", String) * "\n"
-    header = read("html/" * data.lang * "/header.html", String) * "\n"
+    header = read("html/header.html", String) * "\n"
     main = text_between(read(data.path, String), "<main", "</main>") * "\n"
 
     a = """
@@ -62,6 +62,44 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
     final_str = replace(final_str, "FOOTER_PLACEHOLDER" => footer_text[data.lang])
     final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => keywords[data.lang])
+
+    # header data
+    if (data.lang == "es")
+        final_str = replace(final_str, "MAIN_LINK" => "https://boquila.org/")
+    else 
+        final_str = replace(final_str, "MAIN_LINK" => "https://boquila.org/"*data.lang)
+    end
+
+    if (data.lang == "en")
+        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/hub")
+    elseif data.lang == "zh"
+        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/zh/zhongxin")
+    else 
+        final_str = replace(final_str, "HUB_LINK" => "https://boquila.org/"*data.lang*"/hub")
+    end
+
+    if (data.lang == "es")
+        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/verso")
+    elseif data.lang == "en"
+        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/verse")
+    elseif data.lang == "zh"
+        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/zh/yuzhou")
+    else 
+        final_str = replace(final_str, "VERSE_LINK" => "https://boquila.org/"*data.lang*"/verse")
+    end
+
+    if (data.lang == "es")
+        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/donar")
+    elseif (data.lang == "es")
+        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/donate")
+    elseif data.lang == "zh"
+        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/zh/juanzeng")
+    else 
+        final_str = replace(final_str, "DONATE_LINK" => "https://boquila.org/"*data.lang*"/donate")
+    end
+
+    final_str = replace(final_str, "BLOG_LINK" => "https://boquila.org/"*data.lang*"/blog")
+    final_str = replace(final_str, "CURRENT_LANG" => uppercase(data.lang))
 
     layer::Int = get_layer(data)
 
