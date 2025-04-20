@@ -113,12 +113,12 @@ function get_basic(lang)::Vector{HTML}
     ]
 end
 
-function save(data::HTML)
+function save(data::HTML)::Noting
     str = generate(data)
 
     open(data.path, "w") do io
         write(io, str)
-    end
+    end;
 end
 
 verse = Page(
@@ -180,7 +180,6 @@ donate = Page(
     links=Dict(
         "en" => "https://boquila.org/donate",
         "es" => "https://boquila.org/donar",
-        "zh" => "https://boquila.org/zh/juanzeng",
         :default => lang -> "https://boquila.org/$(lang)/donate"
     ),
     img="https://boquila.org/assets/img/logo.png"
@@ -250,7 +249,7 @@ lang = langs[3]
 zh = [
     HTML("zh/index.html", lang, default)
     HTML("zh/verse.html", lang, verse) # boquilaverse
-    HTML("zh/juanzeng.html", lang, donate) # donate
+    HTML("zh/donate.html", lang, donate) # donate
     HTML("zh/hub.html", lang, hub) # boquilahub
 ]
 
