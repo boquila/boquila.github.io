@@ -1,13 +1,15 @@
+const DictDef = Dict{Union{Symbol,String},Union{String,Function}}
+
 # Function to get link from dictionary with fallback to default pattern
-function get_data(dict, lang)
+function get_data(dict::DictDef, lang::String)::String
     return haskey(dict, lang) ? dict[lang] : dict[:default](lang)
 end
 
 Base.@kwdef struct Page
-    title::Dict{Union{Symbol,String},Union{String,Function}}
-    desc::Dict{Union{Symbol,String},Union{String,Function}}
-    links::Dict{Union{Symbol,String},Union{String,Function}}
-    img::String
+    title::DictDef
+    desc::DictDef
+    links::DictDef
+    img::DictDef
 end
 
 struct HTML
@@ -24,7 +26,7 @@ struct HTML
         # Validate lang
         length(lang) == 2 || throw(ArgumentError("lang must be a 2-character string"))
 
-        image = page.img
+        image = get_data(page.img, lang)
 
         # Validate image
         (endswith(image, ".jpg") || endswith(image, ".png")) ||
@@ -77,9 +79,9 @@ function generate(data::HTML)::String
     final_str = replace(final_str, "IMAGE_PLACEHOLDER" => data.image)
     final_str = replace(final_str, "TITLE_PLACEHOLDER" => data.title)
     final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
-    final_str = replace(final_str, "FOOTER_PLACEHOLDER" => footer_text[data.lang])
-    final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => keywords[data.lang])
-    final_str = replace(final_str, "DONATE_BUTTON_TEXT" => donate_button_text[data.lang])
+    final_str = replace(final_str, "FOOTER_PLACEHOLDER" => get_data(footer_text, data.lang))
+    final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => get_data(keywords, data.lang))
+    final_str = replace(final_str, "DONATE_BUTTON_TEXT" => get_data(donate_button_text, data.lang))
 
     # header data
     final_str = replace(final_str, "MAIN_LINK" => get_data(default.links, data.lang))
@@ -140,7 +142,9 @@ verse = Page(
         "es" => "https://boquila.org/verso",
         :default => lang -> "https://boquila.org/$(lang)/verse"
     ),
-    img="https://boquila.org/assets/img/logo.png"
+    img=Dict(
+        :default => lang -> "https://boquila.org/assets/blog/pudu-museum.jpg"
+    ),
 )
 
 hub = Page(
@@ -157,7 +161,9 @@ hub = Page(
         "en" => "https://boquila.org/hub",
         :default => lang -> "https://boquila.org/$(lang)/hub"
     ),
-    img="https://boquila.org/assets/img/logo.png"
+    img=Dict(
+        :default => lang -> "https://raw.githubusercontent.com/boquila/boquilahub/main/readme.jpg"
+    ),
 )
 
 donate = Page(
@@ -183,7 +189,9 @@ donate = Page(
         "es" => "https://boquila.org/donar",
         :default => lang -> "https://boquila.org/$(lang)/donate"
     ),
-    img="https://boquila.org/assets/img/logo.png"
+    img=Dict(
+        :default => lang -> "https://boquila.org/assets/img/logo.png"
+    ),
 )
 
 default = Page(
@@ -208,10 +216,12 @@ default = Page(
         "es" => "https://boquila.org/",
         :default => lang -> "https://boquila.org/$(lang)"
     ),
-    img="https://boquila.org/assets/img/logo.png"
+    img=Dict(
+        :default => lang -> "https://boquila.org/assets/img/logo.png"
+    ),
 )
 
-const keywords = Dict(
+const keywords::DictDef = Dict(
     "es" => "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
     "en" => "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "zh" => "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
@@ -220,7 +230,7 @@ const keywords = Dict(
     "de" => "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz"
 )
 
-const donate_button_text = Dict(
+const donate_button_text::DictDef = Dict(
     "es" => "Donar",
     "en" => "Donate",
     "fr" => "Faire un don",
@@ -229,7 +239,7 @@ const donate_button_text = Dict(
     "de" => "Spenden"
 )
 
-const footer_text = Dict(
+const footer_text::DictDef = Dict(
     "es" => "Uniendo tecnología y naturaleza",
     "en" => "Connecting technology and nature.",
     "fr" => "Connecter la technologie et la nature.",
@@ -237,6 +247,8 @@ const footer_text = Dict(
     "ja" => "テクノロジーと自然をつなぐ",
     "de" => "Technologie und Natur verbinden"
 )
+
+footer_text["en"]
 
 langs = ["es", "en", "zh", "fr", "de", "ja"]
 
