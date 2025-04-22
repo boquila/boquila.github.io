@@ -268,7 +268,7 @@ const footer_text::DictDef = Dict(
     "da" => "Forener teknologi og natur."
 )
 
-langs = ["es", "en", "zh", "fr", "de", "ja","it","da"]
+langs = ["es", "en", "zh", "fr", "de", "ja","it","dk"]
 
 lang = langs[1]
 es = [
