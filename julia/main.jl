@@ -1,6 +1,5 @@
 const DictDef = Dict{Union{Symbol,String},Union{String,Function}}
 
-# Function to get link from dictionary with fallback to default pattern
 function get_data(dict::DictDef, lang::String)::String
     return haskey(dict, lang) ? dict[lang] : dict[:default](lang)
 end
