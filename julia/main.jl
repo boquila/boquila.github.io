@@ -1,4 +1,5 @@
 const DictDef = Dict{Union{Symbol,String},Union{String,Function}}
+langs::Vector{String} = ["es", "en", "zh", "fr", "de", "jp","it","dk"]
 
 function get_data(dict::DictDef, lang::String)::String
     return haskey(dict, lang) ? dict[lang] : dict[:default](lang)
@@ -63,11 +64,13 @@ function text_between(full_string::String, start_string::String, end_string::Str
     return start_string * full_string[start_idx:end_pos[1]-1] * end_string
 end
 
+get_main(str::String)::String = text_between(str, "<main", "</main>") * "\n"
+
 function generate(data::HTML)::String
     footer = read("html/footer.html", String) * "\n"
     head = read("html/head.html", String) * "\n"
     header = read("html/header.html", String) * "\n"
-    main = text_between(read(data.path, String), "<main", "</main>") * "\n"
+    main = read(data.path, String) |> get_main
 
     a = """
     <!DOCTYPE html>
@@ -135,7 +138,7 @@ verse = Page(
         "en" => "BoquilaVerse offers a growing open collection of 3D models made with photogrammetry and deep learning. Ideal for education, AI training, and connecting with nature through detailed visualizations.",
         "fr" => "BoquilaVerse propose une collection ouverte et croissante de modèles 3D créés avec la photogrammétrie et l'intelligence artificielle. Idéal pour l'éducation, la formation en IA et pour se connecter avec la nature grâce à des visualisations détaillées.",
         "zh" => "BoquilaVerse提供不断扩大的开放式3D模型库，所有模型均通过摄影测量和深度学习技术构建。特别适合教育、AI训练，以及通过高精度可视化实现与自然的深度交互。",
-        "ja" => "BoquilaVerseは、フォトグラメトリーとAIによって作成された3Dモデルの成長するオープンコレクションを提供します。教育、AIトレーニング、自然とのつながりに最適です。",
+        "jp" => "BoquilaVerseは、フォトグラメトリーとAIによって作成された3Dモデルの成長するオープンコレクションを提供します。教育、AIトレーニング、自然とのつながりに最適です。",
         "de" => "BoquilaVerse bietet eine wachsende offene Sammlung von 3D-Modellen, die mit Photogrammetrie und KI erstellt wurden. Ideal für Bildung, KI-Training und die Verbindung zur Natur durch detaillierte Visualisierungen.",
         "it" => "BoquilaVerse offre una raccolta aperta e crescente di modelli 3D creati con fotogrammetria e intelligenza artificiale. Ideale per l'educazione, la formazione AI e per connettersi con la natura attraverso visualizzazioni dettagliate.",
         "dk" => "BoquilaVerso tilbyder en voksende åben samling af 3D-modeller lavet med fotogrammetri og kunstig intelligens. Ideelt til uddannelse, AI-træning og forbindelse med naturen gennem detaljerede visualiseringer."
@@ -157,7 +160,7 @@ hub = Page(
         "en" => "BoquilaHUB empowers conservationists with locally deployed AI—no cloud needed. Enjoy efficient performance, simple UI, and real-time analysis of images and video, even on embedded devices.",
         "fr" => "BoquilaHUB autonomise les conservationnistes avec une IA déployée localement, sans besoin de cloud ! Profitez de performances efficaces, d'une interface simple et d'une analyse en temps réel des images et vidéos, même sur des appareils embarqués.",
         "zh" => "BoquilaHUB为环保工作者提供本地化AI解决方案，无需依赖云端。即使在嵌入式设备上，也能实现高效的图像与视频实时分析，操作界面简洁，性能卓越。",
-        "ja" => "BoquilaHUBは、クラウドを必要とせずにローカルで展開されたAIで自然保護活動を支援します。シンプルなUI、効率的なパフォーマンス、リアルタイムの画像・動画解析が可能です。",
+        "jp" => "BoquilaHUBは、クラウドを必要とせずにローカルで展開されたAIで自然保護活動を支援します。シンプルなUI、効率的なパフォーマンス、リアルタイムの画像・動画解析が可能です。",
         "de" => "BoquilaHUB unterstützt Naturschützer mit lokal eingesetzter KI – ganz ohne Cloud. Genieße effiziente Leistung, einfache Benutzeroberfläche und Echtzeitanalyse von Bildern und Videos, auch auf eingebetteten Geräten.",
         "it" => "BoquilaHUB potenzia i conservazionisti con l'IA implementata localmente, senza bisogno di cloud! Goditi prestazioni efficienti, un'interfaccia semplice e analisi in tempo reale di immagini e video, anche su dispositivi embedded.",
         "dk" => "BoquilaHUB styrker naturværnere med lokalt udrullet KI – ingen sky krævet. Nyde effektiv ydeevne, enkel brugergrænseflade og realtidanalyse af billeder og video, selv på indlejrede enheder."
@@ -177,7 +180,7 @@ donate = Page(
         "es" => "Apoya a Fundación Boquila",
         "fr" => "Soutenez la Fondation Boquila",
         "zh" => "支持波奇拉基金会",
-        "ja" => "Boquila財団を支援する",
+        "jp" => "Boquila財団を支援する",
         "de" => "Unterstütze die Boquila-Stiftung",
         "it" => "Supporta la Fondazione Boquila",
         "dk" => "Støt Boquila Fonden",
@@ -188,7 +191,7 @@ donate = Page(
         "en" => "Support Boquila and become part of a global movement to protect the planet. Your commitment can make a difference in biodiversity conservation and sustainable development. Donate now and join the change!",
         "fr" => "Soutenez Boquila et rejoignez un mouvement mondial pour protéger la planète. Votre engagement peut faire la différence dans la conservation de la biodiversité et le développement durable. Faites un don maintenant et participez au changement !",
         "zh" => "支持Boquila，加入全球守护地球的行动。您的每一份投入都将推动生物多样性保护与可持续发展。立即捐赠，成为变革的力量！",
-        "ja" => "Boquilaを支援し、地球を守るためのグローバルな取り組みに参加しましょう。あなたの支援が生物多様性の保全と持続可能な発展に大きな影響を与えます。今すぐ寄付して変化を起こそう！",
+        "jp" => "Boquilaを支援し、地球を守るためのグローバルな取り組みに参加しましょう。あなたの支援が生物多様性の保全と持続可能な発展に大きな影響を与えます。今すぐ寄付して変化を起こそう！",
         "de" => "Unterstütze Boquila und werde Teil einer globalen Bewegung zum Schutz unseres Planeten. Dein Engagement kann einen Unterschied in der Erhaltung der Biodiversität und nachhaltigen Entwicklung machen. Spende jetzt und sei Teil des Wandels!",
         "it" => "Supporta Boquila e diventa parte di un movimento globale per proteggere il pianeta. Il tuo impegno può fare la differenza nella conservazione della biodiversità e nello sviluppo sostenibile. Dona ora e unisciti al cambiamento!",
         "dk" => "Støt Boquila og bliv en del af en global bevægelse for at beskytte planeten. Dit engagement kan gøre en forskel i biodiversitetens bevarelse og bæredygtig udvikling. Donér nu og bliv en del af forandringen!"
@@ -209,7 +212,7 @@ default = Page(
         "en" => "Boquila Foundation",
         "fr" => "Fondation Boquila",
         "zh" => "Boquila基金会",
-        "ja" => "Boquila財団",
+        "jp" => "Boquila財団",
         "de" => "Boquila-Stiftung",
         "it" => "Fondazione Boquila",
         "dk" => "Boquila Fonden",
@@ -220,7 +223,7 @@ default = Page(
         "en" => "Boquila Foundation is a non profit dedicated to applied research, the conservation of biodiversity and sustainable development. We use artificial intelligence-based tools as our basis. We work to find innovative solutions that address the environmental and social challenges of our time.",
         "zh" => "Boquila基金会是一家致力于应用研究、生物多样性保护和可持续发展的非营利组织。我们以人工智能技术为基础，寻找创新解决方案，以应对当今的环境和社会挑战。",
         "fr" => "La Fondation Boquila est une organisation à but non lucratif dédiée à la recherche appliquée, à la conservation de la biodiversité et au développement durable. Nous utilisons des outils basés sur l'intelligence artificielle. Nous travaillons à trouver des solutions innovantes pour relever les défis environnementaux et sociaux de notre époque.",
-        "ja" => "Boquila財団は、応用研究、生物多様性の保全、持続可能な開発に取り組む非営利団体です。AIベースのツールを活用して、現代の環境的・社会的課題に対応する革新的な解決策を追求しています。",
+        "jp" => "Boquila財団は、応用研究、生物多様性の保全、持続可能な開発に取り組む非営利団体です。AIベースのツールを活用して、現代の環境的・社会的課題に対応する革新的な解決策を追求しています。",
         "de" => "Die Boquila-Stiftung ist eine gemeinnützige Organisation, die sich der angewandten Forschung, dem Erhalt der Biodiversität und der nachhaltigen Entwicklung widmet. Wir nutzen KI-basierte Werkzeuge, um innovative Lösungen für die ökologischen und sozialen Herausforderungen unserer Zeit zu finden.",
         "it" => "La Fondazione Boquila è un'organizzazione no-profit dedicata alla ricerca applicata, alla conservazione della biodiversità e allo sviluppo sostenibile. Utilizziamo strumenti basati sull'intelligenza artificiale. Lavoriamo per trovare soluzioni innovative che affrontino le sfide ambientali e sociali della nostra epoca.",
         "dk" => "Boquila Fonden er en non-profit organisation dedikeret til anvendt forskning, bevarelse af biodiversitet og bæredygtig udvikling. Vi bruger KI-baserede værktøjer som vores grundlag. Vi arbejder for at finde innovative løsninger, der adresserer vores tids miljømæssige og sociale udfordringer."
@@ -239,7 +242,7 @@ const keywords::DictDef = Dict(
     "en" => "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "zh" => "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
     "fr" => "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
-    "ja" => "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
+    "jp" => "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "de" => "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz",
     "it" => "Intelligenza artificiale, IA, biodiversità, conservazione, progetti, Cile, innovazione, tecnologia, ambiente, sostenibilità, cambiamento climatico, ecologia, protezione della natura.",
     "dk" => "Kunstig intelligens, AI, biodiversitet, bevarelse, projekter, Chile, innovation, teknologi, miljø, bæredygtighed, klimaforandringer, økologi, naturbeskyttelse."
@@ -250,7 +253,7 @@ const donate_button_text::DictDef = Dict(
     "en" => "Donate",
     "fr" => "Faire un don",
     "zh" => "捐赠",
-    "ja" => "寄付する",
+    "jp" => "寄付する",
     "de" => "Spenden",
     "it" => "Dona",
     "dk" => "Donér"
@@ -261,13 +264,13 @@ const footer_text::DictDef = Dict(
     "en" => "Connecting technology and nature.",
     "fr" => "Connecter la technologie et la nature.",
     "zh" => "科技与自然的联结",
-    "ja" => "テクノロジーと自然をつなぐ",
+    "jp" => "テクノロジーと自然をつなぐ",
     "de" => "Technologie und Natur verbinden",
     "it" => "Collegare tecnologia e natura",
     "dk" => "Forener teknologi og natur."
 )
 
-langs = ["es", "en", "zh", "fr", "de", "ja","it","dk"]
+
 
 lang = langs[1]
 es = [
