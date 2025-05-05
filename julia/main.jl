@@ -1,5 +1,5 @@
 const DictDef = Dict{Union{Symbol,String},Union{String,Function}}
-langs::Vector{String} = ["es", "en", "zh", "fr", "de", "jp","it","dk"]
+langs::Vector{String} = ["es", "en", "zh", "fr", "de", "jp", "it", "dk"]
 
 function get_data(dict::DictDef, lang::String)::String
     return haskey(dict, lang) ? dict[lang] : dict[:default](lang)
@@ -78,24 +78,23 @@ function generate(data::HTML)::String
     """
 
     final_str = a * head * body(header * main * footer) * "</html>"
-    final_str = replace(final_str, "IMAGE_PLACEHOLDER" => data.image)
-    final_str = replace(final_str, "TITLE_PLACEHOLDER" => data.title)
-    final_str = replace(final_str, "DESCRIPTION_PLACEHOLDER" => data.description)
-    final_str = replace(final_str, "FOOTER_PLACEHOLDER" => get_data(footer_text, data.lang))
-    final_str = replace(final_str, "KEYWORDS_PLACEHOLDER" => get_data(keywords, data.lang))
-    final_str = replace(final_str, "DONATE_BUTTON_TEXT" => get_data(donate_button_text, data.lang))
-
-    # header data
-    final_str = replace(final_str, "MAIN_LINK" => get_data(default.links, data.lang))
-    final_str = replace(final_str, "HUB_LINK" => get_data(hub.links, data.lang))
-    final_str = replace(final_str, "VERSE_LINK" => get_data(verse.links, data.lang))
-    final_str = replace(final_str, "DONATE_LINK" => get_data(donate.links, data.lang))
-
-    final_str = replace(final_str, "BLOG_LINK" => "https://boquila.org/" * data.lang * "/blog")
-    final_str = replace(final_str, "CURRENT_LANG" => uppercase(data.lang))
+    final_str = replace(final_str,
+        "IMAGE_PLACEHOLDER" => data.image,
+        "TITLE_PLACEHOLDER" => data.title,
+        "DESCRIPTION_PLACEHOLDER" => data.description,
+        "FOOTER_PLACEHOLDER" => get_data(footer_text, data.lang),
+        "KEYWORDS_PLACEHOLDER" => get_data(keywords, data.lang),
+        "DONATE_BUTTON_TEXT" => get_data(donate_button_text, data.lang),
+        # header
+        "MAIN_LINK" => get_data(default.links, data.lang),
+        "HUB_LINK" => get_data(hub.links, data.lang),
+        "VERSE_LINK" => get_data(verse.links, data.lang),
+        "DONATE_LINK" => get_data(donate.links, data.lang),
+        "BLOG_LINK" => "https://boquila.org/$(data.lang)/blog",
+        "CURRENT_LANG" => uppercase(data.lang)
+    )
 
     layer::Int = get_layer(data)
-
     if layer > 0
         prefix = "../"^layer
         final_str = replace(final_str, "href=\"assets" => "href=\"" * prefix * "assets")
@@ -123,7 +122,7 @@ function save(data::HTML)
 
     open(data.path, "w") do io
         write(io, str)
-    end;
+    end
 end
 
 process(str::String) = save.(get_basic(str))
