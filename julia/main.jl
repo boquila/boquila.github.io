@@ -290,3 +290,6 @@ save.(en)
 save.(es)
 
 process.(langs[3:end])
+
+# write a for loop that prints a bunch of stuff
+
