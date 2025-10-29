@@ -1,97 +1,102 @@
 [
-    {
-        "name": "boquilanet-cl",
-        "description": "Chilean animal detection.",
-        "download_link": "https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq"
-    },
-    {
-        "name": "boquilanet-gen",
-        "description": "Generic animal detection.",
-        "download_link": "https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq"
-    },
-    {
-        "name": "SpeciesNetv4.0.0a",
-        "description": "SpeciesNet: 2000 animals classification",
-        "download_link": "https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq"
-    },
-    {
-        "name": "SpeciesNetv4.0.0b",
-        "description": "SpeciesNet: 2000 animals classification",
-        "download_link": "https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq"
-    },
-    {
-        "name": "MDv5a",
-        "description": "Megadetector V5: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq"
-    },
-    {
-        "name": "MDv5b",
-        "description": "Megadetector V5: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq"
-    },
-    {
-        "name": "MDv1000-cedar",
-        "description": "Megadetector V1000: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq"
-    },
-    {
-        "name": "MDv1000-larch",
-        "description": "Megadetector V1000: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq"
-    },
-    {
-        "name": "MDv1000-redwood",
-        "description": "Megadetector V1000: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq"
-    },
-    {
-        "name": "MDv1000-sorrel",
-        "description": "Megadetector V1000: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq"
-    },
-    {
-        "name": "MDv1000-spruce",
-        "description": "Megadetector V1000: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq"
-    },
-    {
-        "name": "MDV6-yolov9c",
-        "description": "Megadetector V6: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq"
-    },
-    {
-        "name": "MDV6-yolov9e",
-        "description": "Megadetector V6: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq"
-    },
-    {
-        "name": "MDV6-yolov9-e-1280",
-        "description": "Megadetector V6: animal, person and vehicle detection",
-        "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq"
-    },
-    {
-        "name": "flat-bugM",
-        "description": "Insect segmentation",
-        "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq"
-    },
-    {
-        "name": "yolov11n",
-        "description": "Tiny model trained on COCO.",
-        "download_link": "https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq"
-    },
-    {
-        "name": "yolo11n-seg",
-        "description": "Tiny model trained on COCO",
-        "download_link": "https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq"
-    },
-    {
-        "name": "pyronear-yolov8s",
-        "description": "Early wildfire detection.",
-        "download_link": "https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq"
-    },
-    {
-        "name": "pyronear-yolov11s",
-        "description": "Early wildfire detection.",
-        "download_link": "https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq"
-    }
+  {
+    "name": "boquilanet-cl",
+    "description": "Chilean animal detection.",
+    "download_link": "https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq"
+  },
+  {
+    "name": "boquilanet-gen",
+    "description": "Generic animal detection.",
+    "download_link": "https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq"
+  },
+  {
+    "name": "SpeciesNetv4.0.0a",
+    "description": "SpeciesNet: 2000 animals classification",
+    "download_link": "https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq"
+  },
+  {
+    "name": "SpeciesNetv4.0.0b",
+    "description": "SpeciesNet: 2000 animals classification",
+    "download_link": "https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq"
+  },
+  {
+    "name": "MDv5a",
+    "description": "Megadetector V5: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq"
+  },
+  {
+    "name": "MDv5b",
+    "description": "Megadetector V5: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq"
+  },
+  {
+    "name": "MDv1000-cedar",
+    "description": "Megadetector V1000: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq"
+  },
+  {
+    "name": "MDv1000-larch",
+    "description": "Megadetector V1000: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq"
+  },
+  {
+    "name": "MDv1000-redwood",
+    "description": "Megadetector V1000: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq"
+  },
+  {
+    "name": "MDv1000-sorrel",
+    "description": "Megadetector V1000: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq"
+  },
+  {
+    "name": "MDv1000-spruce",
+    "description": "Megadetector V1000: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq"
+  },
+  {
+    "name": "MDV6-yolov9c",
+    "description": "Megadetector V6: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq"
+  },
+  {
+    "name": "MDV6-yolov9e",
+    "description": "Megadetector V6: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq"
+  },
+  {
+    "name": "MDV6-yolov9-e-1280",
+    "description": "Megadetector V6: animal, person and vehicle detection",
+    "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq"
+  },
+  {
+    "name": "flat-bugM",
+    "description": "Insect segmentation",
+    "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq"
+  },
+  {
+    "name": "yolov11n",
+    "description": "Tiny model trained on COCO.",
+    "download_link": "https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq"
+  },
+  {
+    "name": "yolo11n-seg",
+    "description": "Tiny model trained on COCO",
+    "download_link": "https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq"
+  },
+  {
+    "name": "pyronear-yolov8s",
+    "description": "Early wildfire detection.",
+    "download_link": "https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq"
+  },
+  {
+    "name": "pyronear-yolov11s",
+    "description": "Early wildfire detection.",
+    "download_link": "https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq"
+  },
+  {
+    "name": "pyronear-yolov11s",
+    "description": "Generic fish detection.",
+    "download_link": "https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq"
+  }
 ]
