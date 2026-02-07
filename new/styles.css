@@ -45,6 +45,12 @@ a {
     text-transform: uppercase;
     background: transparent;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .btn-link:hover {
