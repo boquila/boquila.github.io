@@ -22,4 +22,6 @@ A lot of websites have a bunch of bloat and fake stuff. We want to be minimal so
 
 Don't make changes that I didn't ask, unless it's obvious it needs to change.
 
-Reuse CSS a lot, about inlining CSS only if it's obvious that it will only go there.
+Reuse CSS a lot, about inlining CSS only if it's obvious that it will ONLY go there.
+
+assets should go inlined, so it's easier to read in every .html what img goes where.
