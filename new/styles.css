@@ -149,7 +149,8 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.5;
+    filter: contrast(1.1);
     z-index: 0;
 }
 
@@ -275,7 +276,8 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.5;
+    filter: contrast(1.1);
     z-index: 0;
 }
 
