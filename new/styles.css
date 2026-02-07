@@ -55,6 +55,7 @@ a {
 header {
     background-color: white;
     padding: 20px 0;
+    border-bottom: var(--border-thick) solid var(--color-dark-gray);
 }
 
 header .container {
@@ -98,12 +99,14 @@ nav a:hover {
     padding: 80px 0;
     background-color: var(--color-green);
     color: var(--color-dark-gray);
+    border-bottom: var(--border-thick) solid var(--color-dark-gray);
 }
 
 .hero-box {
     background: white;
     border: var(--border-thick) solid var(--color-dark-gray);
     padding: 3rem;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
 }
 
 .hero h1 {
@@ -160,8 +163,9 @@ nav a:hover {
     background: white;
     border: var(--border-thick) solid var(--color-dark-gray);
     padding: 2.5rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem auto;
     max-width: 850px;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
 }
 
 .intro-box h2 {
@@ -196,6 +200,7 @@ nav a:hover {
     background: white;
     border: var(--border-thick) solid var(--color-dark-gray);
     padding: 2rem;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
 }
 
 .pillar h3 {
@@ -212,6 +217,8 @@ nav a:hover {
 .software {
     background-color: var(--color-green);
     color: var(--color-dark-gray);
+    border-top: var(--border-thick) solid var(--color-dark-gray);
+    border-bottom: var(--border-thick) solid var(--color-dark-gray);
 }
 
 .software h2 {
@@ -288,6 +295,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .tag {
@@ -298,6 +306,7 @@ nav a:hover {
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 .tag:hover {
@@ -310,6 +319,7 @@ footer {
     background-color: var(--color-dark-gray);
     color: var(--color-white-gray);
     padding: 60px 0;
+    border-top: var(--border-thick) solid var(--color-dark-gray);
 }
 
 .footer-content {
