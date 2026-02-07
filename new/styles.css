@@ -136,6 +136,7 @@ nav a:hover {
     background-color: var(--color-white-gray);
     position: relative;
     overflow: hidden;
+    padding: 140px 0;
 }
 
 .mission::before {
@@ -263,6 +264,7 @@ nav a:hover {
 .projects-list {
     position: relative;
     overflow: hidden;
+    padding: 140px 0;
 }
 
 .projects-list::before {
@@ -309,11 +311,6 @@ nav a:hover {
     font-size: 1rem;
     text-transform: uppercase;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-}
-
-.tag:hover {
-    background-color: var(--color-dark-gray);
-    color: var(--color-green);
 }
 
 /* Footer */
