@@ -44,10 +44,21 @@ a {
     padding: 10px 20px;
     text-transform: uppercase;
     background: transparent;
+    cursor: pointer;
 }
 
 .btn-link:hover {
     background: var(--color-dark-gray);
+    color: var(--color-green);
+}
+
+.btn-primary {
+    background-color: var(--color-green);
+    color: var(--color-dark-gray);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark-gray);
     color: var(--color-green);
 }
 
@@ -315,6 +326,62 @@ nav a:hover {
     font-size: 1rem;
     text-transform: uppercase;
     box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border: var(--border-thick) solid var(--color-dark-gray);
+    background: white;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--color-dark-gray);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-white-gray);
+}
+
+/* List with Icons */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.feature-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-list i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+    color: var(--color-green);
 }
 
 /* Footer */
