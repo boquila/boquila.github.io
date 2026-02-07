@@ -257,7 +257,7 @@ nav a:hover {
 }
 
 .software-item p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 /* Projects List */
@@ -293,6 +293,10 @@ nav a:hover {
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-weight: 800;
+}
+
+.projects-list p {
+    font-size: 1.25rem;
 }
 
 .project-tags {
@@ -346,6 +350,7 @@ footer {
 }
 
 .footer-brand p {
+    font-size: 1.25rem;
     margin: 0;
     opacity: 0.8;
 }
