@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoquilaHUB - 自然人工智能</title>
+    <title>BoquilaHUB - 自然のためのAI</title>
     <meta
-        content="BoquilaHUB 通过本地部署的 AI 为自然保护者赋能——无需云端。享受高效的性能、简单的用户界面，并在嵌入式设备上实时分析图像和视频。"
+        content="BoquilaHUBは、クラウドを必要とせず、ローカルに展開されたAIで自然保護活動家を支援します。効率的なパフォーマンス、シンプルなUI、画像やビデオのリアルタイム分析を、組み込みデバイスでも楽しめます。"
         name="description">
     <meta
-        content="人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护"
+        content="人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護"
         name="keywords">
 
     <meta property="og:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
@@ -46,17 +46,17 @@
                 <ul>
                     <li><a href="hub">Hub</a></li>
                     <li><a href="verse">Verse</a></li>
-                    <li><a href="donate">捐赠</a></li>
+                    <li><a href="donate">寄付</a></li>
                     <li>
                         <select class="lang-select" onchange="if(this.value) location.href = this.value;">
                             <option value="../hub">EN</option>
-                            <option value="hub" selected>ZH</option>
+                            <option value="../zh/hub">ZH</option>
                             <option value="../de/hub">DE</option>
                             <option value="../fr/hub">FR</option>
                             <option value="../vi/hub">VI</option>
                             <option value="../pt/hub">PT</option>
                             <option value="../es/hub">ES</option>
-                            <option value="../ja/hub">JA</option>
+                            <option value="hub" selected>JA</option>
                         </select>
                     </li>
                 </ul>
@@ -68,8 +68,8 @@
         <div class="container">
             <div class="hero-box">
                 <h1>Boquila<span>HUB</span></h1>
-                <p>用于在野生动物数据上运行计算机视觉模型的跨平台工具。在您自己的硬件上运行，无需云端。</p>
-                <a href="https://github.com/boquila/boquilahub/releases" target="_blank" class="btn-link" style="margin-top: 2rem;">下载</a>
+                <p>野生生物データでコンピュータビジョンモデルを実行するためのクロスプラットフォームツール。独自のハードウェアで、クラウドは不要です。</p>
+                <a href="https://github.com/boquila/boquilahub/releases" target="_blank" class="btn-link" style="margin-top: 2rem;">ダウンロード</a>
             </div>
         </div>
     </section>
@@ -78,23 +78,23 @@
         <div class="container">
             <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
                 <div style="flex: 1; min-width: 300px;">
-                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">为什么选择 BoquilaHUB？</h2>
+                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">なぜBoquilaHUBなのか？</h2>
                     <ul class="feature-list">
                         <li>
                             <i class="fas fa-bolt"></i>
-                            <span>本地 AI 部署（无需云端）</span>
+                            <span>ローカルAI展開（クラウド不要）</span>
                         </li>
                         <li>
                             <i class="fas fa-microchip"></i>
-                            <span>可配置推理</span>
+                            <span>構成可能な推論</span>
                         </li>
                         <li>
                             <i class="fas fa-desktop"></i>
-                            <span>直观、简单的用户界面</span>
+                            <span>直感的でシンプルなユーザーインターフェース</span>
                         </li>
                         <li>
                             <i class="fas fa-eye"></i>
-                            <span>分析图像、视频或实时摄像头画面</span>
+                            <span>画像、ビデオ、またはリアルタイムカメラフィードを分析</span>
                         </li>
                     </ul>
                 </div>
@@ -107,142 +107,142 @@
 
     <section class="section" style="background-color: var(--color-white-gray);">
         <div class="container">
-            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem; color: var(--color-dark-gray); text-align: center;">可用模型</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.2rem;">只需下载模型，将其放入您的 "models" 文件夹，BoquilaHUB 即可识别它们。</p>
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem; color: var(--color-dark-gray); text-align: center;">利用可能なモデル</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.2rem;">モデルをダウンロードし、「models」フォルダに配置するだけで、BoquilaHUBがそれらを認識します。</p>
             
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>描述</th>
-                            <th>作者</th>
-                            <th>下载</th>
+                            <th>名前</th>
+                            <th>説明</th>
+                            <th>著者</th>
+                            <th>ダウンロード</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>boquilanet-cl</td>
-                            <td>智利动物检测</td>
+                            <td>チリの動物検出</td>
                             <td>Boquila Foundation</td>
-                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>boquilanet-gen</td>
-                            <td>通用动物检测</td>
+                            <td>一般的な動物検出</td>
                             <td>Boquila Foundation</td>
-                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>SpeciesNetv4.0.0a</td>
-                            <td>SpeciesNet：2000种动物分类</td>
+                            <td>SpeciesNet: 2000種類の動物分類</td>
                             <td>Google</td>
-                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>SpeciesNetv4.0.0b</td>
-                            <td>SpeciesNet：2000种动物分类</td>
+                            <td>SpeciesNet: 2000種類の動物分類</td>
                             <td>Google</td>
-                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv5a</td>
-                            <td>Megadetector V5：动物、人和车辆检测</td>
+                            <td>Megadetector V5: 動物、人、車両の検出</td>
                             <td>Microsoft</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv5b</td>
-                            <td>Megadetector V5：动物、人和车辆检测</td>
+                            <td>Megadetector V5: 動物、人、車両の検出</td>
                             <td>Microsoft</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <!-- V1000 Models -->
                         <tr>
                             <td>MDv1000-cedar</td>
                             <td>Megadetector V1000</td>
                             <td>Dan Morris</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv1000-larch</td>
                             <td>Megadetector V1000</td>
                             <td>Dan Morris</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv1000-redwood</td>
                             <td>Megadetector V1000</td>
                             <td>Dan Morris</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv1000-sorrel</td>
                             <td>Megadetector V1000</td>
                             <td>Dan Morris</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDv1000-spruce</td>
                             <td>Megadetector V1000</td>
                             <td>Dan Morris</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <!-- V6 Models -->
                         <tr>
                             <td>MDV6-yolov9c</td>
                             <td>Megadetector V6</td>
                             <td>Microsoft</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDV6-yolov9e</td>
                             <td>Megadetector V6</td>
                             <td>Microsoft</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>MDV6-yolov9-e-1280</td>
                             <td>Megadetector V6</td>
                             <td>Microsoft</td>
-                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <!-- Other Models -->
                         <tr>
                             <td>flat-bugM</td>
-                            <td>昆虫分割</td>
+                            <td>昆虫のセグメンテーション</td>
                             <td>The DARSA Group</td>
-                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>yolov11n</td>
-                            <td>在 COCO 上训练的小型模型</td>
+                            <td>COCOで訓練された小型モデル</td>
                             <td>Ultralytics</td>
-                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>yolo11n-seg</td>
-                            <td>小型模型（分割）</td>
+                            <td>小型モデル（セグメンテーション）</td>
                             <td>Ultralytics</td>
-                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>pyronear-yolov8s</td>
-                            <td>早期野火检测</td>
+                            <td>早期の山火事検出</td>
                             <td>Pyronear</td>
-                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>pyronear-yolov11s</td>
-                            <td>早期野火检测</td>
+                            <td>早期の山火事検出</td>
                             <td>Pyronear</td>
-                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                         <tr>
                             <td>cfd-yolov12x-1.00</td>
-                            <td>通用鱼类检测</td>
+                            <td>一般的な魚の検出</td>
                             <td>Wild Hackers</td>
-                            <td><a href="https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq" target="_blank" style="text-decoration: underline;">下载</a></td>
+                            <td><a href="https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq" target="_blank" style="text-decoration: underline;">ダウンロード</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -256,11 +256,11 @@
                 <a href="./" class="footer-logo">
                     <img src="../assets/logo.webp" alt="Boquila logo">
                 </a>
-                <p>自然人工智能</p>
+                <p>自然のためのAI</p>
             </div>
             
             <div class="footer-links">
-                <a href="mailto:contacto@boquila.org" title="联系我们"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:contacto@boquila.org" title="お問い合わせ"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/boquila" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>

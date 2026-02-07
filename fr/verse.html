@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoquilaVerse - La nature en 3D</title>
+    <meta
+        content="BoquilaVerse offre une collection ouverte et croissante de modèles 3D réalisés avec la photogrammétrie et l'apprentissage profond. Idéal pour l'éducation, la formation de l'IA et la connexion avec la nature grâce à des visualisations détaillées."
+        name="description">
+    <meta
+        content="Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature."
+        name="keywords">
+
+    <meta property="og:image" content="https://boquila.org/assets/blog/pudu-museum.jpg"/>
+    <meta property="twitter:image" content="https://boquila.org/assets/blog/pudu-museum.jpg"/>
+    <meta name="twitter:image:src" content="https://boquila.org/assets/blog/pudu-museum.jpg">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E743EXTEDS"></script>
@@ -13,157 +25,103 @@
         gtag('config', 'G-E743EXTEDS');
     </script>
 
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>BoquilaVerse</title>
-    <meta
-        content="BoquilaVerse propose une collection ouverte et croissante de modèles 3D créés avec la photogrammétrie et l'intelligence artificielle. Idéal pour l'éducation, la formation en IA et pour se connecter avec la nature grâce à des visualisations détaillées."
-        name="description">
-    <meta
-        content="Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature."
-        name="keywords">
-
-    <meta property="og:image" content="https://boquila.org/assets/blog/pudu-museum.jpg"/>
-    <meta property="twitter:image" content="https://boquila.org/assets/blog/pudu-museum.jpg"/>
-    <meta name="twitter:image:src" content="https://boquila.org/assets/blog/pudu-museum.jpg">
-
-    <!-- Favicons -->
-    <link href="../assets/img/favicon.png" rel="icon">
-    <link href="../assets/img/favicon.png" rel="apple-touch-icon">
-
+    <link href="../assets/favicon.png" rel="icon">
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="../css/style.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<!-- ======= Header ======= -->
-<header id="header" class="d-flex align-items-center">
-  <div class="container d-flex align-items-center">
 
-    <h1 class="logo me-auto">
-      <a href="https://boquila.org/fr" style="display: inline-flex; align-items: center;">
-        <img src="../assets/img/logo.png" class="img-fluid" alt="" style="vertical-align: middle;">
-      </a>
-    </h1>
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto" href="https://boquila.org/fr/blog">Blog</a></li>
-        <li><a class="nav-link scrollto " href="https://boquila.org/fr/hub">HUB</a></li>
-        <li><a class="nav-link scrollto" href="https://boquila.org/fr/verse">Verse</a></li>
-        <li><a class="getstarted scrollto" href="https://boquila.org/fr/donate">Faire un don</a></li>
-        <li>
-          <div class="language-selector-container">
-            <div class="language-selector-button">
-              <span class="current-language">FR</span>
-              <span class="dropdown-icon"></span>
-            </div>
-            <div class="language-dropdown">
-              <a href="https://boquila.org/en" class="language-option" title="English">
-                EN <span class="language-name">English⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/" class="language-option" title="Español">
-                ES <span class="language-name">Español⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/fr" class="language-option" title="Français">
-                FR <span class="language-name">Français⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/de" class="language-option" title="Chinese">
-                DE <span class="language-name">Deutsch⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/it" class="language-option" title="Italiano">
-                IT <span class="language-name">Italiano⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/dk" class="language-option" title="Dansk">
-                DK <span class="language-name">Dansk⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/zh" class="language-option" title="Chinese">
-                ZH <span class="language-name">简体中文⠀⠀</span>
-              </a>
-              <a href="https://boquila.org/jp" class="language-option" title="Japanese">
-                JP <span class="language-name">日本語⠀⠀</span>
-              </a>              
-            </div>
-          </li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
-<main id="main"> <section class="container py-5"> <div class="row align-items-center"> <div class="col-lg-6"> <div class="product-info"> <h2 class="display-6 fw-bold mb-4" style="color: #33DA72;">BoquilaVerse</h2>
-
-  <p class="lead text-muted mb-4">
-    Une collection croissante de modèles 3D créés par photogrammétrie et apprentissage profond. Conçue pour soutenir
-    l'éducation, l'entraînement de l'IA et inspirer une connexion plus profonde avec la nature.
-  </p>
-  <div class="features mb-4">
-    <h5 class="mb-3">Pourquoi BoquilaVerse ?</h5>
-    <ul class="list-unstyled">
-      <li class="mb-2 d-flex align-items-center">
-        <i class="bi bi-tree text-success me-3 fs-4"></i>
-        <span>Tous les modèles 3D sont ouverts !</span>
-      </li>
-      <li class="mb-2 d-flex align-items-center">
-        <i class="bi bi-lightbulb text-warning me-3 fs-4"></i>
-        <span>Permet aux personnes et à l'IA d'en apprendre davantage sur le monde naturel</span>
-      </li>
-      <li class="mb-2 d-flex align-items-center">
-        <i class="bi bi-heart text-primary me-3 fs-4"></i>
-        <span>Encourage l'appréciation de la nature grâce à une visualisation détaillée</span>
-      </li>
-    </ul>
-  </div>
-</div>
-</div>
-<div class="col-lg-6">
-<iframe src="https://boquila.org/html/pudu.html"
-  style="border:none; max-width:690px; width:100%; height:20%; min-height:420px;"></iframe>
-</div>
-</div>
-<div class="d-flex align-items-center">
-<a href="#" class="btn btn-primary me-3" style="background-color: #33DA72; border:none">Bientôt disponible</a>
-</div>
-</section>
-
-</main>
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <img src="../assets/img/logo.png" class="img-fluid" alt="" style="width: 400px; height: auto;">
-        <p>Connecter la technologie et la nature.</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/company/boquila" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://instagram.com/fundacionboquila" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="https://github.com/boquila" class="github"><i class="bx bxl-github"></i></a>
-            <a href="https://huggingface.co/boquila" class="huggingface"><i class="bx bxl">🤗</i></a>
+    <header>
+        <div class="container">
+            <a href="./" class="logo">
+                <img src="../assets/logo2.webp" alt="Boquila logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="hub">Hub</a></li>
+                    <li><a href="verse">Verse</a></li>
+                    <li><a href="donate">Faire un don</a></li>
+                    <li>
+                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                            <option value="../verse">EN</option>
+                            <option value="../zh/verse">ZH</option>
+                            <option value="../de/verse">DE</option>
+                            <option value="verse" selected>FR</option>
+                            <option value="../vi/verse">VI</option>
+                            <option value="../pt/verse">PT</option>
+                            <option value="../es/verse">ES</option>
+                            <option value="../ja/verse">JA</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</footer><!-- End Footer -->
+    </header>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boquila<span>Verse</span></h1>
+                <p>Une collection croissante de modèles 3D de flore, faune et fonge. Créée par photogrammétrie, apprentissage profond et autres techniques.</p>
+                <button class="btn-link" style="margin-top: 2rem; cursor: not-allowed; opacity: 0.7;">Bientôt disponible</button>
+            </div>
+        </div>
+    </section>
 
-<!-- Vendor JS Files -->
-<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../assets/vendor/php-email-form/validate.js"></script>
-<script src="../js/main.js"></script>
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">Pourquoi BoquilaVerse ?</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-tree"></i>
+                            <span>Toujours physiquement et biologiquement précis</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Meilleures données pour entraîner l'IA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-heart"></i>
+                            <span>Visualisations sympas pour les humains</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px; height: 420px; border: var(--border-thick) solid var(--color-dark-gray); box-shadow: 6px 6px 0px rgba(0,0,0,0.1);">
+                    <iframe src="../assets/pudu.html"
+                        style="border:none; width:100%; height:100%;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="./" class="footer-logo">
+                    <img src="../assets/logo.webp" alt="Boquila logo">
+                </a>
+                <p>IA pour la nature</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="mailto:contacto@boquila.org" title="Contactez-nous"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/boquila" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://huggingface.co/boquila" target="_blank" title="HuggingFace">
+                    <img src="../assets/huggingface.svg" alt="HuggingFace" class="footer-icon-svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,323 +1,275 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoquilaHUB - KI für die Natur</title>
+    <meta
+        content="BoquilaHUB stärkt Naturschützer mit lokal eingesetzter KI – keine Cloud erforderlich. Genießen Sie effiziente Leistung, eine einfache Benutzeroberfläche und Echtzeitanalyse von Bildern und Videos, sogar auf eingebetteten Geräten."
+        name="description">
+    <meta
+        content="Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz."
+        name="keywords">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E743EXTEDS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta property="og:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg">
 
-    gtag('config', 'G-E743EXTEDS');
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E743EXTEDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        gtag('config', 'G-E743EXTEDS');
+    </script>
 
-  <title>BoquilaHUB</title>
-  <meta
-    content="BoquilaHUB unterstützt Naturschützer mit lokal eingesetzter KI – ganz ohne Cloud. Genieße effiziente Leistung, einfache Benutzeroberfläche und Echtzeitanalyse von Bildern und Videos, auch auf eingebetteten Geräten."
-    name="description">
-  <meta
-    content="Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz"
-    name="keywords">
-
-  <meta property="og:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
-  <meta property="twitter:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
-  <meta name="twitter:image:src" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg">
-
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/favicon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="../css/style.css" rel="stylesheet">
-
+    <link href="../assets/favicon.png" rel="icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
-
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto">
-        <a href="https://boquila.org/de" style="display: inline-flex; align-items: center;">
-          <img src="../assets/img/logo.png" class="img-fluid" alt="" style="vertical-align: middle;">
-        </a>
-      </h1>
+    <header>
+        <div class="container">
+            <a href="./" class="logo">
+                <img src="../assets/logo2.webp" alt="Boquila logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="hub">Hub</a></li>
+                    <li><a href="verse">Verse</a></li>
+                    <li><a href="donate">Spenden</a></li>
+                    <li>
+                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                            <option value="../hub">EN</option>
+                            <option value="../zh/hub">ZH</option>
+                            <option value="hub" selected>DE</option>
+                            <option value="../fr/hub">FR</option>
+                            <option value="../vi/hub">VI</option>
+                            <option value="../pt/hub">PT</option>
+                            <option value="../es/hub">ES</option>
+                            <option value="../ja/hub">JA</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="https://boquila.org/de/blog">Blog</a></li>
-          <li><a class="nav-link scrollto " href="https://boquila.org/de/hub">HUB</a></li>
-          <li><a class="nav-link scrollto" href="https://boquila.org/de/verse">Verse</a></li>
-          <li><a class="getstarted scrollto" href="https://boquila.org/de/donate">Spenden</a></li>
-          <li>
-            <div class="language-selector-container">
-              <div class="language-selector-button">
-                <span class="current-language">DE</span>
-                <span class="dropdown-icon"></span>
-              </div>
-              <div class="language-dropdown">
-                <a href="https://boquila.org/en" class="language-option" title="English">
-                  EN <span class="language-name">English⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/" class="language-option" title="Español">
-                  ES <span class="language-name">Español⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/fr" class="language-option" title="Français">
-                  FR <span class="language-name">Français⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/de" class="language-option" title="Chinese">
-                  DE <span class="language-name">Deutsch⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/it" class="language-option" title="Italiano">
-                  IT <span class="language-name">Italiano⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/dk" class="language-option" title="Dansk">
-                  DK <span class="language-name">Dansk⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/zh" class="language-option" title="Chinese">
-                  ZH <span class="language-name">简体中文⠀⠀</span>
-                </a>
-                <a href="https://boquila.org/jp" class="language-option" title="Japanese">
-                  JP <span class="language-name">日本語⠀⠀</span>
-                </a>
-              </div>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <main id="main">
-    <section class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="product-info">
-            <h2 class="display-6 fw-bold mb-4" style="color: #33DA72;">BoquilaHUB</h2>
-            <p class="lead text-muted mb-4">
-              Revolutionieren Sie den Naturschutz mit KI, die lokal läuft und Forschern sowie Umweltexperten
-              Spitzentechnologie bietet.
-            </p>
-            <div class="features mb-4">
-              <h5 class="mb-3">Warum BoquilaHUB?</h5>
-              <ul class="list-unstyled">
-                <li class="mb-2 d-flex align-items-center">
-                  <i class="bi bi-lightning-charge text-warning me-3 fs-4"></i>
-                  <span>Lokaler KI-Einsatz (keine Cloud erforderlich)</span>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <i class="bi bi-cpu text-info me-3 fs-4"></i>
-                  <span>Effiziente Leistung für alle Nicht-Inferenz-Aufgaben (geringer CPU- und RAM-Verbrauch)</span>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <i class="bi bi-easel text-success me-3 fs-4"></i>
-                  <span>Intuitive, einfache Benutzeroberfläche</span>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <i class="bi bi-gear text-primary me-3 fs-4"></i>
-                  <span>Cross-kompilierbar (z. B. dieselbe Software kann auf eingebetteten Geräten laufen)</span>
-                </li>
-                <li class="mb-2 d-flex align-items-center">
-                  <i class="bi bi-eye text-primary me-3 fs-4"></i>
-                  <span>Analysieren Sie Bilder, Videos oder Echtzeit-Kamerabilder.</span>
-                </li>
-              </ul>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boquila<span>HUB</span></h1>
+                <p>Plattformübergreifendes Tool zum Ausführen von Computer-Vision-Modellen auf Wildtierdaten. Auf Ihrer eigenen Hardware, keine Cloud erforderlich.</p>
+                <a href="https://github.com/boquila/boquilahub/releases" target="_blank" class="btn-link" style="margin-top: 2rem;">Herunterladen</a>
             </div>
-          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="product-image text-center">
-            <img src="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg"
-              alt="BoquilaHUB-Benutzeroberfläche" class="img-fluid rounded-4 shadow-lg">
-          </div>
-        </div>
-      </div>
-      <div class="d-flex align-items-center">
-        <a href="https://github.com/boquila/boquilahub/" class="btn btn-primary me-3"
-          style="background-color: #33DA72; border-color: #33DA72; border-style: solid;">Mehr erfahren</a>
-      </div>
     </section>
 
-    <section class="container py-5">
-      <h2 class="display-6 fw-bold mb-4" style="color: #33DA72;">Modelle</h2>
-      <p>Laden Sie einfach die Modelle herunter, platzieren Sie sie in Ihrem "models"-Ordner und BoquilaHUB wird sie
-        erkennen.</p>
-      <div class="table-responsive">
-        <table class="table table-bordered table-striped">
-          <thead class="table-dark">
-            <tr>
-              <th>Name</th>
-              <th>Beschreibung</th>
-              <th>Download-Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>boquilanet-cl</td>
-              <td>Chilenische Tiererkennung.</td>
-              <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>boquilanet-gen</td>
-              <td>Generische Tiererkennung.</td>
-              <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>SpeciesNetv4.0.0a</td>
-              <td>SpeciesNet: Klassifizierung von 2000 Tieren</td>
-              <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>SpeciesNetv4.0.0b</td>
-              <td>SpeciesNet: Klassifizierung von 2000 Tieren</td>
-              <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv5a</td>
-              <td>Megadetector V5: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv5b</td>
-              <td>Megadetector V5: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv1000-cedar</td>
-              <td>Megadetector V1000: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv1000-larch</td>
-              <td>Megadetector V1000: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv1000-redwood</td>
-              <td>Megadetector V1000: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv1000-sorrel</td>
-              <td>Megadetector V1000: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDv1000-spruce</td>
-              <td>Megadetector V1000: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDV6-yolov9c</td>
-              <td>Megadetector V6: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDV6-yolov9e</td>
-              <td>Megadetector V6: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>MDV6-yolov9-e-1280</td>
-              <td>Megadetector V6: Erkennung von Tieren, Personen und Fahrzeugen</td>
-              <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>flat-bugM</td>
-              <td>Insektensegmentierung</td>
-              <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>yolov11n</td>
-              <td>Kleines Modell, trainiert auf COCO.</td>
-              <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq" target="_blank">Download</a>
-              </td>
-            </tr>
-            <tr>
-              <td>yolo11n-seg</td>
-              <td>Kleines Modell, trainiert auf COCO</td>
-              <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>pyronear-yolov8s</td>
-              <td>Früherkennung von Waldbränden.</td>
-              <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-            <tr>
-              <td>pyronear-yolov11s</td>
-              <td>Früherkennung von Waldbränden.</td>
-              <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq"
-                  target="_blank">Download</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">Warum BoquilaHUB?</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <span>Lokale KI-Bereitstellung (Keine Cloud nötig)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-microchip"></i>
+                            <span>Konfigurierbare Inferenz</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-desktop"></i>
+                            <span>Intuitive, einfache Benutzeroberfläche</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-eye"></i>
+                            <span>Analyse von Bildern, Videos oder Echtzeit-Kamera-Feeds</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" alt="BoquilaHUB Interface" style="width: 100%; border: var(--border-thick) solid var(--color-dark-gray); box-shadow: 6px 6px 0px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
     </section>
-    <div class="text-center">
-      <a href="https://github.com/boquila/boquilahub/releases/download/v0.3/BoquilaHUB-0.3-windows.7z" target="_blank"
-        class="btn btn-success btn-lg"
-        style="background-color: #33DA72; border-color: #33DA72; border-style: solid;">BoquilaHUB herunterladen</a>
-    </div>
-  </main>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <img src="../assets/img/logo.png" class="img-fluid" alt="" style="width: 400px; height: auto;">
-      <p>Technologie und Natur verbinden</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/company/boquila" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://instagram.com/fundacionboquila" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/boquila" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://huggingface.co/boquila" class="huggingface"><i class="bx bxl">🤗</i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem; color: var(--color-dark-gray); text-align: center;">Verfügbare Modelle</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.2rem;">Laden Sie einfach die Modelle herunter, platzieren Sie sie in Ihrem "models"-Ordner und BoquilaHUB wird sie erkennen.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Beschreibung</th>
+                            <th>Autor(en)</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>boquilanet-cl</td>
+                            <td>Chilenische Tiererkennung</td>
+                            <td>Boquila Foundation</td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>boquilanet-gen</td>
+                            <td>Allgemeine Tiererkennung</td>
+                            <td>Boquila Foundation</td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>SpeciesNetv4.0.0a</td>
+                            <td>SpeciesNet: Klassifizierung von 2000 Tieren</td>
+                            <td>Google</td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>SpeciesNetv4.0.0b</td>
+                            <td>SpeciesNet: Klassifizierung von 2000 Tieren</td>
+                            <td>Google</td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv5a</td>
+                            <td>Megadetector V5: Erkennung von Tieren, Personen und Fahrzeugen</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv5b</td>
+                            <td>Megadetector V5: Erkennung von Tieren, Personen und Fahrzeugen</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <!-- V1000 Models -->
+                        <tr>
+                            <td>MDv1000-cedar</td>
+                            <td>Megadetector V1000</td>
+                            <td>Dan Morris</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-larch</td>
+                            <td>Megadetector V1000</td>
+                            <td>Dan Morris</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-redwood</td>
+                            <td>Megadetector V1000</td>
+                            <td>Dan Morris</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-sorrel</td>
+                            <td>Megadetector V1000</td>
+                            <td>Dan Morris</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-spruce</td>
+                            <td>Megadetector V1000</td>
+                            <td>Dan Morris</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <!-- V6 Models -->
+                        <tr>
+                            <td>MDV6-yolov9c</td>
+                            <td>Megadetector V6</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDV6-yolov9e</td>
+                            <td>Megadetector V6</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDV6-yolov9-e-1280</td>
+                            <td>Megadetector V6</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <!-- Other Models -->
+                        <tr>
+                            <td>flat-bugM</td>
+                            <td>Insektensegmentierung</td>
+                            <td>The DARSA Group</td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>yolov11n</td>
+                            <td>Kleines Modell, trainiert auf COCO</td>
+                            <td>Ultralytics</td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>yolo11n-seg</td>
+                            <td>Kleines Modell (Segmentierung)</td>
+                            <td>Ultralytics</td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>pyronear-yolov8s</td>
+                            <td>Früherkennung von Waldbränden</td>
+                            <td>Pyronear</td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>pyronear-yolov11s</td>
+                            <td>Früherkennung von Waldbränden</td>
+                            <td>Pyronear</td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                        <tr>
+                            <td>cfd-yolov12x-1.00</td>
+                            <td>Allgemeine Fischdetektion</td>
+                            <td>Wild Hackers</td>
+                            <td><a href="https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq" target="_blank" style="text-decoration: underline;">Herunterladen</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../js/main.js"></script>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="./" class="footer-logo">
+                    <img src="../assets/logo.webp" alt="Boquila logo">
+                </a>
+                <p>KI für die Natur</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="mailto:contacto@boquila.org" title="Kontaktiere uns"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/boquila" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://huggingface.co/boquila" target="_blank" title="HuggingFace">
+                    <img src="../assets/huggingface.svg" alt="HuggingFace" class="footer-icon-svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
-
 </html>
