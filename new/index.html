@@ -10,309 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
     
-    <style>
-        :root {
-            --color-green: #33DA72;
-            --color-dark-gray: #4D4D4D;
-            --color-white-gray: #F2F2F2;
-            --border-thick: 2px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Gabarito", sans-serif;
-            background-color: var(--color-white-gray);
-            color: var(--color-dark-gray);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease;
-        }
-
-        /* Layout Utilities */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        /* Buttons & Tags - Hard Edges */
-        .btn-link {
-            display: inline-block;
-            margin-top: 1.5rem;
-            font-weight: 800;
-            text-decoration: none;
-            border: var(--border-thick) solid var(--color-dark-gray);
-            padding: 10px 20px;
-            text-transform: uppercase;
-            background: transparent;
-        }
-
-        .btn-link:hover {
-            background: var(--color-dark-gray);
-            color: var(--color-green);
-        }
-
-        /* Header */
-        header {
-            background-color: white;
-            padding: 20px 0;
-            border-bottom: var(--border-thick) solid var(--color-dark-gray);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 900;
-            font-size: 1.5rem;
-            color: var(--color-dark-gray);
-            letter-spacing: -1px;
-            text-transform: uppercase;
-        }
-        
-        .logo span {
-            color: var(--color-green);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        nav a:hover {
-            color: var(--color-green);
-        }
-
-        /* Hero - Applying the "Green + Box" aesthetic here too */
-        .hero {
-            padding: 80px 0;
-            background-color: var(--color-green);
-            color: var(--color-dark-gray);
-            border-bottom: var(--border-thick) solid var(--color-dark-gray);
-        }
-
-        .hero-box {
-            background: white;
-            border: var(--border-thick) solid var(--color-dark-gray);
-            padding: 3rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .hero h1 span {
-            color: var(--color-green); /* This might need to be dark gray inside white box? Let's keep green for brand */
-            -webkit-text-stroke: 1px var(--color-dark-gray); /* Optional: outline to make it pop on white */
-            -webkit-text-stroke: 0;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        /* Mission / Pillars */
-        .mission {
-            background-color: var(--color-white-gray);
-        }
-
-        .mission h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--color-dark-gray);
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .mission p {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .pillars {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .pillar {
-            background: white;
-            border: var(--border-thick) solid var(--color-dark-gray);
-            padding: 2rem;
-        }
-
-        .pillar h3 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--color-dark-gray);
-            border-bottom: var(--border-thick) solid var(--color-green);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        /* Core Software - The "KING" Style */
-        .software {
-            background-color: var(--color-green);
-            color: var(--color-dark-gray);
-            border-top: var(--border-thick) solid var(--color-dark-gray);
-            border-bottom: var(--border-thick) solid var(--color-dark-gray);
-        }
-
-        .software h2 {
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--color-dark-gray);
-            text-transform: uppercase;
-            font-weight: 900;
-        }
-
-        .software-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0; /* Hard edges touching */
-            border: var(--border-thick) solid var(--color-dark-gray);
-            background: var(--color-dark-gray); /* Gap color */
-            gap: var(--border-thick);
-        }
-
-        .software-item {
-            background: white;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .software-item h3 {
-            font-size: 2.5rem;
-            margin: 0 0 1rem 0;
-            color: var(--color-dark-gray);
-            font-weight: 800;
-        }
-
-        .software-item p {
-            font-size: 1.2rem;
-        }
-
-        /* Projects List */
-        .projects-list h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .tag {
-            background-color: white;
-            border: var(--border-thick) solid var(--color-dark-gray);
-            color: var(--color-dark-gray);
-            padding: 0.8rem 1.5rem;
-            font-weight: 700;
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
-        
-        .tag:hover {
-            background-color: var(--color-dark-gray);
-            color: var(--color-green);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--color-dark-gray);
-            color: var(--color-white-gray);
-            padding: 80px 0;
-            border-top: var(--border-thick) solid var(--color-dark-gray);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            display: block;
-            color: var(--color-green);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .footer-links a {
-            font-weight: 600;
-            text-transform: uppercase;
-            border-bottom: 2px solid transparent;
-        }
-        
-        .footer-links a:hover {
-            border-bottom: 2px solid var(--color-green);
-            color: var(--color-green);
-        }        
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .pillars { grid-template-columns: 1fr; }
-            .software-grid { grid-template-columns: 1fr; }
-            header .container { flex-direction: column; gap: 20px; }
-            .footer-content { flex-direction: column; text-align: left; }
-        }
-    </style>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <a href="#" class="logo">BOQUILA<span>.</span></a>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Boquila logo">
+            </a>
             <nav>
                 <ul>
                     <li><a href="verse.html">Verse</a></li>
@@ -393,17 +102,19 @@
 
     <footer>
         <div class="container footer-content">
-            <div>
-                <span class="footer-logo">BOQUILA</span>
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.png" alt="Boquila logo">
+                </a>
                 <p>AI for nature</p>
             </div>
             
-
             <div class="footer-links">
-                <a href="https://github.com/boquila" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/company/boquila" target="_blank">LinkedIn</a>
-                <a href="https://instagram.com/fundacionboquila" target="_blank">Instagram</a>
-                <a href="https://huggingface.co/boquila" target="_blank">HuggingFace</a>
+                <a href="mailto:contacto@boquila.org" title="Contact Us"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/boquila" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://huggingface.co/boquila" target="_blank" title="HuggingFace"><i class="fas fa-brain"></i></a>
             </div>
         </div>
     </footer>

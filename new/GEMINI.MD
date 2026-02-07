@@ -1,6 +1,6 @@
 # The code
 
-Simple HTML, we do everything by hand. Vanilla everything. No deps outside of the font.
+Simple HTML, we do everything by hand. Vanilla everything. No deps outside of icons, fonts and other similar stuff.
 
 # Branding
 
@@ -16,10 +16,10 @@ Very minimal, simple, yet cute aestethics.
 
 # What's Boquila
 
-A lot of websites have a bunch of bloat and fake stuff. So let's say just what's true about Boquila.
+A lot of websites have a bunch of bloat and fake stuff. We want to be minimal so people can explore our website and get what they want easily.
 
-We develop 2 pieces of software: BoquilaHUB and BoquilaVerse.
+# How to work
 
-That's it.
+Don't make changes that I didn't ask, unless it's obvious it needs to change.
 
-AI for nature. Tech for nature. Tech for good. We want to decentralize and bring cost down to help protect the planet.
+Reuse CSS a lot, about inlining CSS only if it's obvious that it will only go there.
