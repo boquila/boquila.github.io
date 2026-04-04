@@ -48,7 +48,8 @@
                     <li><a href="verse">Verse</a></li>
                     <li><a href="donate">Đóng góp</a></li>
                     <li>
-                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
                             <option value="../">EN</option>
                             <option value="../zh/">ZH</option>
                             <option value="../de/">DE</option>
@@ -64,6 +65,7 @@
         </div>
     </header>
 
+    <main>
     <!-- Hero with the "Green Background" aesthetic -->
     <section class="hero">
         <div class="container">
@@ -106,12 +108,12 @@
                 <div class="software-item">
                     <h3>BoquilaHUB</h3>
                     <p>Ứng dụng máy tính để bàn để chạy các mô hình AI cục bộ và giám sát thiên nhiên.</p>
-                    <a href="hub" class="btn-link">Xem thêm &rarr;</a>
+                    <a href="hub" class="btn-link">Xem BoquilaHUB &rarr;</a>
                 </div>
                 <div class="software-item">
                     <h3>BoquilaVerse</h3>
                     <p>Bộ sưu tập các mô hình 3D được tạo ra từ dữ liệu vật lý chính xác.</p>
-                    <a href="verse" class="btn-link">Xem thêm &rarr;</a>
+                    <a href="verse" class="btn-link">Xem BoquilaVerse &rarr;</a>
                 </div>
             </div>
         </div>
@@ -131,6 +133,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container footer-content">

@@ -31,7 +31,8 @@
                     <li><a href="verse">Verse</a></li>
                     <li><a href="donate">捐赠</a></li>
                     <li>
-                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
                             <option value="../verse">EN</option>
                             <option value="verse" selected>ZH</option>
                             <option value="../de/verse">DE</option>

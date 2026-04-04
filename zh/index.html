@@ -48,7 +48,8 @@
                     <li><a href="verse">Verse</a></li>
                     <li><a href="donate">捐赠</a></li>
                     <li>
-                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
                             <option value="../">EN</option>
                             <option value="./" selected>ZH</option>
                             <option value="../de/">DE</option>
@@ -64,6 +65,7 @@
         </div>
     </header>
 
+    <main>
     <!-- Hero with the "Green Background" aesthetic -->
     <section class="hero">
         <div class="container">
@@ -106,12 +108,12 @@
                 <div class="software-item">
                     <h3>BoquilaHUB</h3>
                     <p>在本地运行 AI 模型并监测自然的桌面应用程序。</p>
-                    <a href="hub" class="btn-link">查看更多 &rarr;</a>
+                    <a href="hub" class="btn-link">查看 BoquilaHUB &rarr;</a>
                 </div>
                 <div class="software-item">
                     <h3>BoquilaVerse</h3>
                     <p>从精确物理数据生成的 3D 模型集合。</p>
-                    <a href="verse" class="btn-link">查看更多 &rarr;</a>
+                    <a href="verse" class="btn-link">查看 BoquilaVerse &rarr;</a>
                 </div>
             </div>
         </div>
@@ -131,6 +133,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container footer-content">

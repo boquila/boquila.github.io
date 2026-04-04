@@ -48,7 +48,8 @@
                     <li><a href="verse">Verse</a></li>
                     <li><a href="donate">Spenden</a></li>
                     <li>
-                        <select class="lang-select" onchange="if(this.value) location.href = this.value;">
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
                             <option value="../">EN</option>
                             <option value="../zh/">ZH</option>
                             <option value="./" selected>DE</option>
@@ -64,6 +65,7 @@
         </div>
     </header>
 
+    <main>
     <!-- Hero with the "Green Background" aesthetic -->
     <section class="hero">
         <div class="container">
@@ -106,12 +108,12 @@
                 <div class="software-item">
                     <h3>BoquilaHUB</h3>
                     <p>Desktop-App zum lokalen Ausführen von KI-Modellen und zur Überwachung der Natur.</p>
-                    <a href="hub" class="btn-link">Mehr sehen &rarr;</a>
+                    <a href="hub" class="btn-link">BoquilaHUB sehen &rarr;</a>
                 </div>
                 <div class="software-item">
                     <h3>BoquilaVerse</h3>
                     <p>Sammlung von 3D-Modellen, generiert aus genauen physikalischen Daten.</p>
-                    <a href="verse" class="btn-link">Mehr sehen &rarr;</a>
+                    <a href="verse" class="btn-link">BoquilaVerse sehen &rarr;</a>
                 </div>
             </div>
         </div>
@@ -131,6 +133,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container footer-content">
