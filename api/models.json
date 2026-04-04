@@ -70,9 +70,24 @@
     "download_link": "https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq"
   },
   {
+    "name": "flat-bugN",
+    "description": "Insect segmentation",
+    "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugN.bq"
+  },
+  {
+    "name": "flat-bugS",
+    "description": "Insect segmentation",
+    "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugS.bq"
+  },
+  {
     "name": "flat-bugM",
     "description": "Insect segmentation",
     "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq"
+  },
+  {
+    "name": "flat-bugL",
+    "description": "Insect segmentation",
+    "download_link": "https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugL.bq"
   },
   {
     "name": "yolov11n",
