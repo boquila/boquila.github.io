@@ -1,5 +1,10 @@
 [
   {
+    "name": "Alita",
+    "description": "New Zealand animal detection.",
+    "download_link": "https://huggingface.co/boquila/Alita/resolve/main/Alita.bq"
+  },
+  {
     "name": "boquilanet-cl",
     "description": "Chilean animal detection.",
     "download_link": "https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq"
