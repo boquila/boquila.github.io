@@ -487,15 +487,10 @@ footer {
 
 .footer-icon-svg {
     height: 1.8rem;
-    width: auto;
+    width: 1.8rem;
     display: block;
-    filter: brightness(0) invert(1); /* Makes it white-gray to match other icons */
+    fill: currentColor;
     transition: all 0.2s ease;
-}
-
-.footer-links a:hover .footer-icon-svg {
-    /* Filter to approximate #33DA72 (Green) */
-    filter: invert(72%) sepia(59%) saturate(464%) hue-rotate(92deg) brightness(96%) contrast(89%);
 }
 
 @media (max-width: 768px) {
