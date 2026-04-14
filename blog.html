@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Boquila</title>
+    <meta name="description" content="Boquila blog — updates on AI for nature, biodiversity conservation, and open-source technology.">
+    <meta name="keywords" content="Boquila blog, AI for nature, biodiversity, open source, conservation technology">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boquila.org/blog">
+    <meta property="og:title" content="Blog - Boquila">
+    <meta property="og:description" content="Updates on AI for nature, biodiversity conservation, and open-source technology.">
+    <meta property="og:image" content="assets/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://boquila.org/blog">
+    <meta property="twitter:title" content="Blog - Boquila">
+    <meta property="twitter:description" content="Updates on AI for nature, biodiversity conservation, and open-source technology.">
+    <meta property="twitter:image" content="assets/logo.webp">
+
+    <link href="assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="./" class="logo">
+                <img width="155" height="40" src="assets/logo2.webp" alt="Boquila logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="hub">Hub</a></li>
+                    <li><a href="verse">Verse</a></li>
+                    <li><a href="blog">Blog</a></li>
+                    <li><a href="donate">Donate</a></li>
+                    <li>
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
+                            <option value="./" selected>EN</option>
+                            <option value="zh/">ZH</option>
+                            <option value="de/">DE</option>
+                            <option value="fr/">FR</option>
+                            <option value="vi/">VI</option>
+                            <option value="pt/">PT</option>
+                            <option value="es/">ES</option>
+                            <option value="ja/">JA</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boquila<span>Blog</span></h1>
+                <p>Updates on our work, research, and the intersection of AI and nature.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray); text-align: center;">Latest Posts</h2>
+            <div class="blog-grid" id="blog-list"></div>
+        </div>
+    </section>
+
+    <script>
+    function formatDate(d) {
+        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const parts = d.split('-');
+        return months[parseInt(parts[1])-1] + ' ' + parseInt(parts[2]) + ', ' + parts[0];
+    }
+    fetch('blog/posts.json')
+        .then(r => r.json())
+        .then(posts => {
+            const list = document.getElementById('blog-list');
+            posts.sort((a, b) => b.date.localeCompare(a.date));
+            list.innerHTML = posts.map(p =>
+                `<a href="blog/${p.slug}" class="blog-card">
+                    <img class="blog-card-img" src="${p.thumbnail}" alt="${p.title}">
+                    <div class="blog-card-body">
+                        <span class="blog-date">${formatDate(p.date)}</span>
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                    </div>
+                </a>`
+            ).join('');
+        });
+    </script>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="./" class="footer-logo">
+                    <img width="178" height="50" src="assets/logo.webp" alt="Boquila logo">
+                </a>
+                <p>AI for nature</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="mailto:contacto@boquila.org" title="Contact Us"><svg class="footer-icon-svg" fill="currentColor"><use href="assets/icons.svg#icon-email"></use></svg></a>
+                <a href="https://github.com/boquila" target="_blank" title="GitHub"><svg class="footer-icon-svg" fill="currentColor"><use href="assets/icons.svg#icon-github"></use></svg></a>
+                <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><svg class="footer-icon-svg" fill="currentColor"><use href="assets/icons.svg#icon-linkedin"></use></svg></a>
+                <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><svg class="footer-icon-svg" fill="currentColor"><use href="assets/icons.svg#icon-instagram"></use></svg></a>
+                <a href="https://huggingface.co/boquila" target="_blank" title="HuggingFace">
+                    <svg class="footer-icon-svg" fill="currentColor"><use href="assets/icons.svg#icon-huggingface"></use></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

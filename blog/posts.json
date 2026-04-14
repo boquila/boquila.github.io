@@ -1,0 +1,9 @@
+[
+    {
+        "slug": "boquilahub-tui",
+        "title": "BoquilaHUB gets a TUI",
+        "description": "BoquilaHUB now ships with a terminal user interface for running AI models directly from the command line.",
+        "date": "2026-04-14",
+        "thumbnail": "blog/boquilahub-tui/cover.jpg"
+    }
+]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoquilaHUB gets a TUI - Boquila Blog</title>
+    <meta name="description" content="BoquilaHUB now has a terminal user interface (TUI) for running AI models directly from the command line.">
+    <meta name="keywords" content="BoquilaHUB, TUI, terminal, AI, biodiversity">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://boquila.org/blog/boquilahub-tui">
+    <meta property="og:title" content="BoquilaHUB gets a TUI - Boquila Blog">
+    <meta property="og:description" content="BoquilaHUB now has a terminal user interface (TUI) for running AI models directly from the command line.">
+    <meta property="og:image" content="cover.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://boquila.org/blog/boquilahub-tui">
+    <meta property="twitter:title" content="BoquilaHUB gets a TUI - Boquila Blog">
+    <meta property="twitter:description" content="BoquilaHUB now has a terminal user interface (TUI) for running AI models directly from the command line.">
+    <meta property="twitter:image" content="cover.jpg">
+
+    <link href="../../assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preload" href="../../assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../../" class="logo">
+                <img width="155" height="40" src="../../assets/logo2.webp" alt="Boquila logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../hub">Hub</a></li>
+                    <li><a href="../../verse">Verse</a></li>
+                    <li><a href="../../blog">Blog</a></li>
+                    <li><a href="../../donate">Donate</a></li>
+                    <li>
+                        <label for="lang-select" class="sr-only">Language</label>
+                        <select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">
+                            <option value="../../" selected>EN</option>
+                            <option value="../../zh/">ZH</option>
+                            <option value="../../de/">DE</option>
+                            <option value="../../fr/">FR</option>
+                            <option value="../../vi/">VI</option>
+                            <option value="../../pt/">PT</option>
+                            <option value="../../es/">ES</option>
+                            <option value="../../ja/">JA</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <time class="blog-post-date">April 14, 2026</time>
+                <h1>BoquilaHUB gets a <span>TUI</span></h1>
+                <p>BoquilaHUB now ships with a terminal user interface for running AI models directly from the command line.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <div class="blog-article">
+                <img src="cover.jpg" alt="BoquilaHUB TUI" class="blog-article-cover">
+                <div class="blog-article-body">
+                    <p>BoquilaHUB now ships with a terminal user interface. You can run inference, manage models, and monitor results without ever leaving your terminal.</p>
+
+                    <img src="first.jpg" alt="BoquilaHUB TUI main view">
+
+                    <p>The TUI is designed to be lightweight and accessible, especially for headless servers and remote environments where a graphical interface isn't practical.</p>
+
+                    <img src="second.jpg" alt="BoquilaHUB TUI running inference">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../../" class="footer-logo">
+                    <img width="178" height="50" src="../../assets/logo.webp" alt="Boquila logo">
+                </a>
+                <p>AI for nature</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="mailto:contacto@boquila.org" title="Contact Us"><svg class="footer-icon-svg" fill="currentColor"><use href="../../assets/icons.svg#icon-email"></use></svg></a>
+                <a href="https://github.com/boquila" target="_blank" title="GitHub"><svg class="footer-icon-svg" fill="currentColor"><use href="../../assets/icons.svg#icon-github"></use></svg></a>
+                <a href="https://www.linkedin.com/company/boquila" target="_blank" title="LinkedIn"><svg class="footer-icon-svg" fill="currentColor"><use href="../../assets/icons.svg#icon-linkedin"></use></svg></a>
+                <a href="https://instagram.com/fundacionboquila" target="_blank" title="Instagram"><svg class="footer-icon-svg" fill="currentColor"><use href="../../assets/icons.svg#icon-instagram"></use></svg></a>
+                <a href="https://huggingface.co/boquila" target="_blank" title="HuggingFace">
+                    <svg class="footer-icon-svg" fill="currentColor"><use href="../../assets/icons.svg#icon-huggingface"></use></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
