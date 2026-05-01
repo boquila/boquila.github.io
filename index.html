@@ -96,38 +96,26 @@
         <div class="scroll-images">
             <div class="scroll-media is-active" data-index="0">
                 <img src="assets/scroll/vangogh1.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
+                <video preload="none" loop muted playsinline class="scroll-video">
                     <source src="assets/scroll/video1.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="scroll-media" data-index="1">
                 <img src="assets/scroll/vangogh2.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
-                    <source src="assets/scroll/video1.mp4" type="video/mp4">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video2.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="scroll-media" data-index="2">
                 <img src="assets/scroll/vangogh3.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
-                    <source src="assets/scroll/video1.mp4" type="video/mp4">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video3.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="scroll-media" data-index="3">
                 <img src="assets/scroll/vangogh4.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
-                    <source src="assets/scroll/video1.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="scroll-media" data-index="4">
-                <img src="assets/scroll/vangogh5.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
-                    <source src="assets/scroll/video1.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="scroll-media" data-index="5">
-                <img src="assets/scroll/vangogh6.webp" alt="" class="scroll-bg">
-                <video autoplay loop muted playsinline class="scroll-video">
-                    <source src="assets/scroll/video1.mp4" type="video/mp4">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video4.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -135,7 +123,7 @@
             <div class="scroll-section" data-index="0">
                 <div class="scroll-section-media">
                     <img src="assets/scroll/vangogh1.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
                         <source src="assets/scroll/video1.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -145,8 +133,8 @@
             <div class="scroll-section" data-index="1">
                 <div class="scroll-section-media">
                     <img src="assets/scroll/vangogh2.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
-                        <source src="assets/scroll/video1.mp4" type="video/mp4">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <h3>Bioacoustics</h3>
@@ -155,8 +143,8 @@
             <div class="scroll-section" data-index="2">
                 <div class="scroll-section-media">
                     <img src="assets/scroll/vangogh3.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
-                        <source src="assets/scroll/video1.mp4" type="video/mp4">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <h3>Computer Vision</h3>
@@ -165,32 +153,12 @@
             <div class="scroll-section" data-index="3">
                 <div class="scroll-section-media">
                     <img src="assets/scroll/vangogh4.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
-                        <source src="assets/scroll/video1.mp4" type="video/mp4">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video4.mp4" type="video/mp4">
                     </video>
                 </div>
                 <h3>Ecosystem Monitoring</h3>
                 <p>Long-term health of ecosystems requires continuous observation. We build integrated monitoring platforms that fuse sensor data into coherent environmental pictures.</p>
-            </div>
-            <div class="scroll-section" data-index="4">
-                <div class="scroll-section-media">
-                    <img src="assets/scroll/vangogh5.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
-                        <source src="assets/scroll/video1.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <h3>IoT &amp; Embedded Systems</h3>
-                <p>Hardware that lasts in the jungle. We design low-power devices and edge-computing nodes that bring intelligence directly to remote field locations.</p>
-            </div>
-            <div class="scroll-section" data-index="5">
-                <div class="scroll-section-media">
-                    <img src="assets/scroll/vangogh6.webp" alt="" class="scroll-section-bg">
-                    <video autoplay loop muted playsinline class="scroll-section-video">
-                        <source src="assets/scroll/video1.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <h3>Synthetic Datasets</h3>
-                <p>Training robust models requires diverse data. We generate synthetic datasets that augment real-world collections and improve model generalization across habitats.</p>
             </div>
         </div>
     </section>
@@ -258,14 +226,32 @@
             var medias = document.querySelectorAll('.scroll-media');
             if (!sections.length || !medias.length) return;
 
+            function controlVideo(mediaOrSection, play) {
+                var video = mediaOrSection.querySelector('video');
+                if (!video) return;
+                if (play) {
+                    video.play().catch(function() {});
+                } else {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            }
+
             var observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        var index = entry.target.getAttribute('data-index');
-                        medias.forEach(function(media) {
-                            media.classList.toggle('is-active', media.getAttribute('data-index') === index);
-                        });
-                    }
+                    var index = entry.target.getAttribute('data-index');
+                    var active = entry.isIntersecting;
+
+                    // Desktop sticky panel: toggle active class + play/pause video
+                    medias.forEach(function(media) {
+                        if (media.getAttribute('data-index') === index) {
+                            media.classList.toggle('is-active', active);
+                            controlVideo(media, active);
+                        }
+                    });
+
+                    // Mobile inline blocks: play/pause video when section is visible
+                    controlVideo(entry.target, active);
                 });
             }, { threshold: 0.5 });
 
