@@ -26,6 +26,7 @@
                 }
             });
 
+            entry.target.classList.toggle('is-active', active);
             controlVideo(entry.target, active);
         });
     }, { threshold: 0.5 });
