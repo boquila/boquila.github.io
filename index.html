@@ -59,7 +59,7 @@
 
     <main>
     <!-- Hero with the "Green Background" aesthetic -->
-    <section class="hero">
+    <section class="hero-landing">
         <div class="container">
             <div class="hero-box">
                 <h1>AI for nature.<br>Tech for <span>good</span>.</h1>
@@ -88,6 +88,77 @@
                     <h3>Real Applications</h3>
                     <p>Useful implementations that impact the real world.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scroll-showcase" id="scrollShowcase">
+        <div class="scroll-images">
+            <div class="scroll-media is-active" data-index="0">
+                <img src="assets/scroll/vangogh1.webp" alt="" class="scroll-bg">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scroll-media" data-index="1">
+                <img src="assets/scroll/vangogh2.webp" alt="" class="scroll-bg">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scroll-media" data-index="2">
+                <img src="assets/scroll/vangogh4.webp" alt="" class="scroll-bg">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scroll-media" data-index="3">
+                <img src="assets/scroll/vangogh3.webp" alt="" class="scroll-bg">
+                <video preload="none" loop muted playsinline class="scroll-video">
+                    <source src="assets/scroll/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="scroll-sections">
+            <div class="scroll-section" data-index="0">
+                <div class="scroll-section-media">
+                    <img src="assets/scroll/vangogh1.webp" alt="" class="scroll-section-bg">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Local AI for Nature</h3>
+                <p>Process any amount of data on your own computer, with local AI. Images, videos or real-time cameras. With just a few clicks.</p>
+            </div>
+            <div class="scroll-section" data-index="1">
+                <div class="scroll-section-media">
+                    <img src="assets/scroll/vangogh2.webp" alt="" class="scroll-section-bg">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Deploy Your Own Server</h3>
+                <p>If you want to process data at scale, maybe you want to deploy servers. We help you with that. Have an easy interactive session.</p>
+            </div>
+            <div class="scroll-section" data-index="2">
+                <div class="scroll-section-media">
+                    <img src="assets/scroll/vangogh4.webp" alt="" class="scroll-section-bg">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Create and Visualize 3D Models</h3>
+                <p>Biologically accurate representations of flora, fauna and funga.</p>
+            </div>
+            <div class="scroll-section" data-index="3">
+                <div class="scroll-section-media">
+                    <img src="assets/scroll/vangogh3.webp" alt="" class="scroll-section-bg">
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="assets/scroll/video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Ready for Your Agents</h3>
+                <p>Packing an extremely simple CLI that you and your agents can use. Monitor nature on auto-pilot.</p>
             </div>
         </div>
     </section>
@@ -149,5 +220,45 @@
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var sections = document.querySelectorAll('.scroll-section');
+            var medias = document.querySelectorAll('.scroll-media');
+            if (!sections.length || !medias.length) return;
+
+            function controlVideo(mediaOrSection, play) {
+                var video = mediaOrSection.querySelector('video');
+                if (!video) return;
+                if (play) {
+                    video.play().catch(function() {});
+                } else {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    var index = entry.target.getAttribute('data-index');
+                    var active = entry.isIntersecting;
+
+                    // Desktop sticky panel: toggle active class + play/pause video
+                    medias.forEach(function(media) {
+                        if (media.getAttribute('data-index') === index) {
+                            media.classList.toggle('is-active', active);
+                            controlVideo(media, active);
+                        }
+                    });
+
+                    // Mobile inline blocks: play/pause video when section is visible
+                    controlVideo(entry.target, active);
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(function(section) {
+                observer.observe(section);
+            });
+        })();
+    </script>
 </body>
 </html>
