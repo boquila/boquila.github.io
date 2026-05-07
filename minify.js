@@ -1,27 +1,32 @@
-// Simple CSS minifier - run with: bun minify.js
+// Build script - run with: bun minify.js
+// Minifies CSS and JS for deployment. Edit the .pretty.css source, not styles.css.
 import { readFileSync, writeFileSync } from "fs";
 
+// --- CSS ---
 const css = readFileSync("styles.css", "utf-8");
-
-const minified = css
-  // Remove comments
+const minifiedCss = css
   .replace(/\/\*[\s\S]*?\*\//g, "")
-  // Remove newlines and extra whitespace
   .replace(/\s+/g, " ")
-  // Remove space around selectors/braces
-  .replace(/\s*{\s*/g, "{")
-  .replace(/\s*}\s*/g, "}")
+  .replace(/\s*\{\s*/g, "{")
+  .replace(/\s*\}\s*/g, "}")
   .replace(/\s*;\s*/g, ";")
   .replace(/\s*:\s*/g, ":")
   .replace(/\s*,\s*/g, ",")
-  // Remove trailing semicolons before closing braces
-  .replace(/;}/g, "}")
-  // Remove leading/trailing whitespace
+  .replace(/;\}/g, "}")
   .trim();
 
-writeFileSync("styles.css", minified);
+writeFileSync("styles.css", minifiedCss);
+console.log(`CSS: ${css.length} -> ${minifiedCss.length} bytes (${(((css.length - minifiedCss.length) / css.length) * 100).toFixed(1)}% saved)`);
 
-const savings = css.length - minified.length;
-console.log(`Original: ${css.length} bytes`);
-console.log(`Minified: ${minified.length} bytes`);
-console.log(`Saved: ${savings} bytes (${((savings / css.length) * 100).toFixed(1)}%)`);
+// --- JS ---
+const js = readFileSync("main.js", "utf-8");
+const minifiedJs = js
+  .replace(/\/\*[\s\S]*?\*\//g, "")
+  .replace(/\/\/.*$/gm, "")
+  .split("\n")
+  .map((line) => line.trim())
+  .filter((line) => line.length > 0)
+  .join("\n");
+
+writeFileSync("main.js", minifiedJs);
+console.log(`JS:  ${js.length} -> ${minifiedJs.length} bytes (${(((js.length - minifiedJs.length) / js.length) * 100).toFixed(1)}% saved)`);
