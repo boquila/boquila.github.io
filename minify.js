@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync } from "fs";
 const css = readFileSync("styles.css", "utf-8");
 const minifiedCss = css
   .replace(/\/\*[\s\S]*?\*\//g, "")
+  .replace(/url\([^)]*\)/gi, (m) => m.replace(/\s+/g, ""))
   .replace(/\s+/g, " ")
   .replace(/\s*\{\s*/g, "{")
   .replace(/\s*\}\s*/g, "}")
