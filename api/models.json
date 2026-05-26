@@ -128,5 +128,15 @@
     "name": "perch-v2",
     "description": "Audio classification across 14,795 species, covering birds, frogs, insects & mammals",
     "download_link": "https://huggingface.co/boquila/perch/resolve/main/perch-v2.bq"
+  },
+  {
+    "name": "bioclip2",
+    "description": "Embedding model for biodiversity",
+    "download_link": "https://huggingface.co/boquila/clip/resolve/main/bioclip2.bq"
+  },
+  {
+    "name": "dinov3",
+    "description": "Cutting edge visual representation",
+    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3.bq"
   }
 ]
