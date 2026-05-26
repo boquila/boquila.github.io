@@ -121,7 +121,7 @@
   },
   {
     "name": "MD_AudioBirds_V1",
-    "description": "Binary audio classificatio for birds (pressence)",
+    "description": "Binary audio classification for birds (presence)",
     "download_link": "https://huggingface.co/boquila/md-audio/resolve/main/MD_AudioBirds_V1.bq"
   },
   {
