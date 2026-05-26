@@ -118,5 +118,15 @@
     "name": "cfd-yolov12x-1.00",
     "description": "Generic fish detection.",
     "download_link": "https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq"
+  },
+  {
+    "name": "MD_AudioBirds_V1",
+    "description": "Binary audio classificatio for birds (pressence)",
+    "download_link": "https://huggingface.co/boquila/md-audio/resolve/main/MD_AudioBirds_V1.bq"
+  },
+  {
+    "name": "perch-v2",
+    "description": "Audio classification across 14,795 species, covering birds, frogs, insects & mammals",
+    "download_link": "https://huggingface.co/boquila/perch/resolve/main/perch-v2.bq"
   }
 ]
