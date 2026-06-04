@@ -711,7 +711,7 @@ position:sticky;
 top:0;
 height:100vh;
 overflow:hidden;
-background:var(--color-dark-gray)
+background:var(--color-green)
 }
 .scroll-media {
 position:absolute;
@@ -720,10 +720,16 @@ display:flex;
 align-items:center;
 justify-content:center;
 opacity:0;
-transition:opacity .8s ease
+will-change:opacity;
+transition:opacity .8s ease .8s
 }
 .scroll-media.is-active {
-opacity:1
+opacity:1;
+transition:opacity .8s ease
+}
+.scroll-media.is-leaving {
+opacity:0;
+transition:opacity .8s ease
 }
 .scroll-bg {
 position:absolute;
@@ -740,6 +746,15 @@ width:80%;
 height:auto;
 max-height:80%;
 object-fit:contain
+}
+.scroll-video,
+.scroll-section-video {
+opacity:0;
+transition:opacity .8s ease
+}
+.scroll-video.is-playing,
+.scroll-section-video.is-playing {
+opacity:1
 }
 .scroll-sections {
 background:var(--color-white-gray)
