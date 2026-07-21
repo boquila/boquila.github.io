@@ -135,8 +135,8 @@
     "download_link": "https://huggingface.co/boquila/clip/resolve/main/bioclip2.bq"
   },
   {
-    "name": "dinov3",
+    "name": "dinov3-vitl16",
     "description": "Cutting edge visual representation",
-    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3.bq"
+    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vitl16.bq"
   }
 ]
