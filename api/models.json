@@ -135,6 +135,21 @@
     "download_link": "https://huggingface.co/boquila/clip/resolve/main/bioclip2.bq"
   },
   {
+    "name": "dinov3-vits16",
+    "description": "Cutting edge visual representation",
+    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vits16.bq"
+  },
+  {
+    "name": "dinov3-vits16plus",
+    "description": "Cutting edge visual representation",
+    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vits16plus.bq"
+  },
+  {
+    "name": "dinov3-vitb16",
+    "description": "Cutting edge visual representation",
+    "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vitb16.bq"
+  },
+  {
     "name": "dinov3-vitl16",
     "description": "Cutting edge visual representation",
     "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vitl16.bq"
