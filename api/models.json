@@ -153,5 +153,15 @@
     "name": "dinov3-vitl16",
     "description": "Cutting edge visual representation",
     "download_link": "https://huggingface.co/boquila/dino/resolve/main/dinov3-vitl16.bq"
+  },
+  {
+    "name": "HerdNet-General",
+    "description": "Animal detection from drone footage.",
+    "download_link": "https://huggingface.co/boquila/overhead/resolve/main/HerdNet-General.bq"
+  },
+  {
+    "name": "OWL",
+    "description": "Animal detection from drone footage.",
+    "download_link": "https://huggingface.co/boquila/overhead/resolve/main/OWL.bq"
   }
 ]
