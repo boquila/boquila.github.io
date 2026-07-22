@@ -165,7 +165,7 @@
     "download_link": "https://huggingface.co/boquila/overhead/resolve/main/OWL.bq"
   },
   {
-    "name": "batdetect2-uk.bq",
+    "name": "batdetect2-uk",
     "description": "Bat audio detection for the UK",
     "download_link": "https://huggingface.co/boquila/batdetect/resolve/main/batdetect2-uk.bq"
   }
