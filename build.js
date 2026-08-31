@@ -50,7 +50,13 @@ function pathVars(page, lang, depth) {
   return vars;
 }
 
-// Path variables for localized blog posts: en at /blog/<slug>/, others at /<lang>/blog/<slug>/
+// Single source of truth for post URLs: en at /blog/<slug>/, others at /<lang>/blog/<slug>/.
+// Post pages are written to dist + this path, and blog cards link to it, so they can't diverge.
+function postPath(lang, slug) {
+  return `/${lang === "en" ? "" : lang + "/"}blog/${slug}/`;
+}
+
+// Path variables for localized blog posts
 function postPathVars(slug, lang) {
   const isEn = lang === "en";
   const up = isEn ? "../../" : "../../../"; // to the site root
@@ -61,8 +67,7 @@ function postPathVars(slug, lang) {
   };
   for (const p of PAGES) vars[`navHref.${p}`] = "../.." + "/" + p;
   const options = LANGS.map((L) => {
-    const target =
-      L === lang ? "./" : `${up}${L === "en" ? "" : L + "/"}blog/${slug}`;
+    const target = L === lang ? "./" : postPath(L, slug);
     const selected = L === lang ? " selected" : "";
     return `                            <option value="${target}"${selected}>${L.toUpperCase()}</option>`;
   });
@@ -99,9 +104,10 @@ mkdirSync("dist/blog", { recursive: true });
 for (const lang of LANGS) {
   const cards = posts.map((p) => {
     const i = (p.i18n && p.i18n[lang]) || {};
-    return {
-      slug: p.slug,
-      title: i.title || p.title,
+  return {
+    slug: p.slug,
+    href: postPath(lang, p.slug),
+    title: i.title || p.title,
       description: i.description || p.description,
       date: p.date,
       thumbnail: p.thumbnail,
@@ -127,12 +133,12 @@ for (const post of posts) {
       "post.description": i.description || post.description,
       "post.keywords": post.keywords || "",
       "post.dateFormatted": new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric" }).format(new Date(post.date + "T00:00:00")),
-      "post.ogUrl": `${SITE}${lang === "en" ? "" : "/" + lang}/blog/${post.slug}`,
+      "post.ogUrl": `${SITE}${postPath(lang, post.slug)}`,
       "post.body": render(bodyTpl, dict(shared, bodyStrings, lang)),
     };
     vars.header = render(headerTpl, vars);
     vars.footer = render(footerTpl, vars);
-    const file = lang === "en" ? `dist/blog/${post.slug}/index.html` : `dist/${lang}/blog/${post.slug}/index.html`;
+    const file = `dist${postPath(lang, post.slug)}index.html`;
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, render(postTpl, vars));
   }
@@ -175,6 +181,7 @@ const copyDir = (src, dest, skip = (f) => false) => {
 };
 copyDir("api", "dist/api");
 copyDir("assets", "dist/assets");
-copyDir("blog", "dist/blog", (f) => f.startsWith("body"));
+// Copy blog assets; skip body templates and posts.json, which the generator writes itself.
+copyDir("blog", "dist/blog", (f) => f.startsWith("body") || f === "posts.json");
 
 console.log(`Built ${PAGES.length * LANGS.length} pages + ${posts.length * LANGS.length} blog post(s) into dist/`);

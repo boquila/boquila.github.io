@@ -55,7 +55,7 @@
             const list = document.getElementById('blog-list');
             posts.sort((a, b) => b.date.localeCompare(a.date));
             list.innerHTML = posts.map(p =>
-                `<a href="{{r}}blog/${p.slug}" class="blog-card">
+                `<a href="${p.href}" class="blog-card">
                     <img class="blog-card-img" src="{{r}}${p.thumbnail}" alt="${p.title}">
                     <div class="blog-card-body">
                         <span class="blog-date">${formatDate(p.date, '{{lang}}')}</span>
