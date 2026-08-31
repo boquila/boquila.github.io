@@ -2,7 +2,7 @@
 
 Static site built with a minimal generator: `bun build.js` outputs everything into `dist/` (not committed, deployed by CI).
 
-Pages live in `site/pages/` as pairs: `page.html` (structure, with `{{key}}` placeholders) + `page.json` (all text/localization, keyed by language, English required, other languages fall back to English key by key). Shared header/footer: `site/header.html`, `site/footer.html`; shared text (nav labels, footer): `site/shared.json`. Never edit `dist/`, it is generated. `api/` is served untouched, don't restructure it. Blog posts: entries in `blog/posts.json`, body html in `blog/<slug>/body.html`, rendered through `site/pages/post.html`.
+Pages live in `site/pages/` as pairs: `page.html` (structure, with `{{key}}` placeholders) + `page.json` (all text/localization, keyed by language, English required, other languages fall back to English key by key). Shared header/footer: `site/header.html`, `site/footer.html`; shared text (nav labels, footer): `site/shared.json`. Never edit `dist/`, it is generated. `api/` is served untouched, don't restructure it. Blog posts: entries in `blog/posts.json` (feed metadata; translated titles/descriptions under `i18n`), article body as a template in `blog/<slug>/body.html` (`{{key}}` placeholders) + `blog/<slug>/body.json` (text/localization, same fallback rules), rendered through `site/pages/post.html` into `/<lang>/blog/<slug>/`.
 
 To add a page: create `site/pages/name.html` + `site/pages/name.json` (at least `en`) and add the name to `PAGES` in `build.js`.
 

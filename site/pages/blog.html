@@ -46,12 +46,10 @@
     </section>
 
     <script>
-    function formatDate(d) {
-        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-        const parts = d.split('-');
-        return months[parseInt(parts[1])-1] + ' ' + parseInt(parts[2]) + ', ' + parts[0];
+    function formatDate(d, lang) {
+        return new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(d + 'T00:00:00'));
     }
-    fetch('{{r}}blog/posts.json')
+    fetch('{{r}}blog/posts{{postsSuffix}}.json')
         .then(r => r.json())
         .then(posts => {
             const list = document.getElementById('blog-list');
@@ -60,7 +58,7 @@
                 `<a href="{{r}}blog/${p.slug}" class="blog-card">
                     <img class="blog-card-img" src="{{r}}${p.thumbnail}" alt="${p.title}">
                     <div class="blog-card-body">
-                        <span class="blog-date">${formatDate(p.date)}</span>
+                        <span class="blog-date">${formatDate(p.date, '{{lang}}')}</span>
                         <h3>${p.title}</h3>
                         <p>${p.description}</p>
                     </div>

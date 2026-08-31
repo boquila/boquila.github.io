@@ -1,0 +1,50 @@
+{
+  "en": {
+    "p1": "BoquilaHUB now ships with a terminal user interface. You can run inference, manage models, and monitor results without ever leaving your terminal.",
+    "img1.alt": "BoquilaHUB TUI main view",
+    "p2": "The TUI is designed to be lightweight and accessible, especially for headless servers and remote environments where a graphical interface isn't practical.",
+    "img2.alt": "BoquilaHUB TUI running inference"
+  },
+  "es": {
+    "p1": "BoquilaHUB ahora incluye una interfaz de usuario de terminal. Puedes ejecutar inferencia, gestionar modelos y monitorear resultados sin salir de tu terminal.",
+    "img1.alt": "Vista principal de la TUI de BoquilaHUB",
+    "p2": "La TUI está diseñada para ser ligera y accesible, especialmente para servidores sin interfaz gráfica y entornos remotos donde una interfaz gráfica no es práctica.",
+    "img2.alt": "TUI de BoquilaHUB ejecutando inferencia"
+  },
+  "de": {
+    "p1": "BoquilaHUB enthält jetzt eine Terminal-Benutzeroberfläche. Sie können Inferenz ausführen, Modelle verwalten und Ergebnisse überwachen, ohne Ihr Terminal jemals zu verlassen.",
+    "img1.alt": "Hauptansicht der BoquilaHUB-TUI",
+    "p2": "Die TUI ist leichtgewichtig und zugänglich konzipiert, besonders für Headless-Server und Remote-Umgebungen, in denen eine grafische Oberfläche unpraktisch ist.",
+    "img2.alt": "BoquilaHUB-TUI führt Inferenz aus"
+  },
+  "fr": {
+    "p1": "BoquilaHUB inclut désormais une interface utilisateur en terminal. Vous pouvez exécuter l'inférence, gérer les modèles et surveiller les résultats sans jamais quitter votre terminal.",
+    "img1.alt": "Vue principale de la TUI de BoquilaHUB",
+    "p2": "La TUI est conçue pour être légère et accessible, en particulier pour les serveurs headless et les environnements distants où une interface graphique n'est pas pratique.",
+    "img2.alt": "TUI de BoquilaHUB exécutant l'inférence"
+  },
+  "ja": {
+    "p1": "BoquilaHUBにターミナルユーザーインターフェースが搭載されました。ターミナルを離れることなく、推論の実行、モデルの管理、結果の監視ができます。",
+    "img1.alt": "BoquilaHUB TUIのメイン画面",
+    "p2": "TUIは軽量で使いやすい設計になっており、特にグラフィカルインターフェースが実用的でないヘッドレスサーバーやリモート環境に最適です。",
+    "img2.alt": "推論を実行するBoquilaHUB TUI"
+  },
+  "pt": {
+    "p1": "O BoquilaHUB agora inclui uma interface de usuário de terminal. Você pode executar inferência, gerenciar modelos e monitorar resultados sem nunca sair do seu terminal.",
+    "img1.alt": "Visão principal da TUI do BoquilaHUB",
+    "p2": "A TUI foi projetada para ser leve e acessível, especialmente para servidores headless e ambientes remotos onde uma interface gráfica não é prática.",
+    "img2.alt": "TUI do BoquilaHUB executando inferência"
+  },
+  "vi": {
+    "p1": "BoquilaHUB hiện đã đi kèm giao diện người dùng dòng lệnh. Bạn có thể chạy suy luận, quản lý mô hình và giám sát kết quả mà không cần rời khỏi terminal.",
+    "img1.alt": "Giao diện chính của BoquilaHUB TUI",
+    "p2": "TUI được thiết kế nhẹ nhàng và dễ sử dụng, đặc biệt phù hợp cho các máy chủ headless và môi trường từ xa nơi giao diện đồ họa không khả thi.",
+    "img2.alt": "BoquilaHUB TUI đang chạy suy luận"
+  },
+  "zh": {
+    "p1": "BoquilaHUB 现已内置终端用户界面。您可以在不离开终端的情况下运行推理、管理模型并监控结果。",
+    "img1.alt": "BoquilaHUB TUI 主界面",
+    "p2": "TUI 的设计轻量且易于使用，特别适合无头服务器以及图形界面不实用的远程环境。",
+    "img2.alt": "BoquilaHUB TUI 正在运行推理"
+  }
+}

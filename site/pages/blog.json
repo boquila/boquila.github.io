@@ -7,5 +7,68 @@
     "og.description": "Updates on AI for nature, biodiversity conservation, and open-source technology.",
     "hero.p": "Updates on our work, research, and the intersection of AI and nature.",
     "latest": "Latest Posts"
+  },
+  "es": {
+    "title": "Blog - Boquila",
+    "description": "Blog de Boquila — novedades sobre IA para la naturaleza, conservación de la biodiversidad y tecnología de código abierto.",
+    "keywords": "Blog de Boquila, IA para la naturaleza, biodiversidad, código abierto, tecnología de conservación",
+    "og.title": "Blog - Boquila",
+    "og.description": "Novedades sobre IA para la naturaleza, conservación de la biodiversidad y tecnología de código abierto.",
+    "hero.p": "Novedades sobre nuestro trabajo, investigación y la intersección entre la IA y la naturaleza.",
+    "latest": "Últimas publicaciones"
+  },
+  "de": {
+    "title": "Blog - Boquila",
+    "description": "Boquila-Blog — Updates über KI für die Natur, Schutz der biologischen Vielfalt und Open-Source-Technologie.",
+    "keywords": "Boquila Blog, KI für die Natur, biologische Vielfalt, Open Source, Naturschutztechnologie",
+    "og.title": "Blog - Boquila",
+    "og.description": "Updates über KI für die Natur, Schutz der biologischen Vielfalt und Open-Source-Technologie.",
+    "hero.p": "Updates über unsere Arbeit, Forschung und die Schnittstelle von KI und Natur.",
+    "latest": "Neueste Beiträge"
+  },
+  "fr": {
+    "title": "Blog - Boquila",
+    "description": "Blog de Boquila — actualités sur l'IA pour la nature, la conservation de la biodiversité et la technologie open source.",
+    "keywords": "Blog Boquila, IA pour la nature, biodiversité, open source, technologie de conservation",
+    "og.title": "Blog - Boquila",
+    "og.description": "Actualités sur l'IA pour la nature, la conservation de la biodiversité et la technologie open source.",
+    "hero.p": "Actualités sur notre travail, nos recherches et l'intersection de l'IA et de la nature.",
+    "latest": "Derniers articles"
+  },
+  "ja": {
+    "title": "ブログ - Boquila",
+    "description": "Boquilaブログ — 自然のためのAI、生物多様性の保全、オープンソース技術に関する最新情報。",
+    "keywords": "Boquilaブログ, 自然のためのAI, 生物多様性, オープンソース, 保全技術",
+    "og.title": "ブログ - Boquila",
+    "og.description": "自然のためのAI、生物多様性の保全、オープンソース技術に関する最新情報。",
+    "hero.p": "私たちの活動、研究、そしてAIと自然の交差点に関する最新情報。",
+    "latest": "最新の投稿"
+  },
+  "pt": {
+    "title": "Blog - Boquila",
+    "description": "Blog da Boquila — novidades sobre IA para a natureza, conservação da biodiversidade e tecnologia de código aberto.",
+    "keywords": "Blog Boquila, IA para a natureza, biodiversidade, código aberto, tecnologia de conservação",
+    "og.title": "Blog - Boquila",
+    "og.description": "Novidades sobre IA para a natureza, conservação da biodiversidade e tecnologia de código aberto.",
+    "hero.p": "Novidades sobre nosso trabalho, pesquisa e a interseção entre IA e natureza.",
+    "latest": "Últimas publicações"
+  },
+  "vi": {
+    "title": "Blog - Boquila",
+    "description": "Blog Boquila — cập nhật về AI cho thiên nhiên, bảo tồn đa dạng sinh học và công nghệ mã nguồn mở.",
+    "keywords": "Blog Boquila, AI cho thiên nhiên, đa dạng sinh học, mã nguồn mở, công nghệ bảo tồn",
+    "og.title": "Blog - Boquila",
+    "og.description": "Cập nhật về AI cho thiên nhiên, bảo tồn đa dạng sinh học và công nghệ mã nguồn mở.",
+    "hero.p": "Cập nhật về công việc, nghiên cứu của chúng tôi và giao thoa giữa AI và thiên nhiên.",
+    "latest": "Bài viết mới nhất"
+  },
+  "zh": {
+    "title": "博客 - Boquila",
+    "description": "Boquila 博客 — 关于自然人工智能、生物多样性保护和开源技术的最新动态。",
+    "keywords": "Boquila 博客, 自然人工智能, 生物多样性, 开源, 保护技术",
+    "og.title": "博客 - Boquila",
+    "og.description": "关于自然人工智能、生物多样性保护和开源技术的最新动态。",
+    "hero.p": "关于我们的工作、研究以及人工智能与自然交汇处的最新动态。",
+    "latest": "最新文章"
   }
 }

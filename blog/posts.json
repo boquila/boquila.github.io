@@ -6,6 +6,43 @@
         "description": "BoquilaHUB now ships with a terminal user interface for running AI models directly from the command line.",
         "keywords": "BoquilaHUB, TUI, terminal, AI, biodiversity",
         "date": "2026-04-14",
-        "thumbnail": "blog/boquilahub-tui/cover.jpg"
+        "thumbnail": "blog/boquilahub-tui/cover.jpg",
+        "i18n": {
+            "es": {
+                "title": "BoquilaHUB estrena una TUI",
+                "htmlTitle": "BoquilaHUB estrena una <span>TUI</span>",
+                "description": "BoquilaHUB ahora incluye una interfaz de terminal para ejecutar modelos de IA directamente desde la línea de comandos."
+            },
+            "de": {
+                "title": "BoquilaHUB bekommt eine TUI",
+                "htmlTitle": "BoquilaHUB bekommt eine <span>TUI</span>",
+                "description": "BoquilaHUB enthält jetzt eine Terminal-Benutzeroberfläche, um KI-Modelle direkt über die Kommandozeile auszuführen."
+            },
+            "fr": {
+                "title": "BoquilaHUB se dote d'une TUI",
+                "htmlTitle": "BoquilaHUB se dote d'une <span>TUI</span>",
+                "description": "BoquilaHUB inclut désormais une interface en terminal pour exécuter des modèles d'IA directement depuis la ligne de commande."
+            },
+            "ja": {
+                "title": "BoquilaHUBにTUIが登場",
+                "htmlTitle": "BoquilaHUBに<span>TUI</span>が登場",
+                "description": "BoquilaHUBに、コマンドラインから直接AIモデルを実行できるターミナルユーザーインターフェースが搭載されました。"
+            },
+            "pt": {
+                "title": "BoquilaHUB ganha uma TUI",
+                "htmlTitle": "BoquilaHUB ganha uma <span>TUI</span>",
+                "description": "O BoquilaHUB agora inclui uma interface de terminal para executar modelos de IA diretamente da linha de comando."
+            },
+            "vi": {
+                "title": "BoquilaHUB có thêm TUI",
+                "htmlTitle": "BoquilaHUB có thêm <span>TUI</span>",
+                "description": "BoquilaHUB hiện đã đi kèm giao diện người dùng dòng lệnh để chạy các mô hình AI trực tiếp từ terminal."
+            },
+            "zh": {
+                "title": "BoquilaHUB 推出 TUI",
+                "htmlTitle": "BoquilaHUB 推出 <span>TUI</span>",
+                "description": "BoquilaHUB 现已内置终端用户界面，可直接通过命令行运行 AI 模型。"
+            }
+        }
     }
 ]

@@ -50,6 +50,26 @@ function pathVars(page, lang, depth) {
   return vars;
 }
 
+// Path variables for localized blog posts: en at /blog/<slug>/, others at /<lang>/blog/<slug>/
+function postPathVars(slug, lang) {
+  const isEn = lang === "en";
+  const up = isEn ? "../../" : "../../../"; // to the site root
+  const vars = {
+    lang,
+    r: up,
+    logoHref: "../..",
+  };
+  for (const p of PAGES) vars[`navHref.${p}`] = "../.." + "/" + p;
+  const options = LANGS.map((L) => {
+    const target =
+      L === lang ? "./" : `${up}${L === "en" ? "" : L + "/"}blog/${slug}`;
+    const selected = L === lang ? " selected" : "";
+    return `                            <option value="${target}"${selected}>${L.toUpperCase()}</option>`;
+  });
+  vars.langSelect = `<select id="lang-select" class="lang-select" onchange="if(this.value) location.href = this.value;">\n${options.join("\n")}\n                        </select>`;
+  return vars;
+}
+
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
 
@@ -63,6 +83,7 @@ for (const page of PAGES) {
   for (const lang of ["en", "es", "de", "fr", "ja", "pt", "vi", "zh"]) {
     const depth = lang === "en" ? 0 : 1;
     const vars = { ...dict(shared, pageStrings, lang), ...pathVars(page, lang, depth) };
+    if (page === "blog") vars.postsSuffix = lang === "en" ? "" : "." + lang;
     vars.header = render(headerTpl, vars);
     vars.footer = render(footerTpl, vars);
     const out = render(tpl, vars);
@@ -72,28 +93,49 @@ for (const page of PAGES) {
   }
 }
 
-// Blog posts: one page per entry in blog/posts.json, body from blog/<slug>/body.html.
+// Blog: per-language card lists for the runtime fetch.
 const posts = json("blog/posts.json");
+mkdirSync("dist/blog", { recursive: true });
+for (const lang of LANGS) {
+  const cards = posts.map((p) => {
+    const i = (p.i18n && p.i18n[lang]) || {};
+    return {
+      slug: p.slug,
+      title: i.title || p.title,
+      description: i.description || p.description,
+      date: p.date,
+      thumbnail: p.thumbnail,
+    };
+  });
+  const name = lang === "en" ? "posts.json" : `posts.${lang}.json`;
+  writeFileSync(`dist/blog/${name}`, JSON.stringify(cards, null, 2) + "\n");
+}
+
+// Blog posts: one page per entry and language, body rendered from blog/<slug>/body.html + body.json.
 const postTpl = read("site/pages/post.html");
-const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 for (const post of posts) {
-  const [y, m, d] = post.date.split("-");
-  const vars = {
-    ...dict(shared, {}, "en"),
-    ...pathVars("blog", "en", 2),
-    "post.slug": post.slug,
-    "post.title": post.title,
-    "post.htmlTitle": post.htmlTitle || post.title,
-    "post.description": post.description,
-    "post.keywords": post.keywords || "",
-    "post.dateFormatted": `${months[parseInt(m) - 1]} ${parseInt(d)}, ${y}`,
-    "post.body": read(`blog/${post.slug}/body.html`).trim(),
-  };
-  vars.header = render(headerTpl, vars);
-  vars.footer = render(footerTpl, vars);
-  const file = `dist/blog/${post.slug}/index.html`;
-  mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, render(postTpl, vars));
+  const bodyTpl = read(`blog/${post.slug}/body.html`);
+  const bodyStrings = json(`blog/${post.slug}/body.json`);
+  for (const lang of LANGS) {
+    const i = (post.i18n && post.i18n[lang]) || {};
+    const vars = {
+      ...dict(shared, {}, lang),
+      ...postPathVars(post.slug, lang),
+      "post.slug": post.slug,
+      "post.title": i.title || post.title,
+      "post.htmlTitle": i.htmlTitle || i.title || post.htmlTitle || post.title,
+      "post.description": i.description || post.description,
+      "post.keywords": post.keywords || "",
+      "post.dateFormatted": new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric" }).format(new Date(post.date + "T00:00:00")),
+      "post.ogUrl": `${SITE}${lang === "en" ? "" : "/" + lang}/blog/${post.slug}`,
+      "post.body": render(bodyTpl, dict(shared, bodyStrings, lang)),
+    };
+    vars.header = render(headerTpl, vars);
+    vars.footer = render(footerTpl, vars);
+    const file = lang === "en" ? `dist/blog/${post.slug}/index.html` : `dist/${lang}/blog/${post.slug}/index.html`;
+    mkdirSync(dirname(file), { recursive: true });
+    writeFileSync(file, render(postTpl, vars));
+  }
 }
 
 // Minified CSS and JS (sources stay untouched).
@@ -133,6 +175,6 @@ const copyDir = (src, dest, skip = (f) => false) => {
 };
 copyDir("api", "dist/api");
 copyDir("assets", "dist/assets");
-copyDir("blog", "dist/blog", (f) => f === "body.html");
+copyDir("blog", "dist/blog", (f) => f.startsWith("body"));
 
-console.log(`Built ${PAGES.length * LANGS.length} pages + ${posts.length} blog post(s) into dist/`);
+console.log(`Built ${PAGES.length * LANGS.length} pages + ${posts.length * LANGS.length} blog post(s) into dist/`);
