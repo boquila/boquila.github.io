@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta
+        content="{{description}}"
+        name="description">
+    <meta
+        content="{{keywords}}"
+        name="keywords">
+
+    <meta property="og:image" content="https://boquila.org/assets/img/logo.webp"/>
+    <meta property="twitter:image" content="https://boquila.org/assets/img/logo.webp"/>
+    <meta name="twitter:image:src" content="https://boquila.org/assets/img/logo.webp">
+    <link href="{{r}}assets/favicon.png" rel="icon">
+        
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box text-center" style="text-align: center;">
+                <h1>{{hero.h1}}</h1>
+                <p>{{hero.p}}</p>
+                
+                <div style="margin: 2rem 0;">
+                    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+                    <script type='text/javascript'>kofiwidget2.init('{{kofi}}', '#33DA72', 'Y8Y716P393'); kofiwidget2.draw();</script>
+                </div>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem; margin-left: auto; margin-right: auto;">{{orGithub}}</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a target="_blank" href="https://github.com/sponsors/boquila" class="btn-link" style="background: #24292e; color: white; border-color: #24292e;">
+                            <svg class="btn-icon"><use href="{{r}}assets/icons.svg#icon-github"></use></svg> {{sponsor}}
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem; margin-left: auto; margin-right: auto;">{{orReveniu}}</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a target="_blank" href="https://app.reveniu.com/checkout-custom-link/83xh0zQCgwLMg2oSXihHk4LLs5VEMFzS" class="btn-link" style="background: #336dff; color: white; border-color: #336dff;">
+                            {{monthly}}
+                        </a>
+                        <a target="_blank" href="https://app.reveniu.com/checkout-custom-link/k6ja1CwHiO9Guc0RdEyLDiV7tob6zOvH" class="btn-link" style="background: #336dff; color: white; border-color: #336dff;">
+                            {{onetime}}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{{footer}}
+
+</body>
+</html>

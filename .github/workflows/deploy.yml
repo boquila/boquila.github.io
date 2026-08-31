@@ -25,8 +25,11 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Minify assets
-        run: bun minify.js
+      - name: Test
+        run: bun tests.js
+
+      - name: Build site
+        run: bun build.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -34,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'dist'
 
   deploy:
     environment:

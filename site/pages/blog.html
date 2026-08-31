@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ogUrl}}">
+    <meta property="og:title" content="{{og.title}}">
+    <meta property="og:description" content="{{og.description}}">
+    <meta property="og:image" content="{{r}}assets/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ogUrl}}">
+    <meta property="twitter:title" content="{{og.title}}">
+    <meta property="twitter:description" content="{{og.description}}">
+    <meta property="twitter:image" content="{{r}}assets/logo.webp">
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boquila<span>Blog</span></h1>
+                <p>{{hero.p}}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray); text-align: center;">{{latest}}</h2>
+            <div class="blog-grid" id="blog-list"></div>
+        </div>
+    </section>
+
+    <script>
+    function formatDate(d) {
+        const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        const parts = d.split('-');
+        return months[parseInt(parts[1])-1] + ' ' + parseInt(parts[2]) + ', ' + parts[0];
+    }
+    fetch('{{r}}blog/posts.json')
+        .then(r => r.json())
+        .then(posts => {
+            const list = document.getElementById('blog-list');
+            posts.sort((a, b) => b.date.localeCompare(a.date));
+            list.innerHTML = posts.map(p =>
+                `<a href="{{r}}blog/${p.slug}" class="blog-card">
+                    <img class="blog-card-img" src="{{r}}${p.thumbnail}" alt="${p.title}">
+                    <div class="blog-card-body">
+                        <span class="blog-date">${formatDate(p.date)}</span>
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                    </div>
+                </a>`
+            ).join('');
+        });
+    </script>
+
+{{footer}}
+
+</body>
+</html>

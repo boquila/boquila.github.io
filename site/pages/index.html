@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ogUrl}}">
+    <meta property="og:title" content="{{og.title}}">
+    <meta property="og:description" content="{{og.description}}">
+    <meta property="og:image" content="{{r}}assets/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ogUrl}}">
+    <meta property="twitter:title" content="{{og.title}}">
+    <meta property="twitter:description" content="{{og.description}}">
+    <meta property="twitter:image" content="{{r}}assets/logo.webp">
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <main>
+    <!-- Hero with the "Green Background" aesthetic -->
+    <section class="hero-landing">
+        <div class="container">
+            <div class="hero-box">
+                <h1 class="hero-anim">{{hero.h1}}</h1>
+                <p class="hero-anim">{{hero.p}}</p>
+            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+    </section>
+
+    <section class="section mission">
+        <div class="container">
+            <div class="intro-box reveal">
+                <h2>{{mission.h2}}</h2>
+                <p>{{mission.p}}</p>
+            </div>
+            
+            <div class="pillars">
+                <div class="pillar reveal">
+                    <h3>{{pillar1.title}}</h3>
+                    <p>{{pillar1.text}}</p>
+                </div>
+                <div class="pillar reveal">
+                    <h3>{{pillar2.title}}</h3>
+                    <p>{{pillar2.text}}</p>
+                </div>
+                <div class="pillar reveal">
+                    <h3>{{pillar3.title}}</h3>
+                    <p>{{pillar3.text}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Each entry is one .scroll-section block; the sticky image column
+         is generated from them by main.js. To add an entry, add a block. -->
+    <section class="scroll-showcase" id="scrollShowcase">
+        <div class="scroll-images"></div>
+        <div class="scroll-sections">
+            <div class="scroll-section">
+                <div class="scroll-section-media">
+                    <picture><source media="(max-width: 768px)" srcset="{{r}}assets/scroll/vangogh1-mobile.webp"><img src="{{r}}assets/scroll/vangogh1.webp" alt="" class="scroll-section-bg"></picture>
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="{{r}}assets/scroll/video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>{{scroll1.title}}</h3>
+                <p>{{scroll1.text}}</p>
+            </div>
+            <div class="scroll-section">
+                <div class="scroll-section-media">
+                    <picture><source media="(max-width: 768px)" srcset="{{r}}assets/scroll/vangogh2-mobile.webp"><img src="{{r}}assets/scroll/vangogh2.webp" alt="" class="scroll-section-bg"></picture>
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="{{r}}assets/scroll/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>{{scroll2.title}}</h3>
+                <p>{{scroll2.text}}</p>
+            </div>
+            <div class="scroll-section">
+                <div class="scroll-section-media">
+                    <picture><source media="(max-width: 768px)" srcset="{{r}}assets/scroll/vangogh4-mobile.webp"><img src="{{r}}assets/scroll/vangogh4.webp" alt="" class="scroll-section-bg"></picture>
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="{{r}}assets/scroll/video4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>{{scroll3.title}}</h3>
+                <p>{{scroll3.text}}</p>
+            </div>
+            <div class="scroll-section">
+                <div class="scroll-section-media">
+                    <picture><source media="(max-width: 768px)" srcset="{{r}}assets/scroll/vangogh3-mobile.webp"><img src="{{r}}assets/scroll/vangogh3.webp" alt="" class="scroll-section-bg"></picture>
+                    <video preload="none" loop muted playsinline class="scroll-section-video">
+                        <source src="{{r}}assets/scroll/video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>{{scroll4.title}}</h3>
+                <p>{{scroll4.text}}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The "King" Section -->
+    <section class="section software">
+        <div class="container">
+            <h2>{{software.h2}}</h2>
+            <div class="software-grid">
+                <div class="software-item">
+                    <h3>{{software1.title}}</h3>
+                    <p>{{software1.text}}</p>
+                    <a href="{{navHref.hub}}" class="btn-link">{{software1.link}}</a>
+                </div>
+                <div class="software-item">
+                    <h3>{{software2.title}}</h3>
+                    <p>{{software2.text}}</p>
+                    <a href="{{navHref.verse}}" class="btn-link">{{software2.link}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects-list">
+        <div class="container">
+            <h2>{{projects.h2}}</h2>
+            <div class="project-tags">
+                <div class="tag">{{tag1}}</div>
+                <div class="tag">{{tag2}}</div>                
+                <div class="tag">{{tag3}}</div>
+                <div class="tag">{{tag4}}</div>
+                <div class="tag">{{tag5}}</div>
+                <div class="tag">{{tag6}}</div>
+                <div class="tag">{{tag7}}</div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+{{footer}}
+
+    <script src="{{r}}main.js"></script>
+</body>
+</html>

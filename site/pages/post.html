@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{post.title}} - Boquila Blog</title>
+    <meta name="description" content="{{post.description}}">
+    <meta name="keywords" content="{{post.keywords}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://boquila.org/blog/{{post.slug}}">
+    <meta property="og:title" content="{{post.title}} - Boquila Blog">
+    <meta property="og:description" content="{{post.description}}">
+    <meta property="og:image" content="cover.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://boquila.org/blog/{{post.slug}}">
+    <meta property="twitter:title" content="{{post.title}} - Boquila Blog">
+    <meta property="twitter:description" content="{{post.description}}">
+    <meta property="twitter:image" content="cover.jpg">
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <time class="blog-post-date">{{post.dateFormatted}}</time>
+                <h1>{{post.htmlTitle}}</h1>
+                <p>{{post.description}}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <div class="blog-article">
+                <img src="cover.jpg" alt="{{post.title}}" class="blog-article-cover">
+                <div class="blog-article-body">
+{{post.body}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{footer}}
+
+</body>
+</html>

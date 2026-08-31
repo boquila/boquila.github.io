@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta
+        content="{{description}}"
+        name="description">
+    <meta
+        content="{{keywords}}"
+        name="keywords">
+
+    <meta property="og:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" />
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg">
+
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+        
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boquila<span>HUB</span></h1>
+                <p>{{hero.p}}</p>
+                <a href="https://github.com/boquila/boquilahub/releases" target="_blank" class="btn-link" style="margin-top: 2rem;">{{download}}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">{{why.title}}</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-bolt"></use></svg>
+                            <span>{{feat1}}</span>
+                        </li>
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-microchip"></use></svg>
+                            <span>{{feat2}}</span>
+                        </li>
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-desktop"></use></svg>
+                            <span>{{feat3}}</span>
+                        </li>
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-eye"></use></svg>
+                            <span>{{feat4}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="https://raw.githubusercontent.com/boquila/boquilahub/main/assets/readme.jpg" alt="BoquilaHUB Interface" style="width: 100%; border: var(--border-thick) solid var(--color-dark-gray); box-shadow: 6px 6px 0px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-white-gray);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 1rem; color: var(--color-dark-gray); text-align: center;">{{models.title}}</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.2rem;">{{models.p}}</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>{{th.name}}</th>
+                            <th>{{th.description}}</th>
+                            <th>{{th.authors}}</th>
+                            <th>{{th.download}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alita</td>
+                            <td>{{model.Alita}}</td>
+                            <td><a href="https://wekaresearch.com/" target="_blank" style="text-decoration: underline;">wekaResearch</a></td>
+                            <td><a href="https://huggingface.co/boquila/Alita/resolve/main/Alita.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>boquilanet-cl</td>
+                            <td>{{model.boquilanet-cl}}</td>
+                            <td>Boquila Foundation</td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-cl.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>boquilanet-gen</td>
+                            <td>{{model.boquilanet-gen}}</td>
+                            <td>Boquila Foundation</td>
+                            <td><a href="https://huggingface.co/boquila/boquilanet-0.1/resolve/main/boquilanet-gen.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>SpeciesNetv4.0.0a</td>
+                            <td>{{model.SpeciesNetv4.0.0a}}</td>
+                            <td>Google</td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0a.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>SpeciesNetv4.0.0b</td>
+                            <td>{{model.SpeciesNetv4.0.0b}}</td>
+                            <td>Google</td>
+                            <td><a href="https://huggingface.co/boquila/speciesnet/resolve/main/SpeciesNetv4.0.0b.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv5a</td>
+                            <td>{{model.MDv5a}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5a.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv5b</td>
+                            <td>{{model.MDv5b}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v5/resolve/main/MDv5b.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <!-- V1000 Models -->
+                        <tr>
+                            <td>MDv1000-cedar</td>
+                            <td>{{model.MDv1000-cedar}}</td>
+                            <td><a href="http://dmorris.net/" target="_blank" style="text-decoration: underline;">Dan Morris</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-cedar.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-larch</td>
+                            <td>{{model.MDv1000-larch}}</td>
+                            <td><a href="http://dmorris.net/" target="_blank" style="text-decoration: underline;">Dan Morris</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-larch.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-redwood</td>
+                            <td>{{model.MDv1000-redwood}}</td>
+                            <td><a href="http://dmorris.net/" target="_blank" style="text-decoration: underline;">Dan Morris</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-redwood.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-sorrel</td>
+                            <td>{{model.MDv1000-sorrel}}</td>
+                            <td><a href="http://dmorris.net/" target="_blank" style="text-decoration: underline;">Dan Morris</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-sorrel.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDv1000-spruce</td>
+                            <td>{{model.MDv1000-spruce}}</td>
+                            <td><a href="http://dmorris.net/" target="_blank" style="text-decoration: underline;">Dan Morris</a></td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v1000/resolve/main/MDv1000-spruce.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <!-- V6 Models -->
+                        <tr>
+                            <td>MDV6-yolov9c</td>
+                            <td>{{model.MDV6-yolov9c}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9c.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDV6-yolov9e</td>
+                            <td>{{model.MDV6-yolov9e}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9e.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MDV6-yolov9-e-1280</td>
+                            <td>{{model.MDV6-yolov9-e-1280}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/megadetector-v6/resolve/main/MDV6-yolov9-e-1280.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <!-- Other Models -->
+                        <tr>
+                            <td>flat-bugN</td>
+                            <td>{{model.flat-bugN}}</td>
+                            <td><a href="https://darsa.info/" target="_blank" style="text-decoration: underline;">The DARSA Group</a></td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugN.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>flat-bugS</td>
+                            <td>{{model.flat-bugS}}</td>
+                            <td><a href="https://darsa.info/" target="_blank" style="text-decoration: underline;">The DARSA Group</a></td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugS.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>flat-bugM</td>
+                            <td>{{model.flat-bugM}}</td>
+                            <td><a href="https://darsa.info/" target="_blank" style="text-decoration: underline;">The DARSA Group</a></td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugM.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>flat-bugL</td>
+                            <td>{{model.flat-bugL}}</td>
+                            <td><a href="https://darsa.info/" target="_blank" style="text-decoration: underline;">The DARSA Group</a></td>
+                            <td><a href="https://huggingface.co/boquila/flat-bug/resolve/main/flat-bugL.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>yolov11n</td>
+                            <td>{{model.yolov11n}}</td>
+                            <td><a href="https://www.ultralytics.com/" target="_blank" style="text-decoration: underline;">Ultralytics</a></td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolov11n.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>yolo11n-seg</td>
+                            <td>{{model.yolo11n-seg}}</td>
+                            <td><a href="https://www.ultralytics.com/" target="_blank" style="text-decoration: underline;">Ultralytics</a></td>
+                            <td><a href="https://huggingface.co/boquila/yolov11/resolve/main/yolo11n-seg.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>pyronear-yolov8s</td>
+                            <td>{{model.pyronear-yolov8s}}</td>
+                            <td><a href="https://pyronear.org/" target="_blank" style="text-decoration: underline;">Pyronear</a></td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov8s.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>pyronear-yolov11s</td>
+                            <td>{{model.pyronear-yolov11s}}</td>
+                            <td><a href="https://pyronear.org/" target="_blank" style="text-decoration: underline;">Pyronear</a></td>
+                            <td><a href="https://huggingface.co/boquila/pyronear/resolve/main/pyronear-yolov11s.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>cfd-yolov12x-1.00</td>
+                            <td>{{model.cfd-yolov12x-1.00}}</td>
+                            <td><a href="https://www.wildhackers.net/" target="_blank" style="text-decoration: underline;">Wild Hackers</a></td>
+                            <td><a href="https://huggingface.co/boquila/cfd/resolve/main/cfd-yolov12x-1.00.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>MD_AudioBirds_V1</td>
+                            <td>{{model.MD_AudioBirds_V1}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/md-audio/resolve/main/MD_AudioBirds_V1.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>perch-v2</td>
+                            <td>{{model.perch-v2}}</td>
+                            <td>Google</td>
+                            <td><a href="https://huggingface.co/boquila/perch/resolve/main/perch-v2.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>bioclip2</td>
+                            <td>{{model.bioclip2}}</td>
+                            <td><a href="https://imageomics.osu.edu/" target="_blank">Imageomics Institute</a></td>
+                            <td><a href="https://huggingface.co/boquila/clip/resolve/main/bioclip2.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>dinov3-vits16</td>
+                            <td>{{model.dinov3-vits16}}</td>
+                            <td>Meta</td>
+                            <td><a href="https://huggingface.co/boquila/dino/resolve/main/dinov3-vits16.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>dinov3-vits16plus</td>
+                            <td>{{model.dinov3-vits16plus}}</td>
+                            <td>Meta</td>
+                            <td><a href="https://huggingface.co/boquila/dino/resolve/main/dinov3-vits16plus.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>dinov3-vitb16</td>
+                            <td>{{model.dinov3-vitb16}}</td>
+                            <td>Meta</td>
+                            <td><a href="https://huggingface.co/boquila/dino/resolve/main/dinov3-vitb16.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>dinov3-vitl16</td>
+                            <td>{{model.dinov3-vitl16}}</td>
+                            <td>Meta</td>
+                            <td><a href="https://huggingface.co/boquila/dino/resolve/main/dinov3-vitl16.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>HerdNet-General</td>
+                            <td>{{model.HerdNet-General}}</td>
+                            <td>Academics</td>
+                            <td><a href="https://huggingface.co/boquila/overhead/resolve/main/HerdNet-General.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>OWL</td>
+                            <td>{{model.OWL}}</td>
+                            <td>Microsoft</td>
+                            <td><a href="https://huggingface.co/boquila/overhead/resolve/main/OWL.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>cai_uk_mammals_yolo10x_v1.0.0</td>
+                            <td>{{model.cai_uk_mammals_yolo10x_v1.0.0}}</td>
+                            <td>Academics</td>
+                            <td><a href="https://huggingface.co/boquila/cai/resolve/main/cai_uk_mammals_yolo10x_v1.0.0.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>cai_uk_mammals_yolo26x_v1.0.0</td>
+                            <td>{{model.cai_uk_mammals_yolo26x_v1.0.0}}</td>
+                            <td>Academics</td>
+                            <td><a href="https://huggingface.co/boquila/cai/resolve/main/cai_uk_mammals_yolo26x_v1.0.0.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                        <tr>
+                            <td>batdetect2-uk</td>
+                            <td>{{model.batdetect2-uk}}</td>
+                            <td>Academics</td>
+                            <td><a href="https://huggingface.co/boquila/batdetect/resolve/main/batdetect2-uk.bq" target="_blank" style="text-decoration: underline;">{{download}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+{{footer}}
+
+</body>
+</html>

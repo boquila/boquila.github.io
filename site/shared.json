@@ -1,0 +1,46 @@
+{
+  "en": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.store": "Store",
+    "nav.donate": "Donate",
+    "footer.tagline": "AI for nature",
+    "footer.contact": "Contact Us"
+  },
+  "es": {
+    "nav.donate": "Donar",
+    "footer.tagline": "IA para la naturaleza",
+    "footer.contact": "Contáctanos"
+  },
+  "de": {
+    "nav.donate": "Spenden",
+    "footer.tagline": "KI für die Natur",
+    "footer.contact": "Kontaktiere uns"
+  },
+  "fr": {
+    "nav.donate": "Faire un don",
+    "footer.tagline": "IA pour la nature",
+    "footer.contact": "Contactez-nous"
+  },
+  "ja": {
+    "nav.donate": "寄付",
+    "footer.tagline": "自然のためのAI",
+    "footer.contact": "お問い合わせ"
+  },
+  "pt": {
+    "nav.donate": "Doar",
+    "footer.tagline": "IA para a natureza",
+    "footer.contact": "Fale Conosco"
+  },
+  "vi": {
+    "nav.donate": "Đóng góp",
+    "footer.tagline": "AI cho thiên nhiên",
+    "footer.contact": "Liên hệ với chúng tôi"
+  },
+  "zh": {
+    "nav.donate": "捐赠",
+    "footer.tagline": "自然人工智能",
+    "footer.contact": "联系我们"
+  }
+}
