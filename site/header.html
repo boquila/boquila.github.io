@@ -7,9 +7,14 @@
                 <ul>
                     <li><a href="{{navHref.hub}}">{{nav.hub}}</a></li>
                     <li><a href="{{navHref.verse}}">{{nav.verse}}</a></li>
-                    <li><a href="{{navHref.blog}}">{{nav.blog}}</a></li>
-                    <li><a href="{{navHref.store}}">{{nav.store}}</a></li>
-                    <li><a href="{{navHref.donate}}">{{nav.donate}}</a></li>
+                    <li class="nav-more">
+                        <button type="button" class="nav-more-toggle">{{nav.more}}<svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                        <ul class="nav-more-menu">
+                            <li><a href="{{navHref.blog}}">{{nav.blog}}</a></li>
+                            <li><a href="{{navHref.merch}}">{{nav.merch}}</a></li>
+                            <li><a href="{{navHref.donate}}">{{nav.donate}}</a></li>
+                        </ul>
+                    </li>
                     <li>
                         <label for="lang-select" class="sr-only">Language</label>
                         {{langSelect}}

@@ -2,8 +2,9 @@
   "en": {
     "nav.hub": "Hub",
     "nav.verse": "Verse",
+    "nav.more": "More",
     "nav.blog": "Blog",
-    "nav.store": "Store",
+    "nav.merch": "Merch",
     "nav.donate": "Donate",
     "footer.tagline": "AI for nature",
     "footer.contact": "Contact Us"

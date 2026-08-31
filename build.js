@@ -5,7 +5,7 @@ import { join, dirname } from "path";
 
 // Display order used in the language selector.
 const LANGS = ["en", "zh", "de", "fr", "vi", "pt", "es", "ja"];
-const PAGES = ["index", "hub", "verse", "donate", "blog", "store"];
+const PAGES = ["index", "hub", "verse", "donate", "blog", "merch"];
 const SITE = "https://boquila.org";
 
 const read = (p) => readFileSync(p, "utf8");

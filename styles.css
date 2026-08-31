@@ -119,6 +119,68 @@ letter-spacing:0.5px
 nav a:hover {
 color:var(--color-green)
 }
+.nav-more {
+position:relative
+}
+.nav-more-toggle {
+font-family:"Gabarito",sans-serif;
+font-weight:700;
+font-size:1.1rem;
+text-transform:uppercase;
+letter-spacing:0.5px;
+color:var(--color-dark-gray);
+background:transparent;
+border:none;
+padding:0;
+cursor:pointer;
+display:flex;
+align-items:center;
+gap:6px
+}
+.nav-more-toggle:hover {
+color:var(--color-green)
+}
+.nav-caret {
+width:0.8em;
+height:0.8em
+}
+.nav-more-menu {
+position:absolute;
+top:calc(100% + 14px);
+left:50%;
+transform:translateX(-50%);
+list-style:none;
+margin:0;
+padding:10px;
+min-width:170px;
+background:white;
+border:var(--border-thick) solid var(--color-dark-gray);
+box-shadow:8px 8px 0px rgba(0,0,0,0.2);
+display:none;
+flex-direction:column;
+z-index:200
+}
+.nav-more:hover .nav-more-menu,.nav-more:focus-within .nav-more-menu {
+display:block
+}
+.nav-more-menu::before {
+content:"";
+position:absolute;
+top:-16px;
+left:0;
+right:0;
+height:16px
+}
+.nav-more-menu a {
+display:block;
+padding:10px 14px;
+font-size:1rem;
+white-space:nowrap
+}
+.nav-more-menu a:hover {
+background:var(--color-white-gray);
+color:var(--color-dark-gray)
+}
 .lang-select {
 font-family:"Gabarito",sans-serif;
 font-size:1rem;
