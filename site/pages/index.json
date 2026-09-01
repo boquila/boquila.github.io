@@ -41,6 +41,7 @@
     "sponsors.h2": "Sponsored by"
   },
   "es": {
+    "title": "Boquila",
     "description": "Boquila es una organización sin fines de lucro dedicada al desarrollo de software, la conservación de la biodiversidad y el desarrollo sostenible mediante IA y tecnología abierta.",
     "keywords": "IA para la naturaleza, conservación de la biodiversidad, software de código abierto, BoquilaHUB, BoquilaVerse, bioacústica, monitoreo de ecosistemas",
     "og.title": "Boquila - IA para la naturaleza. Tech para el bien.",
@@ -64,8 +65,10 @@
     "scroll4.title": "Listo para Tus Agentes",
     "scroll4.text": "Empaquetando una CLI extremadamente simple que tú y tus agentes pueden usar. Monitorea la naturaleza en piloto automático.",
     "software.h2": "Nuestras Plataformas",
+    "software1.title": "BoquilaHUB",
     "software1.text": "Aplicación de escritorio para ejecutar modelos de IA localmente y monitorear la naturaleza.",
     "software1.link": "Ver BoquilaHUB &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "Colección de modelos 3D generados a partir de datos físicos precisos.",
     "software2.link": "Ver BoquilaVerse &rarr;",
     "projects.h2": "Áreas de Trabajo Activas",
@@ -79,6 +82,7 @@
     "sponsors.h2": "Patrocinado por"
   },
   "de": {
+    "title": "Boquila",
     "description": "Boquila ist eine gemeinnützige Organisation, die sich der Softwareentwicklung, dem Schutz der biologischen Vielfalt und der nachhaltigen Entwicklung mithilfe von KI und offenen Technologien widmet.",
     "keywords": "KI für die Natur, Schutz der biologischen Vielfalt, Open Source Software, BoquilaHUB, BoquilaVerse, Bioakustik, Ökosystemüberwachung",
     "og.title": "Boquila - KI für die Natur. Technik für das Gute.",
@@ -102,8 +106,10 @@
     "scroll4.title": "Bereit für Ihre Agenten",
     "scroll4.text": "Ein extrem einfaches CLI, das Sie und Ihre Agenten verwenden können. Überwachen Sie die Natur im Autopilot-Modus.",
     "software.h2": "Unsere Plattformen",
+    "software1.title": "BoquilaHUB",
     "software1.text": "Desktop-App zum lokalen Ausführen von KI-Modellen und zur Überwachung der Natur.",
     "software1.link": "BoquilaHUB sehen &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "Sammlung von 3D-Modellen, generiert aus genauen physikalischen Daten.",
     "software2.link": "BoquilaVerse sehen &rarr;",
     "projects.h2": "Aktive Arbeitsbereiche",
@@ -117,6 +123,7 @@
     "sponsors.h2": "Gesponsert von"
   },
   "fr": {
+    "title": "Boquila",
     "description": "Boquila est une organisation à but non lucratif dédiée au développement de logiciels, à la conservation de la biodiversité et au développement durable grâce à l'IA et aux technologies ouvertes.",
     "keywords": "IA pour la nature, conservation de la biodiversité, logiciel open source, BoquilaHUB, BoquilaVerse, bioacoustique, surveillance des écosystèmes",
     "og.title": "Boquila - IA pour la nature. Tech pour le bien.",
@@ -140,8 +147,10 @@
     "scroll4.title": "Prêt pour vos agents",
     "scroll4.text": "Un CLI extrêmement simple que vous et vos agents pouvez utiliser. Surveillez la nature en pilote automatique.",
     "software.h2": "Nos plateformes",
+    "software1.title": "BoquilaHUB",
     "software1.text": "Application de bureau pour exécuter des modèles d'IA localement et surveiller la nature.",
     "software1.link": "Voir BoquilaHUB &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "Collection de modèles 3D générés à partir de données physiques précises.",
     "software2.link": "Voir BoquilaVerse &rarr;",
     "projects.h2": "Domaines de travail actifs",
@@ -155,6 +164,7 @@
     "sponsors.h2": "Sponsorisé par"
   },
   "ja": {
+    "title": "Boquila",
     "description": "Boquilaは、AIとオープンな技術を用いて、ソフトウェア開発、生物多様性の保全、持続可能な開発に取り組む非営利団体です。",
     "keywords": "自然のためのAI, 生物多様性の保全, オープンソースソフトウェア, BoquilaHUB, BoquilaVerse, 生物音響学, 生態系モニタリング",
     "og.title": "Boquila - 自然のためのAI。善のための技術。",
@@ -178,8 +188,10 @@
     "scroll4.title": "エージェントの準備完了",
     "scroll4.text": "あなたとエージェントが使用できる非常にシンプルなCLIをパッケージ化しています。自動操縦で自然を監視します。",
     "software.h2": "私たちのプラットフォーム",
+    "software1.title": "BoquilaHUB",
     "software1.text": "AIモデルをローカルで実行し、自然を監視するためのデスクトップアプリ。",
     "software1.link": "BoquilaHUB を見る &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "正確な物理データから生成された3Dモデルのコレクション。",
     "software2.link": "BoquilaVerse を見る &rarr;",
     "projects.h2": "活動分野",
@@ -193,6 +205,7 @@
     "sponsors.h2": "スポンサー"
   },
   "pt": {
+    "title": "Boquila",
     "description": "Boquila é uma organização sem fins lucrativos dedicada ao desenvolvimento de software, conservação da biodiversidade e desenvolvimento sustentável usando IA e tecnologia aberta.",
     "keywords": "IA para a natureza, conservação da biodiversidade, software de código aberto, BoquilaHUB, BoquilaVerse, bioacústica, monitoramento de ecossistemas",
     "og.title": "Boquila - IA para a natureza. Tech para o bem.",
@@ -216,8 +229,10 @@
     "scroll4.title": "Pronto para Seus Agentes",
     "scroll4.text": "Empacotando um CLI extremamente simples que você e seus agentes podem usar. Monitore a natureza no piloto automático.",
     "software.h2": "Nossas Plataformas",
+    "software1.title": "BoquilaHUB",
     "software1.text": "App desktop para rodar modelos de IA localmente e monitorar a natureza.",
     "software1.link": "Ver BoquilaHUB &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "Coleção de modelos 3D gerados a partir de dados físicos precisos.",
     "software2.link": "Ver BoquilaVerse &rarr;",
     "projects.h2": "Áreas de Trabalho Ativas",
@@ -231,6 +246,7 @@
     "sponsors.h2": "Patrocinado por"
   },
   "vi": {
+    "title": "Boquila",
     "description": "Boquila là một tổ chức phi lợi nhuận chuyên phát triển phần mềm, bảo tồn đa dạng sinh học và phát triển bền vững bằng cách sử dụng AI và công nghệ mở.",
     "keywords": "AI cho thiên nhiên, bảo tồn đa dạng sinh học, phần mềm mã nguồn mở, BoquilaHUB, BoquilaVerse, sinh học âm học, giám sát hệ sinh thái",
     "og.title": "Boquila - AI cho thiên nhiên. Công nghệ vì cộng đồng.",
@@ -254,8 +270,10 @@
     "scroll4.title": "Sẵn sàng cho các tác nhân của bạn",
     "scroll4.text": "Đóng gói một CLI cực kỳ đơn giản mà bạn và các tác nhân của bạn có thể sử dụng. Giám sát thiên nhiên ở chế độ tự động.",
     "software.h2": "Nền tảng của chúng tôi",
+    "software1.title": "BoquilaHUB",
     "software1.text": "Ứng dụng máy tính để bàn để chạy các mô hình AI cục bộ và giám sát thiên nhiên.",
     "software1.link": "Xem BoquilaHUB &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "Bộ sưu tập các mô hình 3D được tạo ra từ dữ liệu vật lý chính xác.",
     "software2.link": "Xem BoquilaVerse &rarr;",
     "projects.h2": "Các lĩnh vực hoạt động tích cực",
@@ -269,6 +287,7 @@
     "sponsors.h2": "Được tài trợ bởi"
   },
   "zh": {
+    "title": "Boquila",
     "description": "Boquila 是一家非营利组织，致力于利用人工智能和开放技术进行软件开发、生物多样性保护和可持续发展。",
     "keywords": "自然人工智能, 生物多样性保护, 开源软件, BoquilaHUB, BoquilaVerse, 生物声学, 生态系统监测",
     "og.title": "Boquila - 自然人工智能。科技向善。",
@@ -292,8 +311,10 @@
     "scroll4.title": "为您的智能体做好准备",
     "scroll4.text": "打包一个极其简单的CLI，您和您的智能体都可以使用。在自动驾驶模式下监测自然。",
     "software.h2": "我们的平台",
+    "software1.title": "BoquilaHUB",
     "software1.text": "在本地运行 AI 模型并监测自然的桌面应用程序。",
     "software1.link": "查看 BoquilaHUB &rarr;",
+    "software2.title": "BoquilaVerse",
     "software2.text": "从精确物理数据生成的 3D 模型集合。",
     "software2.link": "查看 BoquilaVerse &rarr;",
     "projects.h2": "活跃工作领域",

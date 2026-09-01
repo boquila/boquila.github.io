@@ -26,6 +26,51 @@ function dict(shared, pageStrings, lang) {
   return d;
 }
 
+function validateLocalizedDict(file, strings, errors) {
+  const isObject = (value) => value && typeof value === "object" && !Array.isArray(value);
+  if (!isObject(strings.en)) {
+    errors.push(`${file} [en] is missing or is not an object`);
+    return;
+  }
+
+  const englishKeys = Object.keys(strings.en);
+  for (const lang of LANGS) {
+    const locale = strings[lang];
+    if (!isObject(locale)) {
+      errors.push(`${file} [${lang}] is missing or is not an object`);
+      continue;
+    }
+
+    const localeKeys = Object.keys(locale);
+    const missing = englishKeys.filter((key) => !Object.hasOwn(locale, key));
+    const unexpected = localeKeys.filter((key) => !Object.hasOwn(strings.en, key));
+    if (missing.length) errors.push(`${file} [${lang}] missing keys: ${missing.join(", ")}`);
+    if (unexpected.length) errors.push(`${file} [${lang}] keys not present in en: ${unexpected.join(", ")}`);
+
+    for (const key of englishKeys) {
+      if (!Object.hasOwn(locale, key)) continue;
+      if (typeof locale[key] !== "string" || !locale[key].trim()) {
+        errors.push(`${file} [${lang}] ${key} must be a non-empty string`);
+      }
+    }
+  }
+}
+
+function validatePostMetadata(posts, errors) {
+  const required = ["title", "htmlTitle", "description"];
+  for (const post of posts) {
+    for (const lang of LANGS.filter((lang) => lang !== "en")) {
+      const locale = post.i18n && post.i18n[lang];
+      if (!locale || typeof locale !== "object" || Array.isArray(locale)) {
+        errors.push(`blog/posts.json [${post.slug}/${lang}] is missing or is not an object`);
+        continue;
+      }
+      const missing = required.filter((key) => typeof locale[key] !== "string" || !locale[key].trim());
+      if (missing.length) errors.push(`blog/posts.json [${post.slug}/${lang}] missing keys: ${missing.join(", ")}`);
+    }
+  }
+}
+
 // Path variables for a page rendered at a given depth below the site root.
 function pathVars(page, lang, depth) {
   const r = "../".repeat(depth);
@@ -75,17 +120,35 @@ function postPathVars(slug, lang) {
   return vars;
 }
 
+const shared = json("site/shared.json");
+const pageStringsByPage = new Map(PAGES.map((page) => [page, json(`site/pages/${page}.json`)]));
+const posts = json("blog/posts.json");
+const bodyStringsByPost = new Map(posts.map((post) => [post.slug, json(`blog/${post.slug}/body.json`)]));
+
+// Fail before touching dist: English fallback is resilience, not a substitute for localization.
+const localizationErrors = [];
+validateLocalizedDict("site/shared.json", shared, localizationErrors);
+for (const [page, strings] of pageStringsByPage) {
+  validateLocalizedDict(`site/pages/${page}.json`, strings, localizationErrors);
+}
+for (const [slug, strings] of bodyStringsByPost) {
+  validateLocalizedDict(`blog/${slug}/body.json`, strings, localizationErrors);
+}
+validatePostMetadata(posts, localizationErrors);
+if (localizationErrors.length) {
+  throw new Error(`Localization validation failed:\n- ${localizationErrors.join("\n- ")}`);
+}
+
 rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
 
-const shared = json("site/shared.json");
 const headerTpl = read("site/header.html");
 const footerTpl = read("site/footer.html");
 
 for (const page of PAGES) {
   const tpl = read(`site/pages/${page}.html`);
-  const pageStrings = json(`site/pages/${page}.json`);
-  for (const lang of ["en", "es", "de", "fr", "ja", "pt", "vi", "zh"]) {
+  const pageStrings = pageStringsByPage.get(page);
+  for (const lang of LANGS) {
     const depth = lang === "en" ? 0 : 1;
     const vars = { ...dict(shared, pageStrings, lang), ...pathVars(page, lang, depth) };
     if (page === "blog") vars.postsSuffix = lang === "en" ? "" : "." + lang;
@@ -99,7 +162,6 @@ for (const page of PAGES) {
 }
 
 // Blog: per-language card lists for the runtime fetch.
-const posts = json("blog/posts.json");
 mkdirSync("dist/blog", { recursive: true });
 for (const lang of LANGS) {
   const cards = posts.map((p) => {
@@ -121,7 +183,7 @@ for (const lang of LANGS) {
 const postTpl = read("site/pages/post.html");
 for (const post of posts) {
   const bodyTpl = read(`blog/${post.slug}/body.html`);
-  const bodyStrings = json(`blog/${post.slug}/body.json`);
+  const bodyStrings = bodyStringsByPost.get(post.slug);
   for (const lang of LANGS) {
     const i = (post.i18n && post.i18n[lang]) || {};
     const vars = {

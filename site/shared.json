@@ -10,42 +10,70 @@
     "footer.contact": "Contact Us"
   },
   "es": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "Donar",
     "footer.tagline": "IA para la naturaleza",
     "footer.contact": "Contáctanos",
     "nav.more": "Más"
   },
   "de": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "Spenden",
     "footer.tagline": "KI für die Natur",
     "footer.contact": "Kontaktiere uns",
     "nav.more": "Mehr"
   },
   "fr": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "Faire un don",
     "footer.tagline": "IA pour la nature",
     "footer.contact": "Contactez-nous",
     "nav.more": "Plus"
   },
   "ja": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "寄付",
     "footer.tagline": "自然のためのAI",
     "footer.contact": "お問い合わせ",
     "nav.more": "その他"
   },
   "pt": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "Doar",
     "footer.tagline": "IA para a natureza",
     "footer.contact": "Fale Conosco",
     "nav.more": "Mais"
   },
   "vi": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "Đóng góp",
     "footer.tagline": "AI cho thiên nhiên",
     "footer.contact": "Liên hệ với chúng tôi",
     "nav.more": "Thêm"
   },
   "zh": {
+    "nav.hub": "Hub",
+    "nav.verse": "Verse",
+    "nav.blog": "Blog",
+    "nav.merch": "Merch",
     "nav.donate": "捐赠",
     "footer.tagline": "自然人工智能",
     "footer.contact": "联系我们",

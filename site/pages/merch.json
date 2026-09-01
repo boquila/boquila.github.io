@@ -3,5 +3,40 @@
     "title": "BoquilaMerch",
     "hero.p": "I want a Boquila Shirt too!",
     "form.p": "Please fill out the form below to order your shirt"
+  },
+  "zh": {
+    "title": "BoquilaMerch",
+    "hero.p": "我也想要一件 Boquila T恤！",
+    "form.p": "请填写下方表格订购您的 T恤。"
+  },
+  "de": {
+    "title": "BoquilaMerch",
+    "hero.p": "Ich möchte auch ein Boquila-T-Shirt!",
+    "form.p": "Bitte fülle das folgende Formular aus, um dein T-Shirt zu bestellen."
+  },
+  "fr": {
+    "title": "BoquilaMerch",
+    "hero.p": "Moi aussi, je veux un t-shirt Boquila !",
+    "form.p": "Veuillez remplir le formulaire ci-dessous pour commander votre t-shirt."
+  },
+  "vi": {
+    "title": "BoquilaMerch",
+    "hero.p": "Tôi cũng muốn một chiếc áo Boquila!",
+    "form.p": "Vui lòng điền vào biểu mẫu bên dưới để đặt áo."
+  },
+  "pt": {
+    "title": "BoquilaMerch",
+    "hero.p": "Eu também quero uma camiseta da Boquila!",
+    "form.p": "Preencha o formulário abaixo para pedir sua camiseta."
+  },
+  "es": {
+    "title": "BoquilaMerch",
+    "hero.p": "¡Yo también quiero una camiseta de Boquila!",
+    "form.p": "Completa el formulario de abajo para pedir tu camiseta."
+  },
+  "ja": {
+    "title": "BoquilaMerch",
+    "hero.p": "私もBoquilaのTシャツが欲しい！",
+    "form.p": "以下のフォームに入力してTシャツをご注文ください。"
   }
 }

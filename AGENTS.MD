@@ -2,7 +2,7 @@
 
 Static site built with a minimal generator: `bun build.js` outputs everything into `dist/` (not committed, deployed by CI).
 
-Pages live in `site/pages/` as pairs: `page.html` (structure, with `{{key}}` placeholders) + `page.json` (all text/localization, keyed by language). Shared header/footer: `site/header.html`, `site/footer.html`; shared text (nav labels, footer): `site/shared.json`. The generator technically falls back to English key by key, but fallback is only a resilience mechanism and must never be treated as completed localization. Never edit `dist/`, it is generated. `api/` is served untouched, don't restructure it. Blog posts: entries in `blog/posts.json` (feed metadata; translated titles/descriptions under `i18n`), article body as a template in `blog/<slug>/body.html` (`{{key}}` placeholders) + `blog/<slug>/body.json` (text/localization), rendered through `site/pages/post.html` into `/<lang>/blog/<slug>/`.
+Pages live in `site/pages/` as pairs: `page.html` (structure, with `{{key}}` placeholders) + `page.json` (all text/localization, keyed by language). Shared header/footer: `site/header.html`, `site/footer.html`; shared text (nav labels, footer): `site/shared.json`. The renderer retains English key-by-key fallback as a resilience mechanism, but the build validator requires complete explicit locale data before rendering, so ordinary builds can never silently rely on fallback. Never edit `dist/`, it is generated. `api/` is served untouched, don't restructure it. Blog posts: entries in `blog/posts.json` (feed metadata; translated titles/descriptions under `i18n`), article body as a template in `blog/<slug>/body.html` (`{{key}}` placeholders) + `blog/<slug>/body.json` (text/localization), rendered through `site/pages/post.html` into `/<lang>/blog/<slug>/`.
 
 To add a page: create `site/pages/name.html` + `site/pages/name.json`, include every supported language (`en`, `zh`, `de`, `fr`, `vi`, `pt`, `es`, `ja`), and add the name to `PAGES` in `build.js`.
 
@@ -12,9 +12,11 @@ Every new or changed piece of human-facing text must be localized into all eight
 
 - Never put translatable prose directly in an HTML template or JavaScript file. Use a `{{key}}` and define it in the appropriate JSON file for every language.
 - When adding or changing an English key, add or update that same key under `en`, `zh`, `de`, `fr`, `vi`, `pt`, `es`, and `ja` before considering the task complete.
-- Proper names, product/model identifiers, URLs, and code tokens may remain identical across languages; ordinary UI text may not.
+- Every locale object must contain exactly the same keys as `en`, with non-empty string values. Proper names, product/model identifiers, URLs, and code tokens may repeat the English value, but the key and value must still be explicitly present in every locale.
 - Before finishing, compare the locale objects for the file you changed and spot-check at least one generated non-English page. Do not use fallback output as a substitute for a translation.
 - Preserve valid UTF-8 characters directly; do not replace translated text with ASCII approximations or escaped mojibake.
+- `bun build.js` performs localization validation before deleting or writing `dist/`. It hard-fails on missing locale objects, missing keys, keys absent from `en`, empty/non-string values, or incomplete translated blog metadata. Never bypass or weaken this validation to make a change build.
+- A successful `bun build.js` is a required final check for every change involving templates or localized content.
 
 # Branding
 
