@@ -37,7 +37,8 @@
     "tag4": "Computer Vision",
     "tag5": "Bioacoustics",
     "tag6": "Endangered Species",
-    "tag7": "Ecosystem Monitoring"
+    "tag7": "Ecosystem Monitoring",
+    "sponsors.h2": "Sponsored by"
   },
   "es": {
     "description": "Boquila es una organización sin fines de lucro dedicada al desarrollo de software, la conservación de la biodiversidad y el desarrollo sostenible mediante IA y tecnología abierta.",
@@ -74,7 +75,8 @@
     "tag4": "Visión por Computadora",
     "tag5": "Bioacústica",
     "tag6": "Especies en Peligro",
-    "tag7": "Monitoreo de Ecosistemas"
+    "tag7": "Monitoreo de Ecosistemas",
+    "sponsors.h2": "Patrocinado por"
   },
   "de": {
     "description": "Boquila ist eine gemeinnützige Organisation, die sich der Softwareentwicklung, dem Schutz der biologischen Vielfalt und der nachhaltigen Entwicklung mithilfe von KI und offenen Technologien widmet.",
@@ -111,7 +113,8 @@
     "tag4": "Computer Vision",
     "tag5": "Bioakustik",
     "tag6": "Gefährdete Arten",
-    "tag7": "Ökosystemüberwachung"
+    "tag7": "Ökosystemüberwachung",
+    "sponsors.h2": "Gesponsert von"
   },
   "fr": {
     "description": "Boquila est une organisation à but non lucratif dédiée au développement de logiciels, à la conservation de la biodiversité et au développement durable grâce à l'IA et aux technologies ouvertes.",
@@ -148,7 +151,8 @@
     "tag4": "Vision par ordinateur",
     "tag5": "Bioacoustique",
     "tag6": "Espèces menacées",
-    "tag7": "Surveillance des écosystèmes"
+    "tag7": "Surveillance des écosystèmes",
+    "sponsors.h2": "Sponsorisé par"
   },
   "ja": {
     "description": "Boquilaは、AIとオープンな技術を用いて、ソフトウェア開発、生物多様性の保全、持続可能な開発に取り組む非営利団体です。",
@@ -185,7 +189,8 @@
     "tag4": "コンピュータビジョン",
     "tag5": "生物音響学",
     "tag6": "絶滅危惧種",
-    "tag7": "生態系モニタリング"
+    "tag7": "生態系モニタリング",
+    "sponsors.h2": "スポンサー"
   },
   "pt": {
     "description": "Boquila é uma organização sem fins lucrativos dedicada ao desenvolvimento de software, conservação da biodiversidade e desenvolvimento sustentável usando IA e tecnologia aberta.",
@@ -222,7 +227,8 @@
     "tag4": "Visão Computacional",
     "tag5": "Bioacústica",
     "tag6": "Espécies Ameaçadas",
-    "tag7": "Monitoramento de Ecossistemas"
+    "tag7": "Monitoramento de Ecossistemas",
+    "sponsors.h2": "Patrocinado por"
   },
   "vi": {
     "description": "Boquila là một tổ chức phi lợi nhuận chuyên phát triển phần mềm, bảo tồn đa dạng sinh học và phát triển bền vững bằng cách sử dụng AI và công nghệ mở.",
@@ -259,7 +265,8 @@
     "tag4": "Thị giác máy tính",
     "tag5": "Sinh học âm học",
     "tag6": "Các loài nguy cấp",
-    "tag7": "Giám sát hệ sinh thái"
+    "tag7": "Giám sát hệ sinh thái",
+    "sponsors.h2": "Được tài trợ bởi"
   },
   "zh": {
     "description": "Boquila 是一家非营利组织，致力于利用人工智能和开放技术进行软件开发、生物多样性保护和可持续发展。",
@@ -296,6 +303,7 @@
     "tag4": "计算机视觉",
     "tag5": "生物声学",
     "tag6": "濒危物种",
-    "tag7": "生态系统监测"
+    "tag7": "生态系统监测",
+    "sponsors.h2": "赞助方"
   }
 }

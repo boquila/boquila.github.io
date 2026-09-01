@@ -517,6 +517,60 @@ font-size:1rem;
 text-transform:uppercase;
 box-shadow:4px 4px 0px rgba(0,0,0,0.1)
 }
+.sponsors {
+background:var(--color-dark-gray);
+padding:56px 0
+}
+.sponsors h2 {
+font-size:1.1rem;
+margin:0 0 2rem;
+text-transform:uppercase;
+font-weight:800;
+text-align:center;
+letter-spacing:0.08em;
+color:white
+}
+.sponsors-grid {
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:clamp(24px,5vw,64px);
+align-items:center;
+max-width:800px;
+margin:0 auto
+}
+.sponsor {
+display:flex;
+align-items:center;
+justify-content:center;
+height:64px;
+min-width:0
+}
+.sponsor img {
+display:block;
+width:100%;
+height:100%;
+object-fit:contain
+}
+.sponsor-github img {
+filter:invert(1)
+}
+.sponsor:hover {
+opacity:0.75
+}
+.sponsor:focus-visible {
+outline:3px solid var(--color-green);
+outline-offset:8px
+}
+@media (max-width:600px) {
+.sponsors-grid {
+grid-template-columns:1fr;
+gap:2rem;
+max-width:220px
+}
+.sponsor {
+height:56px
+}
+}
 .table-container {
 overflow-x:auto;
 margin-bottom:2rem;
