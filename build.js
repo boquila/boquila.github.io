@@ -1,7 +1,8 @@
 // Static site generator - run with: bun build.js
 // Builds the whole site into dist/ from site/ (templates + text in .json), blog/ and assets.
-import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, copyFileSync } from "fs";
-import { join, dirname } from "path";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, statSync, copyFileSync, existsSync } from "fs";
+import { join, dirname, extname, basename } from "path";
+import sharp from "sharp";
 
 // Display order used in the language selector.
 const LANGS = ["en", "zh", "de", "fr", "vi", "pt", "es", "ja"];
@@ -242,7 +243,33 @@ const copyDir = (src, dest, skip = (f) => false) => {
   }
 };
 copyDir("api", "dist/api");
-copyDir("assets", "dist/assets");
+// Raster images dropped into assets/ are auto-converted to WebP at build time;
+// templates must reference the .webp name. Sources stay untouched.
+const MAX_IMAGE_WIDTH = 1024;
+const WEBP_INPUT = new Set([".png", ".jpg", ".jpeg"]);
+const copyAssets = async (src, dest) => {
+  mkdirSync(dest, { recursive: true });
+  for (const entry of readdirSync(src)) {
+    const s = join(src, entry);
+    if (statSync(s).isDirectory()) {
+      await copyAssets(s, join(dest, entry));
+      continue;
+    }
+    const ext = extname(entry).toLowerCase();
+    if (WEBP_INPUT.has(ext) && !entry.startsWith("favicon")) {
+      // favicons stay raster (Safari has no webp favicon support) and a hand-tuned
+      // .webp sitting next to the source is treated as the authoritative version.
+      if (existsSync(join(src, basename(entry, ext) + ".webp"))) continue;
+      await sharp(s)
+        .resize({ width: MAX_IMAGE_WIDTH, withoutEnlargement: true })
+        .webp({ quality: 90, alphaQuality: 100 })
+        .toFile(join(dest, basename(entry, ext) + ".webp"));
+      continue;
+    }
+    copyFileSync(s, join(dest, entry));
+  }
+};
+await copyAssets("assets", "dist/assets");
 // Copy blog assets; skip body templates and posts.json, which the generator writes itself.
 copyDir("blog", "dist/blog", (f) => f.startsWith("body") || f === "posts.json");
 
