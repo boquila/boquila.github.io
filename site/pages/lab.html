@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta
+        content="{{description}}"
+        name="description">
+    <meta
+        content="{{keywords}}"
+        name="keywords">
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+        
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Boqui<span>Lab</span></h1>
+                <p>{{hero.p}}</p>
+                <button class="btn-link" style="margin-top: 2rem; cursor: not-allowed; opacity: 0.7;">{{comingSoon}}</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">{{why.title}}</h2>
+            <ul class="feature-list">
+                <li>
+                    <svg><use href="{{r}}assets/icons.svg#icon-eye"></use></svg>
+                    <span>{{feat1}}</span>
+                </li>
+                <li>
+                    <svg><use href="{{r}}assets/icons.svg#icon-heart"></use></svg>
+                    <span>{{feat2}}</span>
+                </li>
+                <li>
+                    <svg><use href="{{r}}assets/icons.svg#icon-bolt"></use></svg>
+                    <span>{{feat3}}</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+{{footer}}
+
+</body>
+</html>
