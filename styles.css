@@ -883,7 +883,7 @@ flex-direction:column;
 justify-content:center;
 padding:60px;
 border-bottom:var(--border-thick) solid var(--color-dark-gray);
-opacity:.35;
+    opacity:.85;
 transition:opacity .5s ease
 }
 .scroll-section.is-active {
