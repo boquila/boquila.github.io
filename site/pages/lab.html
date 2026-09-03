@@ -11,6 +11,10 @@
         content="{{keywords}}"
         name="keywords">
 
+    <meta property="og:image" content="https://boquila.org/assets/lab.webp"/>
+    <meta property="twitter:image" content="https://boquila.org/assets/lab.webp"/>
+    <meta name="twitter:image:src" content="https://boquila.org/assets/lab.webp">
+
     <link href="{{r}}assets/favicon.png" rel="icon">
         
     <link rel="stylesheet" href="{{r}}styles.css">
@@ -32,21 +36,28 @@
 
     <section class="section" style="background-color: white;">
         <div class="container">
-            <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">{{why.title}}</h2>
-            <ul class="feature-list">
-                <li>
-                    <svg><use href="{{r}}assets/icons.svg#icon-eye"></use></svg>
-                    <span>{{feat1}}</span>
-                </li>
-                <li>
-                    <svg><use href="{{r}}assets/icons.svg#icon-heart"></use></svg>
-                    <span>{{feat2}}</span>
-                </li>
-                <li>
-                    <svg><use href="{{r}}assets/icons.svg#icon-bolt"></use></svg>
-                    <span>{{feat3}}</span>
-                </li>
-            </ul>
+            <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">{{why.title}}</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-eye"></use></svg>
+                            <span>{{feat1}}</span>
+                        </li>
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-heart"></use></svg>
+                            <span>{{feat2}}</span>
+                        </li>
+                        <li>
+                            <svg><use href="{{r}}assets/icons.svg#icon-bolt"></use></svg>
+                            <span>{{feat3}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="{{r}}assets/lab.webp" alt="{{img.alt}}" width="706" height="576" loading="lazy" decoding="async" style="width: 100%; height: auto; border: var(--border-thick) solid var(--color-dark-gray); box-shadow: 6px 6px 0px rgba(0,0,0,0.1);">
+                </div>
+            </div>
         </div>
     </section>
 
