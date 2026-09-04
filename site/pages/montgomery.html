@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="https://boquila.org/assets/logo.webp">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{title}}">
+    <meta property="twitter:description" content="{{description}}">
+    <meta property="twitter:image" content="https://boquila.org/assets/logo.webp">
+
+    <link href="{{r}}assets/favicon.png" rel="icon">
+    <link rel="stylesheet" href="{{r}}styles.css">
+    <link rel="preload" href="{{r}}assets/fonts/gabarito-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+
+{{header}}
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-box">
+                    <h1>Mont<span>gomery</span></h1>
+                    <p>{{hero.p}}</p>
+                    <a href="https://github.com/boquila/montgomery" target="_blank" rel="noopener" class="btn-link">{{github}}</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: white;">
+            <div class="container">
+                <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 style="font-size: 2.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--color-dark-gray);">{{why.title}}</h2>
+                        <ul class="feature-list">
+                            <li>
+                                <svg><use href="{{r}}assets/icons.svg#icon-bolt"></use></svg>
+                                <span>{{feat1}}</span>
+                            </li>
+                            <li>
+                                <svg><use href="{{r}}assets/icons.svg#icon-microchip"></use></svg>
+                                <span>{{feat2}}</span>
+                            </li>
+                            <li>
+                                <svg><use href="{{r}}assets/icons.svg#icon-eye"></use></svg>
+                                <span>{{feat3}}</span>
+                            </li>
+                            <li>
+                                <svg><use href="{{r}}assets/icons.svg#icon-desktop"></use></svg>
+                                <span>{{feat4}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="terminal-card" aria-label="{{terminal.alt}}">
+                        <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                        <code><span>$</span> montgomery train --architecture yolo26n --data dataset.yaml --epochs 100</code>
+                        <code><span>$</span> montgomery predict --model best.bpk --source image.jpg --json</code>
+                        <code><span>$</span> montgomery export-onnx --model best.bpk</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: var(--color-white-gray);">
+            <div class="container">
+                <h2 class="section-title">{{models.title}}</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>{{th.family}}</th>
+                                <th>{{th.variants}}</th>
+                                <th>{{th.tasks}}</th>
+                                <th>{{th.status}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>YOLOX</td><td>nano, tiny, s, m, l, x</td><td>{{task.detect}}</td><td>{{status.stable}}</td></tr>
+                            <tr><td>YOLOv3</td><td>tinyu</td><td>{{task.detect}}</td><td>{{status.experimental}}</td></tr>
+                            <tr><td>YOLOv8</td><td>n, s, m, l, x</td><td>{{task.all}}</td><td>{{status.experimental}}</td></tr>
+                            <tr><td>YOLOv10</td><td>n, s, m, b, l, x</td><td>{{task.detect}}</td><td>{{status.experimental}}</td></tr>
+                            <tr><td>YOLO11</td><td>n, s, m, l, x</td><td>{{task.all}}</td><td>{{status.experimental}}</td></tr>
+                            <tr><td>YOLO12</td><td>n, s, m, l, x</td><td>{{task.detect}}</td><td>{{status.experimental}}</td></tr>
+                            <tr><td>YOLO26</td><td>n, s, m, l, x</td><td>{{task.all}}</td><td>{{status.experimental}}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{{footer}}
+
+</body>
+</html>
