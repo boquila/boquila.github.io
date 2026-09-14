@@ -1,6 +1,7 @@
 {
   "en": {
     "title": "BoquilaHUB - AI for Nature",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB empowers conservationists with locally deployed AI—no cloud needed. Enjoy efficient performance, simple UI, and real-time analysis of images and video, even on embedded devices.",
     "keywords": "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "hero.p": "Cross-platform tool for running computer vision models on wildlife data. On your own hardware, no cloud required.",
@@ -55,6 +56,7 @@
   },
   "es": {
     "title": "BoquilaHUB - IA para la Naturaleza",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB empodera a los conservacionistas con IA implementada localmente, sin necesidad de nube. Disfrute de un rendimiento eficiente, una interfaz de usuario simple y análisis en tiempo real de imágenes y video, incluso en dispositivos embebidos.",
     "keywords": "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
     "hero.p": "Herramienta multiplataforma para ejecutar modelos de visión por computadora en datos de vida silvestre. En su propio hardware, no se requiere nube.",
@@ -109,6 +111,7 @@
   },
   "de": {
     "title": "BoquilaHUB - KI für die Natur",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB stärkt Naturschützer mit lokal eingesetzter KI – keine Cloud erforderlich. Genießen Sie effiziente Leistung, eine einfache Benutzeroberfläche und Echtzeitanalyse von Bildern und Videos, sogar auf eingebetteten Geräten.",
     "keywords": "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz.",
     "hero.p": "Plattformübergreifendes Tool zum Ausführen von Computer-Vision-Modellen auf Wildtierdaten. Auf Ihrer eigenen Hardware, keine Cloud erforderlich.",
@@ -163,6 +166,7 @@
   },
   "fr": {
     "title": "BoquilaHUB - IA pour la nature",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB permet aux défenseurs de l'environnement d'utiliser une IA déployée localement, sans cloud. Profitez de performances efficaces, d'une interface simple et d'une analyse en temps réel des images et des vidéos, même sur des appareils embarqués.",
     "keywords": "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
     "hero.p": "Outil multiplateforme pour exécuter des modèles de vision par ordinateur sur des données de la faune. Sur votre propre matériel, aucun cloud requis.",
@@ -217,6 +221,7 @@
   },
   "ja": {
     "title": "BoquilaHUB - 自然のためのAI",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUBは、クラウドを必要とせず、ローカルに展開されたAIで自然保護活動家を支援します。効率的なパフォーマンス、シンプルなUI、画像やビデオのリアルタイム分析を、組み込みデバイスでも楽しめます。",
     "keywords": "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "hero.p": "野生生物データでコンピュータビジョンモデルを実行するためのクロスプラットフォームツール。独自のハードウェアで、クラウドは不要です。",
@@ -271,6 +276,7 @@
   },
   "pt": {
     "title": "BoquilaHUB - IA para a Natureza",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB capacita conservacionistas com IA implantada localmente - sem necessidade de nuvem. Desfrute de desempenho eficiente, interface simples e análise em tempo real de imagens e vídeos, mesmo em dispositivos embarcados.",
     "keywords": "Inteligência artificial, IA, biodiversidade, conservação, projetos, Chile, inovação, tecnologia, meio ambiente, sustentabilidade, mudança climática, ecologia, proteção da natureza.",
     "hero.p": "Ferramenta multiplataforma para rodar modelos de visão computacional em dados de vida selvagem. No seu próprio hardware, sem necessidade de nuvem.",
@@ -325,6 +331,7 @@
   },
   "vi": {
     "title": "BoquilaHUB - AI cho thiên nhiên",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB trao quyền cho các nhà bảo tồn với AI được triển khai cục bộ—không cần đám mây. Tận hưởng hiệu suất hiệu quả, giao diện đơn giản và phân tích hình ảnh và video theo thời gian thực, ngay cả trên các thiết bị nhúng.",
     "keywords": "Trí tuệ nhân tạo, AI, đa dạng sinh học, bảo tồn, dự án, Chile, đổi mới, công nghệ, môi trường, bền vững, biến đổi khí hậu, sinh thái học, bảo vệ thiên nhiên.",
     "hero.p": "Công cụ đa nền tảng để chạy các mô hình thị giác máy tính trên dữ liệu động vật hoang dã. Trên phần cứng của riêng bạn, không cần đám mây.",
@@ -379,6 +386,7 @@
   },
   "zh": {
     "title": "BoquilaHUB - 自然人工智能",
+    "brand": "BoquilaHUB",
     "description": "BoquilaHUB 通过本地部署的 AI 为自然保护者赋能——无需云端。享受高效的性能、简单的用户界面，并在嵌入式设备上实时分析图像和视频。",
     "keywords": "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
     "hero.p": "用于在野生动物数据上运行计算机视觉模型的跨平台工具。在您自己的硬件上运行，无需云端。",

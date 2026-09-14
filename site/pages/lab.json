@@ -1,6 +1,7 @@
 {
   "en": {
     "title": "BoquiLab - Data and AI Models",
+    "brand": "BoquiLab",
     "description": "BoquiLab is transparent infrastructure for sharing data and building open AI models. Strict data commitments are handled automatically, making it ideal for companies with confidentiality rules.",
     "keywords": "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "hero.p": "Transparent infrastructure for sharing data and building open models.",
@@ -13,6 +14,7 @@
   },
   "es": {
     "title": "BoquiLab - Datos y Modelos de IA",
+    "brand": "BoquiLab",
     "description": "BoquiLab es una infraestructura transparente para compartir datos y construir modelos de IA abiertos. Los compromisos de datos estrictos se gestionan automáticamente, ideal para empresas con reglas de confidencialidad.",
     "keywords": "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
     "hero.p": "Infraestructura transparente para compartir datos y construir modelos abiertos.",
@@ -25,6 +27,7 @@
   },
   "de": {
     "title": "BoquiLab - Daten und KI-Modelle",
+    "brand": "BoquiLab",
     "description": "BoquiLab ist eine transparente Infrastruktur zum Teilen von Daten und zum Aufbau offener KI-Modelle. Strenge Datenzusagen werden automatisch verwaltet, ideal für Unternehmen mit Vertraulichkeitsregeln.",
     "keywords": "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz.",
     "hero.p": "Transparente Infrastruktur zum Teilen von Daten und für offene Modelle.",
@@ -37,6 +40,7 @@
   },
   "fr": {
     "title": "BoquiLab - Données et modèles d'IA",
+    "brand": "BoquiLab",
     "description": "BoquiLab est une infrastructure transparente pour partager des données et créer des modèles d'IA ouverts. Les engagements de données stricts sont gérés automatiquement, idéal pour les entreprises soumises à des règles de confidentialité.",
     "keywords": "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
     "hero.p": "Une infrastructure transparente pour partager des données et créer des modèles ouverts.",
@@ -49,6 +53,7 @@
   },
   "ja": {
     "title": "BoquiLab - データとAIモデル",
+    "brand": "BoquiLab",
     "description": "BoquiLabは、データを共有しオープンなAIモデルを構築するための透明なインフラです。厳格なデータに関する誓約は自動的に管理され、機密保持規則のある企業に最適です。",
     "keywords": "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "hero.p": "データを共有し、オープンなモデルを構築するための透明なインフラ。",
@@ -61,6 +66,7 @@
   },
   "pt": {
     "title": "BoquiLab - Dados e Modelos de IA",
+    "brand": "BoquiLab",
     "description": "BoquiLab é uma infraestrutura transparente para compartilhar dados e construir modelos de IA abertos. Compromissos de dados rigorosos são gerenciados automaticamente, ideal para empresas com regras de confidencialidade.",
     "keywords": "Inteligência artificial, IA, biodiversidade, conservação, projetos, Chile, inovação, tecnologia, meio ambiente, sustentabilidade, mudança climática, ecologia, proteção da natureza.",
     "hero.p": "Infraestrutura transparente para compartilhar dados e construir modelos abertos.",
@@ -73,6 +79,7 @@
   },
   "vi": {
     "title": "BoquiLab - Dữ liệu và mô hình AI",
+    "brand": "BoquiLab",
     "description": "BoquiLab là cơ sở hạ tầng minh bạch để chia sẻ dữ liệu và xây dựng các mô hình AI mở. Các cam kết dữ liệu nghiêm ngặt được quản lý tự động, lý tưởng cho các công ty có quy định bảo mật.",
     "keywords": "Trí tuệ nhân tạo, AI, đa dạng sinh học, bảo tồn, dự án, Chile, đổi mới, công nghệ, môi trường, bền vững, biến đổi khí hậu, sinh thái học, bảo vệ thiên nhiên.",
     "hero.p": "Cơ sở hạ tầng minh bạch để chia sẻ dữ liệu và xây dựng các mô hình mở.",
@@ -85,6 +92,7 @@
   },
   "zh": {
     "title": "BoquiLab - 数据与 AI 模型",
+    "brand": "BoquiLab",
     "description": "BoquiLab 是用于共享数据和构建开放 AI 模型的透明基础设施。严格的数据承诺会自动管理，非常适合有保密规定的公司。",
     "keywords": "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
     "hero.p": "用于共享数据和构建开放模型的透明基础设施。",

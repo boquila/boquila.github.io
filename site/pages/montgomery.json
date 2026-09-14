@@ -1,6 +1,7 @@
 {
   "en": {
     "title": "Montgomery - Native Computer Vision in Rust",
+    "brand": "Montgomery",
     "description": "Montgomery is an experimental native Rust stack for WGPU training and computer vision inference on CPUs and GPUs, with no Python, PyTorch or ONNX Runtime required for normal inference.",
     "keywords": "Montgomery, Rust, computer vision, AI training, GPU, WGPU, object detection, instance segmentation, image classification, YOLO, ONNX",
     "hero.p": "Native object detection, instance segmentation and image classification in Rust with Burn.",
@@ -23,6 +24,7 @@
   },
   "zh": {
     "title": "Montgomery - Rust 原生计算机视觉",
+    "brand": "Montgomery",
     "description": "Montgomery 是一个实验性的 Rust 原生技术栈，用于 WGPU 训练以及在 CPU 和 GPU 上进行计算机视觉推理；常规推理无需 Python、PyTorch 或 ONNX Runtime。",
     "keywords": "Montgomery, Rust, 计算机视觉, AI 训练, GPU, WGPU, 目标检测, 实例分割, 图像分类, YOLO, ONNX",
     "hero.p": "使用 Rust 和 Burn 实现原生目标检测、实例分割和图像分类。",
@@ -45,6 +47,7 @@
   },
   "de": {
     "title": "Montgomery - Native Computer Vision in Rust",
+    "brand": "Montgomery",
     "description": "Montgomery ist ein experimenteller nativer Rust-Stack für WGPU-Training und Computer-Vision-Inferenz auf CPUs und GPUs. Für die normale Inferenz werden weder Python noch PyTorch oder ONNX Runtime benötigt.",
     "keywords": "Montgomery, Rust, Computer Vision, KI-Training, GPU, WGPU, Objekterkennung, Instanzsegmentierung, Bildklassifizierung, YOLO, ONNX",
     "hero.p": "Native Objekterkennung, Instanzsegmentierung und Bildklassifizierung in Rust mit Burn.",
@@ -67,6 +70,7 @@
   },
   "fr": {
     "title": "Montgomery - Vision par ordinateur native en Rust",
+    "brand": "Montgomery",
     "description": "Montgomery est une pile Rust native expérimentale pour l'entraînement WGPU et l'inférence de vision par ordinateur sur CPU et GPU, sans Python, PyTorch ni ONNX Runtime pour l'inférence normale.",
     "keywords": "Montgomery, Rust, vision par ordinateur, entraînement IA, GPU, WGPU, détection d'objets, segmentation d'instances, classification d'images, YOLO, ONNX",
     "hero.p": "Détection d'objets, segmentation d'instances et classification d'images natives en Rust avec Burn.",
@@ -89,6 +93,7 @@
   },
   "vi": {
     "title": "Montgomery - Thị giác máy tính thuần Rust",
+    "brand": "Montgomery",
     "description": "Montgomery là một hệ thống thuần Rust đang thử nghiệm dành cho huấn luyện WGPU và suy luận thị giác máy tính trên CPU và GPU, không cần Python, PyTorch hay ONNX Runtime cho suy luận thông thường.",
     "keywords": "Montgomery, Rust, thị giác máy tính, huấn luyện AI, GPU, WGPU, phát hiện đối tượng, phân đoạn đối tượng, phân loại hình ảnh, YOLO, ONNX",
     "hero.p": "Phát hiện đối tượng, phân đoạn đối tượng và phân loại hình ảnh thuần Rust với Burn.",
@@ -111,6 +116,7 @@
   },
   "pt": {
     "title": "Montgomery - Visão computacional nativa em Rust",
+    "brand": "Montgomery",
     "description": "Montgomery é uma stack experimental nativa em Rust para treinamento WGPU e inferência de visão computacional em CPUs e GPUs, sem Python, PyTorch ou ONNX Runtime na inferência normal.",
     "keywords": "Montgomery, Rust, visão computacional, treinamento de IA, GPU, WGPU, detecção de objetos, segmentação de instâncias, classificação de imagens, YOLO, ONNX",
     "hero.p": "Detecção de objetos, segmentação de instâncias e classificação de imagens nativas em Rust com Burn.",
@@ -133,6 +139,7 @@
   },
   "es": {
     "title": "Montgomery - Visión computacional nativa en Rust",
+    "brand": "Montgomery",
     "description": "Montgomery es una pila experimental nativa en Rust para entrenamiento WGPU e inferencia de visión computacional en CPU y GPU, sin Python, PyTorch ni ONNX Runtime para la inferencia normal.",
     "keywords": "Montgomery, Rust, visión computacional, entrenamiento de IA, GPU, WGPU, detección de objetos, segmentación de instancias, clasificación de imágenes, YOLO, ONNX",
     "hero.p": "Detección de objetos, segmentación de instancias y clasificación de imágenes nativas en Rust con Burn.",
@@ -155,6 +162,7 @@
   },
   "ja": {
     "title": "Montgomery - Rust ネイティブのコンピュータービジョン",
+    "brand": "Montgomery",
     "description": "Montgomery は、WGPU 学習と CPU・GPU 上のコンピュータービジョン推論に対応する実験的な Rust ネイティブスタックです。通常の推論に Python、PyTorch、ONNX Runtime は必要ありません。",
     "keywords": "Montgomery, Rust, コンピュータービジョン, AI 学習, GPU, WGPU, 物体検出, インスタンスセグメンテーション, 画像分類, YOLO, ONNX",
     "hero.p": "Rust と Burn によるネイティブな物体検出、インスタンスセグメンテーション、画像分類。",
