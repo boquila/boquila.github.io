@@ -41,6 +41,19 @@ color:var(--color-dark-gray);
 margin:0;
 line-height:1.6
 }
+.nature-trail {
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:9999
+}
+@media (prefers-reduced-motion:reduce), (hover:none), (pointer:coarse) {
+.nature-trail {
+display:none
+}
+}
 a {
 text-decoration:none;
 color:inherit;
@@ -304,11 +317,16 @@ line-height:1;
 margin-top:0;
 margin-bottom:1.5rem;
 font-weight:800;
-text-transform:uppercase
+text-transform:none
 }
 .hero-landing h1 span {
 color:var(--color-green);
 animation:glow 2.5s ease-in-out infinite
+}
+@media (prefers-reduced-motion:reduce) {
+.hero-landing h1 span {
+animation:none
+}
 }
 @keyframes glow {
 0%,100% {
@@ -362,67 +380,6 @@ transform:translateX(-50%) translateY(10px)
 }
 
 }
-.mission {
-background-color:var(--color-white-gray);
-position:relative;
-overflow:hidden;
-padding:140px 0
-}
-.mission::before {
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:url('assets/back1.avif');
-background-size:cover;
-background-position:top;
-background-repeat:no-repeat;
-opacity:0.18;
-z-index:0
-}
-.mission .container {
-position:relative;
-z-index:1
-}
-.intro-box {
-background:white;
-border:var(--border-thick) solid var(--color-dark-gray);
-padding:2.5rem;
-margin:0 auto 3rem auto;
-max-width:850px;
-box-shadow:6px 6px 0px rgba(0,0,0,0.1)
-}
-.intro-box h2 {
-margin-top:0 !important
-}
-.intro-box p:last-child {
-margin-bottom:0 !important
-}
-.mission h2 {
-font-size:2.5rem;
-margin-bottom:2rem;
-color:var(--color-dark-gray);
-text-transform:uppercase;
-font-weight:800
-}
-.mission p {
-font-size:1.25rem;
-margin-bottom:1.5rem
-}
-.pillars {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:2rem;
-margin-top:4rem
-}
-.pillar {
-background:white;
-border:var(--border-thick) solid var(--color-dark-gray);
-padding:2rem;
-box-shadow:6px 6px 0px rgba(0,0,0,0.1)
-}
 .reveal {
 opacity:0;
 transform:translateY(24px);
@@ -431,15 +388,6 @@ transition:opacity .7s ease,transform .7s ease
 .reveal.revealed {
 opacity:1;
 transform:translateY(0)
-}
-.pillar h3 {
-font-size:1.5rem;
-margin-top:0;
-margin-bottom:1rem;
-color:var(--color-dark-gray);
-border-bottom:var(--border-thick) solid var(--color-green);
-padding-bottom:10px;
-display:inline-block
 }
 .software {
 background-color:var(--color-green);
@@ -953,9 +901,6 @@ height:2.5rem
 }
 .hero-landing h1 {
 font-size:2.5rem
-}
-.pillars {
-grid-template-columns:1fr
 }
 .software-grid {
 grid-template-columns:1fr
