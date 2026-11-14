@@ -405,18 +405,62 @@ font-weight:900
 }
 .software-grid {
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:0;
-border:var(--border-thick) solid var(--color-dark-gray);
-background:var(--color-dark-gray);
-gap:var(--border-thick)
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:1.5rem
 }
 .software-item {
 background:white;
-padding:3rem;
+border:var(--border-thick) solid var(--color-dark-gray);
+box-shadow:6px 6px 0 rgba(0,0,0,0.2);
+padding:clamp(1.5rem,3vw,3rem);
 display:flex;
 flex-direction:column;
-justify-content:center
+color:inherit;
+text-decoration:none;
+transition:transform .2s ease,box-shadow .2s ease
+}
+.software-item:focus-visible {
+outline:3px solid var(--color-dark-gray);
+outline-offset:5px
+}
+.software-arrow {
+display:flex;
+align-items:center;
+justify-content:center;
+align-self:flex-end;
+width:44px;
+height:44px;
+margin-top:auto;
+border:var(--border-thick) solid var(--color-dark-gray);
+transition:background-color .2s ease,color .2s ease
+}
+.software-item:focus-visible .software-arrow {
+background:var(--color-dark-gray);
+color:var(--color-green)
+}
+@media (hover:hover) {
+.software-item:hover {
+transform:translate(-3px,-3px);
+box-shadow:9px 9px 0 rgba(0,0,0,0.2)
+}
+.software-item:hover .software-arrow {
+background:var(--color-dark-gray);
+color:var(--color-green)
+}
+}
+.software-item:active {
+transform:translate(2px,2px);
+box-shadow:4px 4px 0 rgba(0,0,0,0.2)
+}
+@media (prefers-reduced-motion:reduce) {
+.software-item,
+.software-arrow {
+transition:none
+}
+.software-item:hover,
+.software-item:active {
+transform:none
+}
 }
 .software-item h3 {
 font-size:2.5rem;
@@ -431,13 +475,16 @@ line-height:0
 display:block;
 width:auto;
 height:3rem;
-max-width:100%
+max-width:100%;
+object-fit:contain;
+object-position:left center
 }
 .software-item h3.product-logo--montgomery img {
 height:2.5rem
 }
 .software-item p {
-font-size:1.25rem
+font-size:1.25rem;
+margin:0 0 1.5rem
 }
 .projects-list {
 position:relative;

@@ -96,26 +96,26 @@
         <div class="container">
             <h2>{{software.h2}}</h2>
             <div class="software-grid">
-                <div class="software-item">
-                    <h3 class="product-logo"><img src="{{r}}assets/logos/boquilahub.svg" alt="{{software1.title}}" width="161" height="32"></h3>
-                    <p>{{software1.text}}</p>
-                    <a href="{{navHref.hub}}" class="btn-link">{{software1.link}}</a>
-                </div>
-                <div class="software-item">
-                    <h3 class="product-logo"><img src="{{r}}assets/logos/boquilaverse.svg" alt="{{software2.title}}" width="185" height="32"></h3>
-                    <p>{{software2.text}}</p>
-                    <a href="{{navHref.verse}}" class="btn-link">{{software2.link}}</a>
-                </div>
-                <div class="software-item">
-                    <h3 class="product-logo"><img src="{{r}}assets/logos/boquilab.svg" alt="{{software3.title}}" width="126" height="32"></h3>
-                    <p>{{software3.text}}</p>
-                    <a href="{{navHref.lab}}" class="btn-link">{{software3.link}}</a>
-                </div>
-                <div class="software-item">
-                    <h3 class="product-logo product-logo--montgomery"><img src="{{r}}assets/logos/montgomery.svg" alt="{{software4.title}}" width="292" height="44"></h3>
-                    <p>{{software4.text}}</p>
-                    <a href="{{navHref.montgomery}}" class="btn-link">{{software4.link}}</a>
-                </div>
+                <a href="{{navHref.hub}}" class="software-item" aria-labelledby="platform-hub" aria-describedby="platform-hub-description">
+                    <h3 class="product-logo" id="platform-hub"><img src="{{r}}assets/logos/boquilahub.svg" alt="{{software1.title}}" width="161" height="32"></h3>
+                    <p id="platform-hub-description">{{software1.text}}</p>
+                    <span class="software-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a href="{{navHref.verse}}" class="software-item" aria-labelledby="platform-verse" aria-describedby="platform-verse-description">
+                    <h3 class="product-logo" id="platform-verse"><img src="{{r}}assets/logos/boquilaverse.svg" alt="{{software2.title}}" width="185" height="32"></h3>
+                    <p id="platform-verse-description">{{software2.text}}</p>
+                    <span class="software-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a href="{{navHref.lab}}" class="software-item" aria-labelledby="platform-lab" aria-describedby="platform-lab-description">
+                    <h3 class="product-logo" id="platform-lab"><img src="{{r}}assets/logos/boquilab.svg" alt="{{software3.title}}" width="126" height="32"></h3>
+                    <p id="platform-lab-description">{{software3.text}}</p>
+                    <span class="software-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a href="{{navHref.montgomery}}" class="software-item" aria-labelledby="platform-montgomery" aria-describedby="platform-montgomery-description">
+                    <h3 class="product-logo product-logo--montgomery" id="platform-montgomery"><img src="{{r}}assets/logos/montgomery.svg" alt="{{software4.title}}" width="292" height="44"></h3>
+                    <p id="platform-montgomery-description">{{software4.text}}</p>
+                    <span class="software-arrow" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
             </div>
         </div>
     </section>
