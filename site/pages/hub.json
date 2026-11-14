@@ -6,7 +6,7 @@
     "keywords": "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "hero.p": "Cross-platform tool for running computer vision models on wildlife data. On your own hardware, no cloud required.",
     "download": "Download",
-    "why.title": "Why BoquilaHUB?",
+    "overview.title": "Make sense of wildlife data",
     "feat1": "Local AI Deployment (No Cloud needed)",
     "feat2": "Configurable Inference",
     "feat3": "Intuitive, Simple User Interface",
@@ -52,7 +52,8 @@
     "model.OWL": "Animal detection from drone footage",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Detection and classification of UK mammals",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Detection and classification of UK mammals",
-    "model.batdetect2-uk": "Bat audio detection for the UK"
+    "model.batdetect2-uk": "Bat audio detection for the UK",
+    "preview.alt": "BoquilaHUB interface"
   },
   "es": {
     "title": "BoquilaHUB - IA para la Naturaleza",
@@ -61,7 +62,7 @@
     "keywords": "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
     "hero.p": "Herramienta multiplataforma para ejecutar modelos de visión por computadora en datos de vida silvestre. En su propio hardware, no se requiere nube.",
     "download": "Descargar",
-    "why.title": "¿Por qué BoquilaHUB?",
+    "overview.title": "Comprende los datos de la vida silvestre",
     "feat1": "Implementación de IA local (sin nube)",
     "feat2": "Inferencia configurable",
     "feat3": "Interfaz de usuario intuitiva y sencilla",
@@ -107,7 +108,8 @@
     "model.OWL": "Detección de animales en filmaciones de dron",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Detección y clasificación de mamíferos del Reino Unido",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Detección y clasificación de mamíferos del Reino Unido",
-    "model.batdetect2-uk": "Detección acústica de murciélagos del Reino Unido"
+    "model.batdetect2-uk": "Detección acústica de murciélagos del Reino Unido",
+    "preview.alt": "Interfaz de BoquilaHUB"
   },
   "de": {
     "title": "BoquilaHUB - KI für die Natur",
@@ -116,7 +118,7 @@
     "keywords": "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz.",
     "hero.p": "Plattformübergreifendes Tool zum Ausführen von Computer-Vision-Modellen auf Wildtierdaten. Auf Ihrer eigenen Hardware, keine Cloud erforderlich.",
     "download": "Herunterladen",
-    "why.title": "Warum BoquilaHUB?",
+    "overview.title": "Wildtierdaten verstehen",
     "feat1": "Lokale KI-Bereitstellung (Keine Cloud nötig)",
     "feat2": "Konfigurierbare Inferenz",
     "feat3": "Intuitive, einfache Benutzeroberfläche",
@@ -162,7 +164,8 @@
     "model.OWL": "Tiererkennung aus Drohnenaufnahmen",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Erkennung und Klassifizierung britischer Säugetiere",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Erkennung und Klassifizierung britischer Säugetiere",
-    "model.batdetect2-uk": "Akustische Fledermauserkennung für Großbritannien"
+    "model.batdetect2-uk": "Akustische Fledermauserkennung für Großbritannien",
+    "preview.alt": "BoquilaHUB-Benutzeroberfläche"
   },
   "fr": {
     "title": "BoquilaHUB - IA pour la nature",
@@ -171,7 +174,7 @@
     "keywords": "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
     "hero.p": "Outil multiplateforme pour exécuter des modèles de vision par ordinateur sur des données de la faune. Sur votre propre matériel, aucun cloud requis.",
     "download": "Télécharger",
-    "why.title": "Pourquoi BoquilaHUB ?",
+    "overview.title": "Comprendre les données sur la faune",
     "feat1": "Déploiement d'IA local (Pas de cloud)",
     "feat2": "Inférence configurable",
     "feat3": "Interface utilisateur simple et intuitive",
@@ -217,7 +220,8 @@
     "model.OWL": "Détection d'animaux à partir de séquences de drone",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Détection et classification des mammifères du Royaume-Uni",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Détection et classification des mammifères du Royaume-Uni",
-    "model.batdetect2-uk": "Détection audio des chauves-souris au Royaume-Uni"
+    "model.batdetect2-uk": "Détection audio des chauves-souris au Royaume-Uni",
+    "preview.alt": "Interface de BoquilaHUB"
   },
   "ja": {
     "title": "BoquilaHUB - 自然のためのAI",
@@ -226,7 +230,7 @@
     "keywords": "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "hero.p": "野生生物データでコンピュータビジョンモデルを実行するためのクロスプラットフォームツール。独自のハードウェアで、クラウドは不要です。",
     "download": "ダウンロード",
-    "why.title": "なぜBoquilaHUBなのか？",
+    "overview.title": "野生動物のデータを読み解く",
     "feat1": "ローカルAI展開（クラウド不要）",
     "feat2": "構成可能な推論",
     "feat3": "直感的でシンプルなユーザーインターフェース",
@@ -272,7 +276,8 @@
     "model.OWL": "ドローン映像からの動物検出",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "英国の哺乳類の検出と分類",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "英国の哺乳類の検出と分類",
-    "model.batdetect2-uk": "英国のコウモリ音声検出"
+    "model.batdetect2-uk": "英国のコウモリ音声検出",
+    "preview.alt": "BoquilaHUBの画面"
   },
   "pt": {
     "title": "BoquilaHUB - IA para a Natureza",
@@ -281,7 +286,7 @@
     "keywords": "Inteligência artificial, IA, biodiversidade, conservação, projetos, Chile, inovação, tecnologia, meio ambiente, sustentabilidade, mudança climática, ecologia, proteção da natureza.",
     "hero.p": "Ferramenta multiplataforma para rodar modelos de visão computacional em dados de vida selvagem. No seu próprio hardware, sem necessidade de nuvem.",
     "download": "Baixar",
-    "why.title": "Por que BoquilaHUB?",
+    "overview.title": "Entenda os dados sobre a vida selvagem",
     "feat1": "Implantação de IA Local (Sem Nuvem)",
     "feat2": "Inferência Configurável",
     "feat3": "Interface de Usuário Intuitiva e Simples",
@@ -327,7 +332,8 @@
     "model.OWL": "Detecção de animais em filmagens de drone",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Detecção e classificação de mamíferos do Reino Unido",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Detecção e classificação de mamíferos do Reino Unido",
-    "model.batdetect2-uk": "Detecção de áudio de morcegos do Reino Unido"
+    "model.batdetect2-uk": "Detecção de áudio de morcegos do Reino Unido",
+    "preview.alt": "Interface do BoquilaHUB"
   },
   "vi": {
     "title": "BoquilaHUB - AI cho thiên nhiên",
@@ -336,7 +342,7 @@
     "keywords": "Trí tuệ nhân tạo, AI, đa dạng sinh học, bảo tồn, dự án, Chile, đổi mới, công nghệ, môi trường, bền vững, biến đổi khí hậu, sinh thái học, bảo vệ thiên nhiên.",
     "hero.p": "Công cụ đa nền tảng để chạy các mô hình thị giác máy tính trên dữ liệu động vật hoang dã. Trên phần cứng của riêng bạn, không cần đám mây.",
     "download": "Tải xuống",
-    "why.title": "Tại sao chọn BoquilaHUB?",
+    "overview.title": "Hiểu dữ liệu về động vật hoang dã",
     "feat1": "Triển khai AI cục bộ (Không cần đám mây)",
     "feat2": "Suy luận có thể cấu hình",
     "feat3": "Giao diện người dùng đơn giản, trực quan",
@@ -382,7 +388,8 @@
     "model.OWL": "Phát hiện động vật từ cảnh quay drone",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "Phát hiện và phân loại động vật có vú tại Vương quốc Anh",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "Phát hiện và phân loại động vật có vú tại Vương quốc Anh",
-    "model.batdetect2-uk": "Phát hiện âm thanh dơi tại Vương quốc Anh"
+    "model.batdetect2-uk": "Phát hiện âm thanh dơi tại Vương quốc Anh",
+    "preview.alt": "Giao diện BoquilaHUB"
   },
   "zh": {
     "title": "BoquilaHUB - 自然人工智能",
@@ -391,7 +398,7 @@
     "keywords": "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
     "hero.p": "用于在野生动物数据上运行计算机视觉模型的跨平台工具。在您自己的硬件上运行，无需云端。",
     "download": "下载",
-    "why.title": "为什么选择 BoquilaHUB？",
+    "overview.title": "读懂野生动物数据",
     "feat1": "本地 AI 部署（无需云端）",
     "feat2": "可配置推理",
     "feat3": "直观、简单的用户界面",
@@ -437,6 +444,7 @@
     "model.OWL": "无人机影像动物检测",
     "model.cai_uk_mammals_yolo10x_v1.0.0": "英国哺乳动物检测与分类",
     "model.cai_uk_mammals_yolo26x_v1.0.0": "英国哺乳动物检测与分类",
-    "model.batdetect2-uk": "英国蝙蝠音频检测"
+    "model.batdetect2-uk": "英国蝙蝠音频检测",
+    "preview.alt": "BoquilaHUB 界面"
   }
 }

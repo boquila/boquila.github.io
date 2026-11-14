@@ -7,7 +7,7 @@
     "hero.p": "Transparent infrastructure for sharing data and building open models.",
     "comingSoon": "Coming Soon",
     "img.alt": "BoquiLab",
-    "why.title": "Why BoquiLab?",
+    "overview.title": "Build open models together",
     "feat1": "A simple, transparent way for anyone to share data",
     "feat2": "Automatic handling of strict data commitments, ideal for companies with confidentiality rules",
     "feat3": "Open models, built from the data the community shares"
@@ -20,7 +20,7 @@
     "hero.p": "Infraestructura transparente para compartir datos y construir modelos abiertos.",
     "comingSoon": "Próximamente",
     "img.alt": "BoquiLab",
-    "why.title": "¿Por qué BoquiLab?",
+    "overview.title": "Construye modelos abiertos en comunidad",
     "feat1": "Una forma sencilla y transparente de compartir datos, para cualquier persona",
     "feat2": "Gestión automática de compromisos de datos estrictos, ideal para empresas con reglas de confidencialidad",
     "feat3": "Modelos abiertos, construidos con los datos que comparte la comunidad"
@@ -33,7 +33,7 @@
     "hero.p": "Transparente Infrastruktur zum Teilen von Daten und für offene Modelle.",
     "comingSoon": "Demnächst",
     "img.alt": "BoquiLab",
-    "why.title": "Warum BoquiLab?",
+    "overview.title": "Gemeinsam offene Modelle entwickeln",
     "feat1": "Ein einfacher, transparenter Weg für alle, Daten zu teilen",
     "feat2": "Automatische Verwaltung strenger Datenzusagen, ideal für Unternehmen mit Vertraulichkeitsregeln",
     "feat3": "Offene Modelle, aufgebaut auf den Daten der Community"
@@ -46,7 +46,7 @@
     "hero.p": "Une infrastructure transparente pour partager des données et créer des modèles ouverts.",
     "comingSoon": "Bientôt disponible",
     "img.alt": "BoquiLab",
-    "why.title": "Pourquoi BoquiLab ?",
+    "overview.title": "Construire ensemble des modèles ouverts",
     "feat1": "Un moyen simple et transparent pour chacun de partager des données",
     "feat2": "Gestion automatique des engagements de données stricts, idéal pour les entreprises soumises à des règles de confidentialité",
     "feat3": "Des modèles ouverts, construits à partir des données partagées par la communauté"
@@ -59,7 +59,7 @@
     "hero.p": "データを共有し、オープンなモデルを構築するための透明なインフラ。",
     "comingSoon": "近日公開",
     "img.alt": "BoquiLab",
-    "why.title": "なぜBoquiLabなのか？",
+    "overview.title": "オープンなモデルを共につくる",
     "feat1": "誰もが簡単に、透明な形でデータを共有できる場",
     "feat2": "厳格なデータに関する誓約を自動で管理。機密保持規則のある企業に最適",
     "feat3": "コミュニティが共有するデータから生まれるオープンなモデル"
@@ -72,7 +72,7 @@
     "hero.p": "Infraestrutura transparente para compartilhar dados e construir modelos abertos.",
     "comingSoon": "Em breve",
     "img.alt": "BoquiLab",
-    "why.title": "Por que BoquiLab?",
+    "overview.title": "Crie modelos abertos em conjunto",
     "feat1": "Uma forma simples e transparente de qualquer pessoa compartilhar dados",
     "feat2": "Gestão automática de compromissos de dados rigorosos, ideal para empresas com regras de confidencialidade",
     "feat3": "Modelos abertos, construídos com os dados que a comunidade compartilha"
@@ -85,7 +85,7 @@
     "hero.p": "Cơ sở hạ tầng minh bạch để chia sẻ dữ liệu và xây dựng các mô hình mở.",
     "comingSoon": "Sắp ra mắt",
     "img.alt": "BoquiLab",
-    "why.title": "Tại sao chọn BoquiLab?",
+    "overview.title": "Cùng xây dựng các mô hình mở",
     "feat1": "Cách đơn giản và minh bạch để bất kỳ ai cũng có thể chia sẻ dữ liệu",
     "feat2": "Tự động quản lý các cam kết dữ liệu nghiêm ngặt, lý tưởng cho các công ty có quy định bảo mật",
     "feat3": "Các mô hình mở, được xây dựng từ dữ liệu cộng đồng chia sẻ"
@@ -98,7 +98,7 @@
     "hero.p": "用于共享数据和构建开放模型的透明基础设施。",
     "comingSoon": "即将推出",
     "img.alt": "BoquiLab",
-    "why.title": "为什么选择 BoquiLab？",
+    "overview.title": "共同构建开放模型",
     "feat1": "让任何人都能简单、透明地共享数据",
     "feat2": "自动管理严格的数据承诺，非常适合有保密规定的公司",
     "feat3": "由社区共享的数据构建的开放模型"

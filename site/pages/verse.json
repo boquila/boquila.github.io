@@ -6,10 +6,11 @@
     "keywords": "Artificial intelligence, AI, biodiversity, conservation, projects, Chile, innovation, technology, environment, sustainability, climate change, ecology, nature protection.",
     "hero.p": "A growing collection of 3D models of flora, fauna and funga. Created through photogrammetry, deep learning and other techniques. ",
     "comingSoon": "Coming Soon",
-    "why.title": "Why BoquilaVerse?",
+    "overview.title": "Explore nature in 3D",
     "feat1": "Always physically and biologically accurate",
     "feat2": "Better data to train AI for conservation",
-    "feat3": "Cool visualizations for humans"
+    "feat3": "Cool visualizations for humans",
+    "preview.alt": "Interactive 3D model of a pudu"
   },
   "es": {
     "title": "BoquilaVerse - Naturaleza en 3D",
@@ -18,10 +19,11 @@
     "keywords": "Inteligencia artificial, IA, biodiversidad, conservación, proyectos, Chile, innovación, tecnología, medio ambiente, sostenibilidad, cambio climático, ecología, protección de la naturaleza.",
     "hero.p": "Una colección en crecimiento de modelos 3D de flora, fauna y hongos. Creada mediante fotogrametría, aprendizaje profundo y otras técnicas.",
     "comingSoon": "Próximamente",
-    "why.title": "¿Por qué BoquilaVerse?",
+    "overview.title": "Explora la naturaleza en 3D",
     "feat1": "Siempre física y biológicamente preciso",
     "feat2": "Mejores datos para entrenar IA",
-    "feat3": "Visualizaciones geniales para humanos"
+    "feat3": "Visualizaciones geniales para humanos",
+    "preview.alt": "Modelo 3D interactivo de un pudú"
   },
   "de": {
     "title": "BoquilaVerse - Natur in 3D",
@@ -30,10 +32,11 @@
     "keywords": "Künstliche Intelligenz, KI, Biodiversität, Naturschutz, Projekte, Chile, Innovation, Technologie, Umwelt, Nachhaltigkeit, Klimawandel, Ökologie, Naturschutz.",
     "hero.p": "Eine wachsende Sammlung von 3D-Modellen von Flora, Fauna und Pilzen. Erstellt durch Photogrammetrie, Deep Learning und andere Techniken.",
     "comingSoon": "Demnächst",
-    "why.title": "Warum BoquilaVerse?",
+    "overview.title": "Natur in 3D entdecken",
     "feat1": "Immer physikalisch und biologisch akkurat",
     "feat2": "Bessere Daten zum Trainieren von KI",
-    "feat3": "Coole Visualisierungen für Menschen"
+    "feat3": "Coole Visualisierungen für Menschen",
+    "preview.alt": "Interaktives 3D-Modell eines Pudus"
   },
   "fr": {
     "title": "BoquilaVerse - La nature en 3D",
@@ -42,10 +45,11 @@
     "keywords": "Intelligence artificielle, IA, biodiversité, conservation, projets, Chili, innovation, technologie, environnement, durabilité, changement climatique, écologie, protection de la nature.",
     "hero.p": "Une collection croissante de modèles 3D de flore, faune et fonge. Créée par photogrammétrie, apprentissage profond et autres techniques.",
     "comingSoon": "Bientôt disponible",
-    "why.title": "Pourquoi BoquilaVerse ?",
+    "overview.title": "Explorer la nature en 3D",
     "feat1": "Toujours physiquement et biologiquement précis",
     "feat2": "Meilleures données pour entraîner l'IA",
-    "feat3": "Visualisations sympas pour les humains"
+    "feat3": "Visualisations sympas pour les humains",
+    "preview.alt": "Modèle 3D interactif d’un pudu"
   },
   "ja": {
     "title": "BoquilaVerse - 3Dの自然",
@@ -54,10 +58,11 @@
     "keywords": "人工知能, AI, 生物多様性, 保全, プロジェクト, チリ, イノベーション, 技術, 環境, 持続可能性, 気候変動, 生態学, 自然保護",
     "hero.p": "植物、動物、菌類の3Dモデルの成長中のコレクション。フォトグラメトリ、ディープラーニング、その他の技術を通じて作成されました。",
     "comingSoon": "近日公開",
-    "why.title": "なぜBoquilaVerseなのか？",
+    "overview.title": "3Dで自然を探索する",
     "feat1": "常に物理的および生物学的に正確",
     "feat2": "AIを訓練するためのより良いデータ",
-    "feat3": "人間のためのクールな視覚化"
+    "feat3": "人間のためのクールな視覚化",
+    "preview.alt": "プーズーのインタラクティブ3Dモデル"
   },
   "pt": {
     "title": "BoquilaVerse - Natureza em 3D",
@@ -66,10 +71,11 @@
     "keywords": "Inteligência artificial, IA, biodiversidade, conservação, projetos, Chile, inovação, tecnologia, meio ambiente, sustentabilidade, mudança climática, ecologia, proteção da natureza.",
     "hero.p": "Uma coleção crescente de modelos 3D de flora, fauna e fungos. Criada através de fotogrametria, aprendizado profundo e outras técnicas.",
     "comingSoon": "Em breve",
-    "why.title": "Por que BoquilaVerse?",
+    "overview.title": "Explore a natureza em 3D",
     "feat1": "Sempre fisicamente e biologicamente preciso",
     "feat2": "Melhores dados para treinar IA",
-    "feat3": "Visualizações legais para humanos"
+    "feat3": "Visualizações legais para humanos",
+    "preview.alt": "Modelo 3D interativo de um pudu"
   },
   "vi": {
     "title": "BoquilaVerse - Thiên nhiên trong 3D",
@@ -78,10 +84,11 @@
     "keywords": "Trí tuệ nhân tạo, AI, đa dạng sinh học, bảo tồn, dự án, Chile, đổi mới, công nghệ, môi trường, bền vững, biến đổi khí hậu, sinh thái học, bảo vệ thiên nhiên.",
     "hero.p": "Một bộ sưu tập ngày càng tăng các mô hình 3D về hệ thực vật, động vật và nấm. Được tạo ra thông qua quang trắc, học sâu và các kỹ thuật khác.",
     "comingSoon": "Sắp ra mắt",
-    "why.title": "Tại sao chọn BoquilaVerse?",
+    "overview.title": "Khám phá thiên nhiên trong không gian 3D",
     "feat1": "Luôn chính xác về mặt vật lý và sinh học",
     "feat2": "Dữ liệu tốt hơn để đào tạo AI",
-    "feat3": "Hình ảnh trực quan tuyệt vời cho con người"
+    "feat3": "Hình ảnh trực quan tuyệt vời cho con người",
+    "preview.alt": "Mô hình 3D tương tác của hươu pudu"
   },
   "zh": {
     "title": "BoquilaVerse - 3D 自然",
@@ -90,9 +97,10 @@
     "keywords": "人工智能, AI, 生物多样性, 保护, 项目, 智利, 创新, 技术, 环境, 可持续性, 气候变化, 生态学, 自然保护",
     "hero.p": "不断增长的植物、动物和真菌 3D 模型集合。通过摄影测量、深度学习和其他技术创建。",
     "comingSoon": "即将推出",
-    "why.title": "为什么选择 BoquilaVerse？",
+    "overview.title": "在 3D 世界中探索自然",
     "feat1": "始终在物理和生物学上准确",
     "feat2": "更好的数据用于训练 AI",
-    "feat3": "为人类提供酷炫的可视化"
+    "feat3": "为人类提供酷炫的可视化",
+    "preview.alt": "普度鹿交互式 3D 模型"
   }
 }
