@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
 
 permissions:
   contents: read
@@ -14,7 +17,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  demo-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      changed: ${{ steps.release.outputs.changed }}
+    steps:
+      - name: Find the latest released Montgomery demo
+        id: release
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh api 'repos/boquila/montgomery/releases?per_page=100' --jq '[.[] | select(.draft == false and .prerelease == false and any(.assets[]; .name == "montgomery-web-demo.zip" and .state == "uploaded"))][0].tag_name // empty')
+          if [ -z "$tag" ]; then
+            echo "::error::Publish a Montgomery release with montgomery-web-demo.zip before enabling this deployment."
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          changed=true
+          if [ "$EVENT_NAME" = schedule ]; then
+            published=$(curl --fail --silent --show-error --connect-timeout 10 --max-time 20 --retry 2 https://boquila.org/montgomery-lib/source.json | jq -r '.version' || true)
+            if [ "$published" = "$tag" ]; then
+              changed=false
+            fi
+          fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: demo-release
+    if: needs.demo-release.outputs.changed == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,6 +67,26 @@ jobs:
 
       - name: Build site
         run: bun build.js
+
+      - name: Record existing website files
+        run: find dist -type f -print0 | sort -z | xargs -0 sha256sum > "$RUNNER_TEMP/website.sha256"
+
+      - name: Include Montgomery demo
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ needs.demo-release.outputs.tag }}
+        run: |
+          gh release download "$RELEASE_TAG" --repo boquila/montgomery --pattern montgomery-web-demo.zip --dir "$RUNNER_TEMP"
+          mkdir dist/montgomery-lib
+          unzip -q "$RUNNER_TEMP/montgomery-web-demo.zip" -d dist/montgomery-lib
+          test "$(jq -r '.version' dist/montgomery-lib/source.json)" = "$RELEASE_TAG"
+
+      - name: Verify original website is unchanged
+        run: |
+          sha256sum --check --quiet "$RUNNER_TEMP/website.sha256"
+          test -f dist/montgomery.html
+          test -f dist/montgomery-lib/index.html
+          test ! -e dist/montgomery
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
